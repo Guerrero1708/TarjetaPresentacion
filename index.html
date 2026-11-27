@@ -112,6 +112,21 @@
                 comercioSemestral:     49000,  // Comercio Semestral (+IVA / eq., mín. 4 Split)
                 continuidadTrimestral: 45000,  // Continuidad Trimestral (+IVA / eq., flotas 6+ Split)
                 visitaMinimaB2B:      165000   // Visita mínima comercial 1 a 3 Split (+IVA)
+            },
+
+            // -----------------------------------------------------------------
+            // 7. BOMBAS DE CONDENSADO INSTALADAS (IVA INCLUIDO)
+            //    mismaVisita = junto a instalación o mantención
+            //    visitaUnica = solo ir a instalar o cambiar la bomba
+            // -----------------------------------------------------------------
+            bombasCondensado: {
+                wipcoolP16:      { mismaVisita: 100000, visitaUnica: 130000 }, // Split 9k-24k (Estándar 19 dB)
+                wipcoolP32:      { mismaVisita: 120000, visitaUnica: 150000 }, // Split 24k-36k / Oficinas
+                aspenMiniOrange: { mismaVisita: 160000, visitaUnica: 190000 }, // Split 9k-24k (Premium UK)
+                aspenMaxiOrange: { mismaVisita: 190000, visitaUnica: 220000 }, // Comercial 24k-60k / 15 m altura
+                wipcoolP12:      { mismaVisita:  95000, visitaUnica: 125000 }, // Compacta oculta / esquina (9k-12k)
+                aspenMiniAqua:   { mismaVisita: 150000, visitaUnica: 180000 }, // Ultra delgada 100% oculta (9k-18k)
+                aspenHiFlow:     { mismaVisita: 110000, visitaUnica: 140000 }  // Con estanque (Fan Coil / Ducto)
             }
         };
     </script>
@@ -912,8 +927,21 @@
                     </div>
                 </div>
 
+                <!-- ACCESOS RÁPIDOS A OTROS SERVICIOS -->
+                <div class="mt-3 grid grid-cols-3 gap-1.5 text-center">
+                    <a href="#solo-instalacion" class="bg-white hover:bg-blue-50 text-slate-700 hover:text-brand-blue font-bold text-[10.5px] sm:text-xs py-2 px-2 rounded-xl border border-slate-200 shadow-xs transition-colors">
+                        <i class="fas fa-tools text-brand-blue mr-1"></i>Solo Inst.
+                    </a>
+                    <a href="#bombas-condensado" class="bg-white hover:bg-sky-50 text-slate-700 hover:text-sky-700 font-bold text-[10.5px] sm:text-xs py-2 px-2 rounded-xl border border-slate-200 shadow-xs transition-colors">
+                        <i class="fas fa-tint text-sky-500 mr-1"></i>Bombas
+                    </a>
+                    <a href="#mantenimiento" class="bg-white hover:bg-emerald-50 text-slate-700 hover:text-emerald-700 font-bold text-[10.5px] sm:text-xs py-2 px-2 rounded-xl border border-slate-200 shadow-xs transition-colors">
+                        <i class="fas fa-clipboard-check text-emerald-600 mr-1"></i>Mantención
+                    </a>
+                </div>
+
                 <!-- BLOQUE: ¿YA TIENES TU EQUIPO? SOLO INSTALACIÓN -->
-                <div class="mt-4 bg-white rounded-2xl border border-slate-200 p-4 shadow-xs">
+                <div id="solo-instalacion" class="mt-3 scroll-mt-20 bg-white rounded-2xl border border-slate-200 p-4 shadow-xs">
                     <div class="flex items-center justify-between flex-wrap gap-2 mb-2.5">
                         <div>
                             <span class="text-[10px] font-black uppercase text-slate-400 tracking-wider block">Servicio Profesional</span>
@@ -965,6 +993,52 @@
                         <i class="fab fa-whatsapp text-emerald-400 text-sm"></i>
                         <span>Agendar Solo Instalación</span>
                     </a>
+                </div>
+
+                <!-- BLOQUE: BOMBAS DE CONDENSADO INSTALADAS -->
+                <div id="bombas-condensado" class="mt-4 scroll-mt-20 bg-white rounded-2xl border border-slate-200 p-4 shadow-xs">
+                    <div class="flex items-start justify-between flex-wrap gap-2 mb-2.5">
+                        <div>
+                            <span class="text-[10px] font-black uppercase text-sky-600 tracking-wider block flex items-center gap-1">
+                                <i class="fas fa-tint"></i>
+                                Evacuación Limpia sin Romper Muros
+                            </span>
+                            <h4 class="text-sm sm:text-base font-black text-brand-dark mt-0.5">Bombas de Condensado Instaladas</h4>
+                        </div>
+                        <span class="text-[10px] font-bold bg-sky-50 text-sky-700 border border-sky-200 px-2.5 py-1 rounded-full">
+                            IVA Incluido • 5 m Manguera
+                        </span>
+                    </div>
+
+                    <p class="text-[11px] text-slate-600 mb-3 leading-snug">
+                        Ideal cuando no tienes desagüe cercano o no quieres usar bidones. <strong>Incluye:</strong> bomba nueva, hasta <strong>5 metros de manguera reforzada (6 mm)</strong>, fijaciones, conexión y prueba de flujo.
+                    </p>
+
+                    <!-- Selector de Modalidad (Misma Visita vs Visita Única) -->
+                    <div class="bg-slate-100 p-1 rounded-xl grid grid-cols-2 gap-1 mb-3">
+                        <button type="button" onclick="setPumpMode('mismaVisita')" id="pump-mode-misma" class="py-2 px-2 rounded-lg text-[10.5px] sm:text-xs font-extrabold transition-all bg-brand-blue text-white shadow-xs">
+                            🛠️ Junto a Inst. o Mantención
+                        </button>
+                        <button type="button" onclick="setPumpMode('visitaUnica')" id="pump-mode-unica" class="py-2 px-2 rounded-lg text-[10.5px] sm:text-xs font-bold transition-all text-slate-600 hover:text-brand-dark">
+                            🚐 Visita Única (Solo Bomba)
+                        </button>
+                    </div>
+
+                    <!-- Tarjetas Principales de Bombas (4 modelos clave) -->
+                    <div id="bombas-cards-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-3"></div>
+
+                    <!-- Opciones Especiales (Ocultas y con Estanque) -->
+                    <div class="bg-slate-50 border border-slate-200/90 rounded-xl p-3">
+                        <span class="text-[10px] font-black uppercase text-slate-500 tracking-wider block mb-2">
+                            Opciones Especiales (Ocultas y con Estanque):
+                        </span>
+                        <div id="bombas-special-grid" class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-[10.5px]"></div>
+                    </div>
+
+                    <p class="text-[10px] text-slate-500 mt-2.5 leading-snug flex items-start gap-1.5">
+                        <i class="fas fa-info-circle text-sky-600 mt-0.5"></i>
+                        <span>Garantía ante fallas de fabricación o instalación. Para mantener su funcionamiento óptimo, el depósito y flotador requieren limpieza en la mantención preventiva anual. <strong>Aspen Maxi Orange</strong> se recomienda solo en áreas comerciales o livings (no dormitorios).</span>
+                    </p>
                 </div>
 
                 <div class="mt-4 flex gap-2 justify-center">
@@ -1372,6 +1446,7 @@
                     <button type="button" onclick="selectAdminBrandTab('hisense')" id="adm-tab-hisense" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-brand-blue text-white shadow-sm">Hisense</button>
                     <button type="button" onclick="selectAdminBrandTab('trane')" id="adm-tab-trane" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 text-slate-700">Trane</button>
                     <button type="button" onclick="selectAdminBrandTab('daikin')" id="adm-tab-daikin" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 text-slate-700">Daikin</button>
+                    <button type="button" onclick="selectAdminBrandTab('bombas')" id="adm-tab-bombas" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-sky-100 text-sky-800">Bombas</button>
                     <button type="button" onclick="selectAdminBrandTab('mantenimiento')" id="adm-tab-mantenimiento" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-100 text-emerald-800">Mantenciones & Inst.</button>
                 </div>
             </div>
@@ -1406,6 +1481,7 @@
             document.body.style.overflow = 'hidden';
             selectBrand(currentBrand);
             renderSoloInstallPrices();
+            renderBombasPrices();
             renderMaintenancePrices();
         }
 
@@ -1413,7 +1489,7 @@
             const modal = document.getElementById('catalog-modal');
             modal.classList.add('hidden');
             document.body.style.overflow = 'auto';
-            if (window.location.hash === '#catalogo' || window.location.hash === '#mantenimiento') {
+            if (window.location.hash === '#catalogo' || window.location.hash === '#mantenimiento' || window.location.hash === '#bombas') {
                 history.replaceState(null, '', window.location.pathname + window.location.search);
             }
         }
@@ -1437,6 +1513,12 @@
             const params = new URLSearchParams(window.location.search);
             if (hash === '#catalogo' || params.has('catalogo')) {
                 openCatalogModal();
+            } else if (hash === '#bombas' || params.has('bombas')) {
+                openCatalogModal();
+                setTimeout(() => {
+                    const sec = document.getElementById('bombas-condensado');
+                    if (sec) sec.scrollIntoView({ behavior: 'smooth' });
+                }, 150);
             } else if (hash === '#mantenimiento' || params.has('mantenimiento')) {
                 openCatalogModal();
                 setTimeout(() => {
@@ -1528,6 +1610,76 @@ Correo: ventas@easycoolclimatizacion.com`;
         let materials = JSON.parse(JSON.stringify(CONFIG_PRECIOS_INICIAL.insumos));
         let soloInstalacion = JSON.parse(JSON.stringify(CONFIG_PRECIOS_INICIAL.soloInstalacion));
         let maintenancePrices = JSON.parse(JSON.stringify(CONFIG_PRECIOS_INICIAL.mantenimientos));
+        let bombasCondensado = JSON.parse(JSON.stringify(CONFIG_PRECIOS_INICIAL.bombasCondensado));
+
+        const BOMBAS_CATALOGO = [
+            {
+                key: 'wipcoolP16',
+                featured: true,
+                name: 'Wipcool P-16',
+                subtitle: 'Estándar Silenciosa',
+                badge: '★ Más Vendida Hogar',
+                badgeClass: 'bg-emerald-100 text-emerald-800',
+                borderClass: 'border-emerald-300 bg-emerald-50/30',
+                noise: '~19 dB(A)',
+                range: 'Split Muro 9.000 a 24.000 BTU',
+                desc: 'Ultra silenciosa y confiable. Ideal para dormitorios y departamentos.'
+            },
+            {
+                key: 'aspenMiniOrange',
+                featured: true,
+                name: 'Aspen Mini Orange',
+                subtitle: 'Premium Reino Unido',
+                badge: '👑 Alta Durabilidad',
+                badgeClass: 'bg-amber-100 text-amber-800',
+                borderClass: 'border-slate-200 bg-white',
+                noise: '21–26 dB(A)',
+                range: 'Split Muro 9.000 a 24.000 BTU',
+                desc: 'Marca líder mundial (UK). Máxima vida útil para hogar y oficinas.'
+            },
+            {
+                key: 'wipcoolP32',
+                featured: true,
+                name: 'Wipcool P-32',
+                subtitle: 'Alto Caudal (Maxi)',
+                badge: '🏢 Oficinas / Comercio',
+                badgeClass: 'bg-sky-100 text-sky-800',
+                borderClass: 'border-slate-200 bg-white',
+                noise: '~23–28 dB(A)',
+                range: 'Split 24.000 a 36.000 BTU',
+                desc: 'Mayor capacidad de bombeo (hasta 32 L/h) para uso continuo.'
+            },
+            {
+                key: 'aspenMaxiOrange',
+                featured: true,
+                name: 'Aspen Maxi Orange',
+                subtitle: 'Heavy Duty (hasta 15 m)',
+                badge: '⚡ Uso Pesado',
+                badgeClass: 'bg-indigo-100 text-indigo-800',
+                borderClass: 'border-slate-200 bg-white',
+                noise: '~35 dB (Comercial)',
+                range: '24k–60k, Ducto, Piso-Cielo, Servidores',
+                desc: 'Eleva agua hasta 15 m de altura. Uso exclusivo comercial/técnico.'
+            },
+            {
+                key: 'wipcoolP12',
+                featured: false,
+                name: 'Wipcool P-12 / P-12-C',
+                range: 'Oculta o esquina (9k–12k BTU)'
+            },
+            {
+                key: 'aspenMiniAqua',
+                featured: false,
+                name: 'Aspen Mini Aqua',
+                range: '100% oculta ultra delgada (9k–18k)'
+            },
+            {
+                key: 'aspenHiFlow',
+                featured: false,
+                name: 'Aspen Hi Flow Tank',
+                range: 'Con estanque (Fan Coil / Ducto)'
+            }
+        ];
 
         const catalogData = {
             hisense: {
@@ -1691,11 +1843,13 @@ Correo: ventas@easycoolclimatizacion.com`;
         const defaultMaterials = JSON.parse(JSON.stringify(materials));
         const defaultMaintenancePrices = JSON.parse(JSON.stringify(maintenancePrices));
         const defaultSoloInstalacion = JSON.parse(JSON.stringify(soloInstalacion));
+        const defaultBombasCondensado = JSON.parse(JSON.stringify(bombasCondensado));
         const defaultLaborByTier = JSON.parse(JSON.stringify(laborByTier));
         const defaultMarginByBrand = JSON.parse(JSON.stringify(marginByBrand));
 
         let currentBrand = 'hisense';
         let currentBtuIndex = 0;
+        let currentPumpMode = 'mismaVisita';
         let adminSelectedBrand = 'hisense';
 
         function formatCLP(value) {
@@ -1975,89 +2129,89 @@ Correo: ventas@easycoolclimatizacion.com`;
                 </div>
             `;
 
-            const rowLight = buildMatrixRow('⚡', 'Consumo en Cuenta de Luz (Modo Mantención)', entries.map(e => {
-                const isWinner = e.bKey === 'daikin';
+            const rowLuz = buildMatrixRow('⚡', 'Cuenta de Luz (Consumo Inverter)', entries.map(e => {
                 const c = shortConsumption[e.bKey][cmpKey] || { main: 'Clase A', sub: '' };
+                const isWinner = e.bKey === 'daikin';
                 return `
-                    <div class="p-2.5 sm:p-3 text-center flex flex-col justify-center items-center ${isWinner ? 'bg-emerald-50/80' : ''}">
-                        ${isWinner ? '<span class="text-[9px] font-black text-emerald-800 bg-emerald-200/80 px-1.5 py-0.5 rounded-full mb-1">🏆 Menor luz</span>' : ''}
-                        <strong class="text-xs sm:text-sm font-black ${isWinner ? 'text-emerald-900' : 'text-slate-700'} leading-tight">${c.main}</strong>
-                        <span class="text-[9.5px] sm:text-[10.5px] text-slate-500 font-semibold mt-0.5 leading-tight">${c.sub}</span>
+                    <div class="p-2 sm:p-2.5 text-center ${isWinner ? 'bg-emerald-50/80' : ''}">
+                        <span class="block font-black text-[11px] sm:text-xs ${isWinner ? 'text-emerald-700' : 'text-slate-700'}">${isWinner ? '★ ' : ''}${c.main}</span>
+                        <span class="block text-[9.5px] sm:text-[10px] text-slate-500 mt-0.5 leading-tight">${c.sub}</span>
                     </div>
                 `;
             }).join(''));
 
-            const rowNoise = buildMatrixRow('🤫', 'Silencio Nocturno (Unidad Interior)', entries.map(e => {
+            const rowRuido = buildMatrixRow('🤫', 'Silencio Nocturno (Unidad Interior)', entries.map(e => {
                 const isWinner = e.noiseVal === minNoise;
-                const label = e.noiseVal <= 26 ? 'Susurro' : e.noiseVal <= 32 ? 'Muy bajo' : 'Normal';
+                const label = e.noiseVal <= 26 ? 'Susurro' : e.noiseVal <= 30 ? 'Muy bajo' : 'Normal';
                 return `
-                    <div class="p-2.5 sm:p-3 text-center flex flex-col justify-center items-center ${isWinner ? 'bg-emerald-50/80' : ''}">
-                        ${isWinner ? '<span class="text-[9px] font-black text-emerald-800 bg-emerald-200/80 px-1.5 py-0.5 rounded-full mb-1">🏆 Más silencioso</span>' : ''}
-                        <strong class="text-xs sm:text-sm font-black ${isWinner ? 'text-emerald-900' : 'text-slate-700'} leading-tight">${e.item.noiseMin.replace('(A)', '')}</strong>
-                        <span class="text-[9.5px] sm:text-[10.5px] text-slate-500 font-semibold mt-0.5 leading-tight">${label}</span>
+                    <div class="p-2 sm:p-2.5 text-center ${isWinner ? 'bg-emerald-50/80' : ''}">
+                        <span class="block font-black text-[11px] sm:text-xs ${isWinner ? 'text-emerald-700' : 'text-slate-700'}">${isWinner ? '★ ' : ''}${e.item.noiseMin}</span>
+                        <span class="block text-[9.5px] sm:text-[10px] text-slate-500 mt-0.5 leading-tight">${label}</span>
                     </div>
                 `;
             }).join(''));
 
-            const rowExtras = buildMatrixRow('✨', 'Ventaja Única de Cada Marca', entries.map(e => {
+            const rowVentaja = buildMatrixRow('✨', 'Ventaja Única de la Marca', entries.map(e => {
                 const ex = shortExtras[e.bKey];
                 return `
-                    <div class="p-2.5 sm:p-3 text-center flex flex-col justify-center items-center">
-                        <span class="text-[9px] font-black text-slate-600 bg-slate-100 px-1.5 py-0.5 rounded-full mb-1">${ex.badge}</span>
-                        <strong class="text-[11px] sm:text-xs font-black text-brand-dark leading-tight">${ex.title}</strong>
-                        <span class="text-[9.5px] sm:text-[10.5px] text-slate-500 font-semibold mt-0.5 leading-tight">${ex.sub}</span>
+                    <div class="p-2 sm:p-2.5 text-center">
+                        <span class="inline-block text-[9px] font-black px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 mb-1">${ex.badge}</span>
+                        <span class="block font-extrabold text-[10.5px] sm:text-xs text-brand-dark leading-tight">${ex.title}</span>
+                        <span class="block text-[9.5px] text-slate-500 mt-0.5 leading-tight">${ex.sub}</span>
                     </div>
                 `;
             }).join(''));
 
-            const rowIndoor = buildMatrixRow('📐', 'Ancho en Muro (Unidad Interior)', entries.map(e => {
+            const rowMuro = buildMatrixRow('📐', 'Ancho en Muro (Unidad Interior)', entries.map(e => {
                 const isWinner = e.indoorWidth === minIndoorW;
                 return `
-                    <div class="p-2.5 sm:p-3 text-center flex flex-col justify-center items-center ${isWinner ? 'bg-emerald-50/80' : ''}">
-                        ${isWinner ? '<span class="text-[9px] font-black text-emerald-800 bg-emerald-200/80 px-1.5 py-0.5 rounded-full mb-1">🏆 Más angosto</span>' : ''}
-                        <strong class="text-xs sm:text-sm font-black ${isWinner ? 'text-emerald-900' : 'text-slate-700'} leading-tight">${String(e.indoorWidth).replace('.', ',')} cm</strong>
-                        <span class="text-[8.5px] sm:text-[10px] text-slate-400 font-medium mt-0.5 leading-tight">${e.item.indoorDim}</span>
+                    <div class="p-2 sm:p-2.5 text-center ${isWinner ? 'bg-emerald-50/80' : ''}">
+                        <span class="block font-black text-[11px] sm:text-xs ${isWinner ? 'text-emerald-700' : 'text-slate-700'}">${isWinner ? '★ ' : ''}${Math.round(e.indoorWidth)} cm</span>
+                        <span class="block text-[9px] text-slate-400 mt-0.5 leading-tight">${e.item.indoorDim}</span>
                     </div>
                 `;
             }).join(''));
 
-            const rowOutdoor = buildMatrixRow('📦', 'Ancho en Balcón / Loggia (Unidad Exterior)', entries.map(e => {
+            const rowBalcon = buildMatrixRow('📦', 'Ancho en Balcón (Unidad Exterior)', entries.map(e => {
                 const isWinner = e.outdoorWidth === minOutdoorW;
                 return `
-                    <div class="p-2.5 sm:p-3 text-center flex flex-col justify-center items-center ${isWinner ? 'bg-emerald-50/80' : ''}">
-                        ${isWinner ? '<span class="text-[9px] font-black text-emerald-800 bg-emerald-200/80 px-1.5 py-0.5 rounded-full mb-1">🏆 Más compacto</span>' : ''}
-                        <strong class="text-xs sm:text-sm font-black ${isWinner ? 'text-emerald-900' : 'text-slate-700'} leading-tight">${String(e.outdoorWidth).replace('.', ',')} cm</strong>
-                        <span class="text-[8.5px] sm:text-[10px] text-slate-400 font-medium mt-0.5 leading-tight">${e.item.outdoorDim}</span>
+                    <div class="p-2 sm:p-2.5 text-center ${isWinner ? 'bg-emerald-50/80' : ''}">
+                        <span class="block font-black text-[11px] sm:text-xs ${isWinner ? 'text-emerald-700' : 'text-slate-700'}">${isWinner ? '★ ' : ''}${Math.round(e.outdoorWidth)} cm</span>
+                        <span class="block text-[9px] text-slate-400 mt-0.5 leading-tight">${e.item.outdoorDim}</span>
                     </div>
                 `;
             }).join(''));
 
             const rowIdeal = buildMatrixRow('🎯', 'Ideal si buscas...', entries.map(e => `
-                <div class="p-2.5 sm:p-3 text-center flex items-center justify-center">
-                    <span class="text-[10px] sm:text-[11px] font-bold text-slate-700 leading-snug">${shortIdeal[e.bKey]}</span>
+                <div class="p-2 sm:p-2.5 text-center text-[10px] sm:text-[11px] font-semibold text-slate-600 leading-snug">
+                    ${shortIdeal[e.bKey]}
                 </div>
             `).join(''));
 
-            const actionFooter = `
-                <div class="p-2.5 sm:p-3 bg-slate-50">
-                    <div class="grid ${colGridClass} gap-2">
-                        ${entries.map(e => `
-                            <button type="button" onclick="selectBrand('${e.bKey}', '${cmpKey}'); closeCompareModal();" class="w-full py-2.5 px-2 rounded-xl ${e.bKey === 'daikin' ? 'bg-brand-blue hover:bg-blue-600' : 'bg-brand-dark hover:bg-brand-navy'} text-white font-extrabold text-[11px] sm:text-xs uppercase tracking-wide shadow-xs transition-colors">
+            const actionRow = `
+                <div class="grid ${colGridClass} divide-x divide-slate-200 bg-slate-50">
+                    ${entries.map(e => `
+                        <div class="p-2.5 sm:p-3 text-center">
+                            <button type="button" onclick="chooseFromCompare('${e.bKey}', '${cmpKey}')" class="w-full py-2 px-2 rounded-xl bg-brand-blue hover:bg-blue-600 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs transition-all shadow-xs">
                                 Elegir ${e.brand.name}
                             </button>
-                        `).join('')}
-                    </div>
-                    <p class="text-[9.5px] text-slate-400 text-center mt-2">
-                        Valores totales IVA incluido. En 9.000 BTU se muestran Hisense y Daikin (Trane parte desde 12.000 BTU).
-                    </p>
+                        </div>
+                    `).join('')}
                 </div>
             `;
 
-            document.getElementById('compare-table-body').innerHTML =
-                stickyHeader + rowLight + rowNoise + rowExtras + rowIndoor + rowOutdoor + rowIdeal + actionFooter;
+            const container = document.getElementById('compare-table-body');
+            if (container) {
+                container.innerHTML = stickyHeader + rowLuz + rowRuido + rowVentaja + rowMuro + rowBalcon + rowIdeal + actionRow;
+            }
         }
 
-        // --- 5. SOLO INSTALACIÓN & MANTENIMIENTOS ---
+        function chooseFromCompare(brandKey, cmpKey) {
+            selectBrand(brandKey, cmpKey);
+            closeCompareModal();
+        }
+
+        // --- 5. SOLO INSTALACIÓN, BOMBAS DE CONDENSADO & MANTENIMIENTOS ---
         function renderSoloInstallPrices() {
             const setText = (id, text) => {
                 const el = document.getElementById(id);
@@ -2066,6 +2220,88 @@ Correo: ventas@easycoolclimatizacion.com`;
             setText('inst-disp-9a12', formatCLP(soloInstalacion['9a12']));
             setText('inst-disp-18', formatCLP(soloInstalacion['18']));
             setText('inst-disp-24', formatCLP(soloInstalacion['24']));
+        }
+
+        function setPumpMode(mode) {
+            currentPumpMode = mode === 'visitaUnica' ? 'visitaUnica' : 'mismaVisita';
+            const btnMisma = document.getElementById('pump-mode-misma');
+            const btnUnica = document.getElementById('pump-mode-unica');
+            if (btnMisma && btnUnica) {
+                if (currentPumpMode === 'mismaVisita') {
+                    btnMisma.className = 'py-2 px-2 rounded-lg text-[10.5px] sm:text-xs font-extrabold transition-all bg-brand-blue text-white shadow-xs';
+                    btnUnica.className = 'py-2 px-2 rounded-lg text-[10.5px] sm:text-xs font-bold transition-all text-slate-600 hover:text-brand-dark';
+                } else {
+                    btnUnica.className = 'py-2 px-2 rounded-lg text-[10.5px] sm:text-xs font-extrabold transition-all bg-brand-blue text-white shadow-xs';
+                    btnMisma.className = 'py-2 px-2 rounded-lg text-[10.5px] sm:text-xs font-bold transition-all text-slate-600 hover:text-brand-dark';
+                }
+            }
+            renderBombasPrices();
+        }
+
+        function renderBombasPrices() {
+            const mainGrid = document.getElementById('bombas-cards-grid');
+            const specialGrid = document.getElementById('bombas-special-grid');
+            if (!mainGrid || !specialGrid) return;
+
+            const isUnica = currentPumpMode === 'visitaUnica';
+            const modeLabel = isUnica ? 'Visita única (solo bomba)' : 'Instalada en misma visita (inst. o mant.)';
+            const altLabel = isUnica ? 'Misma visita' : 'Visita única';
+
+            const featuredItems = BOMBAS_CATALOGO.filter(b => b.featured);
+            mainGrid.innerHTML = featuredItems.map(b => {
+                const prices = bombasCondensado[b.key] || { mismaVisita: 0, visitaUnica: 0 };
+                const activePrice = isUnica ? prices.visitaUnica : prices.mismaVisita;
+                const altPrice = isUnica ? prices.mismaVisita : prices.visitaUnica;
+                const msg = encodeURIComponent(
+                    `Hola José, deseo cotizar la bomba de condensado ${b.name} (${b.subtitle}) en modalidad "${modeLabel}" por ${formatCLP(activePrice)} (IVA incluido).`
+                );
+
+                return `
+                    <div class="rounded-2xl border p-3 flex flex-col justify-between transition-all ${b.borderClass}">
+                        <div>
+                            <div class="flex items-center justify-between gap-1.5 flex-wrap mb-1.5">
+                                <span class="text-[9.5px] font-black px-2 py-0.5 rounded-full ${b.badgeClass}">${b.badge}</span>
+                                <span class="text-[10px] font-bold text-slate-500">${b.noise}</span>
+                            </div>
+                            <h5 class="text-sm font-black text-brand-dark leading-tight">${b.name} <span class="text-[11px] font-bold text-slate-500">• ${b.subtitle}</span></h5>
+                            <span class="block text-[10px] font-extrabold text-sky-700 mt-1">${b.range}</span>
+                            <p class="text-[10.5px] text-slate-600 mt-1 leading-snug">${b.desc}</p>
+                        </div>
+                        <div class="mt-3 pt-2.5 border-t border-slate-200/80 flex items-center justify-between gap-2">
+                            <div>
+                                <strong class="text-lg font-[900] text-brand-dark block leading-none fade-swap">${formatCLP(activePrice)}</strong>
+                                <span class="text-[9.5px] text-slate-500 font-semibold block mt-0.5">${altLabel}: ${formatCLP(altPrice)}</span>
+                            </div>
+                            <a href="https://wa.me/56957776174?text=${msg}" target="_blank" rel="noopener noreferrer" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-3 py-2 rounded-xl text-[11px] flex items-center gap-1.5 shadow-xs transition-colors flex-shrink-0">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Cotizar</span>
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            const specialItems = BOMBAS_CATALOGO.filter(b => !b.featured);
+            specialGrid.innerHTML = specialItems.map(b => {
+                const prices = bombasCondensado[b.key] || { mismaVisita: 0, visitaUnica: 0 };
+                const activePrice = isUnica ? prices.visitaUnica : prices.mismaVisita;
+                const msg = encodeURIComponent(
+                    `Hola José, deseo cotizar la bomba especial ${b.name} en modalidad "${modeLabel}" por ${formatCLP(activePrice)} (IVA incluido).`
+                );
+
+                return `
+                    <a href="https://wa.me/56957776174?text=${msg}" target="_blank" rel="noopener noreferrer" class="bg-white hover:border-sky-400 p-2.5 rounded-xl border border-slate-200 flex items-center justify-between sm:flex-col sm:items-start gap-1.5 transition-all">
+                        <div>
+                            <strong class="text-brand-dark block text-[11px] font-black leading-tight">${b.name}</strong>
+                            <span class="text-[9.5px] text-slate-500 block mt-0.5">${b.range}</span>
+                        </div>
+                        <div class="text-right sm:text-left sm:w-full sm:flex sm:items-center sm:justify-between sm:mt-1">
+                            <strong class="text-sky-700 font-black text-xs">${formatCLP(activePrice)}</strong>
+                            <span class="text-[9.5px] font-bold text-emerald-600 block">Pedir →</span>
+                        </div>
+                    </a>
+                `;
+            }).join('');
         }
 
         function renderMaintenancePrices() {
@@ -2209,6 +2445,7 @@ Correo: ventas@easycoolclimatizacion.com`;
             document.getElementById('admin-modal').classList.add('hidden');
             renderBrandView();
             renderSoloInstallPrices();
+            renderBombasPrices();
             renderMaintenancePrices();
         }
 
@@ -2221,17 +2458,25 @@ Correo: ventas@easycoolclimatizacion.com`;
 
         function selectAdminBrandTab(tabKey) {
             adminSelectedBrand = tabKey;
-            ['hisense', 'trane', 'daikin', 'mantenimiento'].forEach(b => {
+            ['hisense', 'trane', 'daikin', 'bombas', 'mantenimiento'].forEach(b => {
                 const btn = document.getElementById('adm-tab-' + b);
                 if (!btn) return;
                 if (b === tabKey) {
-                    btn.className = b === 'mantenimiento'
-                        ? 'px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-600 text-white shadow-sm'
-                        : 'px-2.5 py-1 rounded-lg text-xs font-bold bg-brand-blue text-white shadow-sm';
+                    if (b === 'mantenimiento') {
+                        btn.className = 'px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-600 text-white shadow-sm';
+                    } else if (b === 'bombas') {
+                        btn.className = 'px-2.5 py-1 rounded-lg text-xs font-bold bg-sky-600 text-white shadow-sm';
+                    } else {
+                        btn.className = 'px-2.5 py-1 rounded-lg text-xs font-bold bg-brand-blue text-white shadow-sm';
+                    }
                 } else {
-                    btn.className = b === 'mantenimiento'
-                        ? 'px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-50 text-emerald-800 border border-emerald-200'
-                        : 'px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 text-slate-700';
+                    if (b === 'mantenimiento') {
+                        btn.className = 'px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-50 text-emerald-800 border border-emerald-200';
+                    } else if (b === 'bombas') {
+                        btn.className = 'px-2.5 py-1 rounded-lg text-xs font-bold bg-sky-50 text-sky-800 border border-sky-200';
+                    } else {
+                        btn.className = 'px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 text-slate-700';
+                    }
                 }
             });
             renderAdminEquipmentEditor();
@@ -2240,6 +2485,47 @@ Correo: ventas@easycoolclimatizacion.com`;
         function renderAdminEquipmentEditor() {
             const container = document.getElementById('admin-equipment-editor');
             if (!container) return;
+
+            if (adminSelectedBrand === 'bombas') {
+                let html = `
+                    <div class="bg-sky-50/70 border border-sky-200 rounded-2xl p-3">
+                        <div class="flex items-center justify-between mb-2 flex-wrap gap-1">
+                            <h4 class="font-black text-sky-900 text-xs uppercase flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-sky-500"></span>
+                                Bombas de Condensado Instaladas (IVA Incluido)
+                            </h4>
+                            <span class="text-[10px] text-sky-700 font-semibold bg-white px-2 py-0.5 rounded border border-sky-200">
+                                Misma Visita vs. Visita Única
+                            </span>
+                        </div>
+                        <div class="space-y-2">
+                            ${BOMBAS_CATALOGO.map(b => {
+                                const vals = bombasCondensado[b.key] || { mismaVisita: 0, visitaUnica: 0 };
+                                return `
+                                    <div class="bg-white p-2.5 rounded-xl border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                                        <div>
+                                            <span class="text-xs font-black text-slate-800 block">${b.name}</span>
+                                            <span class="text-[10px] text-slate-500 block">${b.range}</span>
+                                        </div>
+                                        <div class="grid grid-cols-2 gap-2">
+                                            <div class="flex items-center gap-1">
+                                                <span class="text-[10px] font-bold text-slate-500">Misma:</span>
+                                                <input type="number" step="5000" value="${vals.mismaVisita}" oninput="updateBombaCost('${b.key}', 'mismaVisita', this.value)" class="w-24 text-right font-black text-xs p-1 border border-slate-300 rounded">
+                                            </div>
+                                            <div class="flex items-center gap-1">
+                                                <span class="text-[10px] font-bold text-slate-500">Única:</span>
+                                                <input type="number" step="5000" value="${vals.visitaUnica}" oninput="updateBombaCost('${b.key}', 'visitaUnica', this.value)" class="w-24 text-right font-black text-xs p-1 border border-slate-300 rounded">
+                                            </div>
+                                        </div>
+                                    </div>
+                                `;
+                            }).join('')}
+                        </div>
+                    </div>
+                `;
+                container.innerHTML = html;
+                return;
+            }
 
             if (adminSelectedBrand === 'mantenimiento') {
                 const camposInst = [
@@ -2373,6 +2659,12 @@ Correo: ventas@easycoolclimatizacion.com`;
             renderSoloInstallPrices();
         }
 
+        function updateBombaCost(key, field, value) {
+            if (!bombasCondensado[key]) bombasCondensado[key] = { mismaVisita: 0, visitaUnica: 0 };
+            bombasCondensado[key][field] = parseFloat(value) || 0;
+            renderBombasPrices();
+        }
+
         function updateGlobalParams() {
             fleteEquiposGrandes = parseFloat(document.getElementById('cfg-flete').value) || 0;
             redondeoComercial = document.getElementById('cfg-rounding').checked;
@@ -2415,7 +2707,8 @@ Correo: ventas@easycoolclimatizacion.com`;
                 margenPorMarca: marginByBrand,
                 insumos: materials,
                 soloInstalacion,
-                mantenimientos: maintenancePrices
+                mantenimientos: maintenancePrices,
+                bombasCondensado
             };
 
             const codeSnippet = `const CONFIG_PRECIOS_INICIAL = ${JSON.stringify(exportObj, null, 4)};`;
@@ -2429,6 +2722,7 @@ Correo: ventas@easycoolclimatizacion.com`;
             materials = JSON.parse(JSON.stringify(defaultMaterials));
             maintenancePrices = JSON.parse(JSON.stringify(defaultMaintenancePrices));
             soloInstalacion = JSON.parse(JSON.stringify(defaultSoloInstalacion));
+            bombasCondensado = JSON.parse(JSON.stringify(defaultBombasCondensado));
             laborByTier = JSON.parse(JSON.stringify(defaultLaborByTier));
             marginByBrand = JSON.parse(JSON.stringify(defaultMarginByBrand));
             fleteEquiposGrandes = CONFIG_PRECIOS_INICIAL.fleteEquiposGrandes;
@@ -2438,6 +2732,7 @@ Correo: ventas@easycoolclimatizacion.com`;
             renderAdminEquipmentEditor();
             renderBrandView();
             renderSoloInstallPrices();
+            renderBombasPrices();
             renderMaintenancePrices();
             showToast('¡Valores de GitHub restaurados!');
         }
@@ -2445,6 +2740,7 @@ Correo: ventas@easycoolclimatizacion.com`;
         window.onload = function() {
             renderBrandView();
             renderSoloInstallPrices();
+            renderBombasPrices();
             renderMaintenancePrices();
             checkDirectCatalogLink();
         };

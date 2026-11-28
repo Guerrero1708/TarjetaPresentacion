@@ -2,131 +2,93 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>EasyCool Climatización | Catálogo Oficial y Servicios</title>
+    <meta name="description" content="Equipos Inverter R32 Llave en Mano (Hisense, Trane y Daikin) con 3 años de garantía, Solo Instalación, Bombas de Condensado, Diagnóstico y Mantenciones en Santiago.">
 
     <!-- =========================================================================
-         ZONA DE EDICIÓN DIRECTA EN GITHUB (ÚNICA FUENTE QUE VEN TUS CLIENTES)
+         MODO APP NATIVA (PWA + BARRA DE ESTADO INTEGRADA + ÍCONO EASYCOOL)
+    ========================================================================= -->
+    <meta id="theme-color-meta" name="theme-color" content="#0f172a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="EasyCool">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 110 110%22><circle cx=%2255%22 cy=%2255%22 r=%2255%22 fill=%22%234981F3%22/><rect x=%2223%22 y=%2226%22 width=%2267%22 height=%2214%22 rx=%227%22 fill=%22%23F1F6FF%22/><rect x=%2237%22 y=%2248%22 width=%2253%22 height=%2214%22 rx=%227%22 fill=%22%23E4EEFF%22/><rect x=%2250%22 y=%2270%22 width=%2240%22 height=%2214%22 rx=%227%22 fill=%22%23D2E3FF%22/></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 110 110%22><rect width=%22110%22 height=%22110%22 rx=%2224%22 fill=%22%230f172a%22/><circle cx=%2255%22 cy=%2255%22 r=%2242%22 fill=%22%234981F3%22/><rect x=%2230%22 y=%2233%22 width=%2252%22 height=%2211%22 rx=%225.5%22 fill=%22%23F1F6FF%22/><rect x=%2241%22 y=%2250%22 width=%2241%22 height=%2211%22 rx=%225.5%22 fill=%22%23E4EEFF%22/><rect x=%2251%22 y=%2267%22 width=%2231%22 height=%2211%22 rx=%225.5%22 fill=%22%23D2E3FF%22/></svg>">
+    <link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22EasyCool%20Climatizaci%C3%B3n%22%2C%22short_name%22%3A%22EasyCool%22%2C%22start_url%22%3A%22.%2F%23catalogo%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%230f172a%22%2C%22theme_color%22%3A%22%234981F3%22%7D">
+
+    <!-- =========================================================================
+         TARJETA DE VISTA PREVIA PARA INSTAGRAM DM Y WHATSAPP (OPEN GRAPH)
+    ========================================================================= -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CL">
+    <meta property="og:site_name" content="EasyCool Climatización">
+    <meta property="og:title" content="EasyCool Climatización | Catálogo Oficial 2026 — 3 Años de Garantía">
+    <meta property="og:description" content="Equipos Inverter R32 Llave en Mano (Hisense, Trane y Daikin), comparador de consumo eléctrico y medidas reales, Bombas de Condensado, Diagnóstico y Mantenciones en Santiago.">
+    <meta property="og:url" content="https://guerrero1708.github.io/#catalogo">
+    <!-- OPCIONAL: Si subes una imagen portada.jpg (1200x630) a tu repositorio en GitHub, quita los comentarios de la siguiente línea: -->
+    <!-- <meta property="og:image" content="https://guerrero1708.github.io/portada.jpg"> -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EasyCool Climatización | Catálogo Oficial 2026">
+    <meta name="twitter:description" content="Equipos Inverter Llave en Mano con 3 años de garantía, Solo Instalación, Bombas de Condensado, Diagnóstico y Mantenciones en Santiago.">
+
+    <!-- =========================================================================
+         PRECIOS PÚBLICOS VIGENTES (BLOQUE GENERADO POR TU CALCULADORA PRIVADA)
          =========================================================================
-         CÓMO ACTUALIZAR PRECIOS DESDE TU CELULAR EN GITHUB:
-         1. Entra a tu repositorio en GitHub -> abre "index.html" -> toca el lápiz (Editar).
-         2. Modifica SOLO los números de abajo (sin puntos ni signo $).
-         3. Toca "Commit changes": en 1 minuto TODOS los clientes con tu link
-            verán los valores nuevos y los equipos se recalculan solos.
+         Para actualizar tu web: abre tu archivo privado "calculadora_privada.html",
+         presiona "Copiar Bloque Público para GitHub" y reemplaza este bloque completo.
     ========================================================================= -->
     <script>
-        const CONFIG_PRECIOS_INICIAL = {
-
-            // -----------------------------------------------------------------
-            // 1. COSTOS NETOS TRANSFERENCIA DE TU PROVEEDOR (ACONDIPARTS)
-            //    Cambia aquí el valor neto que te mande tu proveedor y el precio
-            //    llave en mano (con insumos, margen, mano de obra, IVA y flete)
-            //    se actualiza automáticamente.
-            // -----------------------------------------------------------------
-            equiposProveedor: {
+        const PRECIOS_PUBLICOS = {
+            equipos: {
                 hisense: {
-                    "9.000 BTU":  224900,
-                    "12.000 BTU": 245900,
-                    "18.000 BTU": 341000,
-                    "22.000 BTU": 421600
+                    "9.000 BTU":  469900,
+                    "12.000 BTU": 499900,
+                    "18.000 BTU": 689900,
+                    "22.000 BTU": 809900
                 },
                 trane: {
-                    "12.000 BTU": 240900,
-                    "18.000 BTU": 362900,
-                    "24.000 BTU": 454600
+                    "12.000 BTU": 509900,
+                    "18.000 BTU": 739900,
+                    "24.000 BTU": 879900
                 },
                 daikin: {
-                    "9.000 BTU":  231900,
-                    "12.000 BTU": 239990,
-                    "18.000 BTU": 362900,
-                    "24.000 BTU": 449000
+                    "9.000 BTU":  509900,
+                    "12.000 BTU": 519900,
+                    "18.000 BTU": 759900,
+                    "24.000 BTU": 899900
                 }
             },
-
-            // -----------------------------------------------------------------
-            // 2. FLETE EQUIPOS GRANDES (18.000, 22.000 Y 24.000 BTU)
-            //    Cambia a 0 el día que tengas camioneta propia, o ajusta el monto.
-            // -----------------------------------------------------------------
-            fleteEquiposGrandes: 50000,
-
-            // -----------------------------------------------------------------
-            // 3. MANO DE OBRA NETA, MÁRGENES POR MARCA Y REDONDEO ($X9.900)
-            // -----------------------------------------------------------------
-            redondeoComercial: true, // true = redondea a $X9.900 | false = precio exacto
-
-            manoDeObra: {
-                "9a12":  115000,
-                "18":    120000,
-                "22a24": 135000
-            },
-
-            margenPorMarca: {
-                hisense: 12,
-                trane:   17,
-                daikin:  22
-            },
-
-            // -----------------------------------------------------------------
-            // 4. COSTOS NETOS INSUMOS BÁSICOS (ACONDIPARTS)
-            // -----------------------------------------------------------------
-            insumos: {
-                soporte:           7500, // Soporte muro chico 9-12k
-                canaleta100:       4700, // Bandeja eléctrica 100x50 x 2m
-                canaleta20:         900, // Bandeja eléctrica 20x10 x 2m
-                cordonMetro:       1270, // Cordón 3x1,5 por metro
-                cordonMetrosCant:     3, // Metros de cordón incluidos
-                accesoriosVarios:  7090, // Pack 4 gomas ($4.100) + enchufe ($1.400) + cinta ($1.590)
-                extraInsumoGrande: 4500  // Diferencia soporte grande + cordón 3x2,5 en 18k/22k/24k
-            },
-
-            // -----------------------------------------------------------------
-            // 5. SOLO INSTALACIÓN (EQUIPO DEL CLIENTE - IVA INCLUIDO)
-            // -----------------------------------------------------------------
             soloInstalacion: {
                 "9a12": 149900,
                 "18":   179900,
                 "24":   219900
             },
-
-            // -----------------------------------------------------------------
-            // 6. PLANES DE MANTENIMIENTO, UPGRADES Y EMPRESAS (B2B)
-            // -----------------------------------------------------------------
             mantenimientos: {
-                // Residencial (IVA incluido)
-                base:                  45000,  // Mantención Base Preventiva
-                packEstacional:        55000,  // Pack Estacional Cero Alergias
-                paseAnual:             89900,  // Pase Anual (2 mantenciones completas al año)
-
-                // Campaña Edificios (IVA incluido, por equipo)
-                comunidad3a4:          38000,  // 3 a 4 Equipos
-                comunidad5mas:         35000,  // 5 o más Equipos
-
-                // Upgrades en Terreno (IVA incluido)
-                kitSanitario:          15000,  // Kit Sanitario Antialérgico
-                moduloWifi:            29990,  // Controlador IR Wi-Fi Universal
-                escudoInverter:        30000,  // Escudo Eléctrico Enchufable
-                lavadoProfundo:        39900,  // Lavado Profundo / Desarme Turbina
-                garantia3Anos:         55000,  // Extensión Garantía 1 -> 3 Años (solo inst. EasyCool)
-
-                // Empresas, Oficinas y Locales Comerciales (Valores NETOS + IVA)
-                comercioSemestral:     49000,  // Comercio Semestral (+IVA / eq., mín. 4 Split)
-                continuidadTrimestral: 45000,  // Continuidad Trimestral (+IVA / eq., flotas 6+ Split)
-                visitaMinimaB2B:      165000   // Visita mínima comercial 1 a 3 Split (+IVA)
+                base:                  45000,
+                packEstacional:        55000,
+                paseAnual:             89900,
+                diagnosticoFalla:      35000,
+                comunidad3a4:          38000,
+                comunidad5mas:         35000,
+                kitSanitario:          15000,
+                moduloWifi:            29990,
+                escudoInverter:        30000,
+                lavadoProfundo:        39900,
+                garantia3Anos:         55000,
+                comercioSemestral:     49000,
+                continuidadTrimestral: 45000,
+                visitaMinimaB2B:      165000
             },
-
-            // -----------------------------------------------------------------
-            // 7. BOMBAS DE CONDENSADO INSTALADAS (IVA INCLUIDO)
-            //    mismaVisita = junto a instalación o mantención
-            //    visitaUnica = solo ir a instalar o cambiar la bomba
-            // -----------------------------------------------------------------
             bombasCondensado: {
-                wipcoolP16:      { mismaVisita: 100000, visitaUnica: 130000 }, // Split 9k-24k (Estándar 19 dB)
-                wipcoolP32:      { mismaVisita: 120000, visitaUnica: 150000 }, // Split 24k-36k / Oficinas
-                aspenMiniOrange: { mismaVisita: 160000, visitaUnica: 190000 }, // Split 9k-24k (Premium UK)
-                aspenMaxiOrange: { mismaVisita: 190000, visitaUnica: 220000 }, // Comercial 24k-60k / 15 m altura
-                wipcoolP12:      { mismaVisita:  95000, visitaUnica: 125000 }, // Compacta oculta / esquina (9k-12k)
-                aspenMiniAqua:   { mismaVisita: 150000, visitaUnica: 180000 }, // Ultra delgada 100% oculta (9k-18k)
-                aspenHiFlow:     { mismaVisita: 110000, visitaUnica: 140000 }  // Con estanque (Fan Coil / Ducto)
+                wipcoolP16:      { mismaVisita: 100000, visitaUnica: 130000 },
+                wipcoolP32:      { mismaVisita: 120000, visitaUnica: 150000 },
+                aspenMiniOrange: { mismaVisita: 160000, visitaUnica: 190000 },
+                aspenMaxiOrange: { mismaVisita: 190000, visitaUnica: 220000 },
+                wipcoolP12:      { mismaVisita:  95000, visitaUnica: 125000 },
+                aspenMiniAqua:   { mismaVisita: 150000, visitaUnica: 180000 },
+                aspenHiFlow:     { mismaVisita: 110000, visitaUnica: 140000 }
             }
         };
     </script>
@@ -167,7 +129,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* --- SISTEMA DE DISEÑO (DARK PREMIUM LINKTREE) --- */
+        /* --- SISTEMA DE DISEÑO (DARK PREMIUM LINKTREE + SCROLL NATIVO CATÁLOGO) --- */
         :root {
             --bg-deep: #0f172a;
             --glass-panel: rgba(30, 41, 59, 0.95);
@@ -178,6 +140,10 @@
             --accent-green: #22c55e;
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         .bg-orb {
@@ -204,12 +170,26 @@
             background-color: var(--bg-deep);
             color: var(--text-main);
             min-height: 100vh;
+            background-image: radial-gradient(circle at 50% 0%, #1e293b 0%, var(--bg-deep) 80%);
+            overflow-x: hidden;
+        }
+
+        body.catalog-open {
+            background-color: #f8fafc;
+            background-image: none;
+            color: #212B3B;
+        }
+
+        .linktree-shell {
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: radial-gradient(circle at 50% 0%, #1e293b 0%, var(--bg-deep) 80%);
             padding: 20px;
-            overflow-x: hidden;
+            padding-top: max(20px, env(safe-area-inset-top));
+            padding-bottom: max(24px, env(safe-area-inset-bottom));
+            position: relative;
+            z-index: 1;
         }
 
         /* --- TARJETA PRINCIPAL LINKTREE --- */
@@ -423,7 +403,7 @@
         /* Botón Flotante WhatsApp */
         .fab-container {
             position: fixed;
-            bottom: 20px;
+            bottom: max(20px, env(safe-area-inset-bottom));
             right: 20px;
             z-index: 60;
         }
@@ -453,9 +433,19 @@
             animation: pulse-ring 2s infinite;
         }
 
-        /* --- ESTILOS CATÁLOGO --- */
-        #catalog-modal { transition: opacity 0.25s ease; }
-        #catalog-modal.hidden { display: none; opacity: 0; pointer-events: none; }
+        /* --- ESTILOS CATÁLOGO (FLUJO NATIVO DE PÁGINA PARA AUTO-OCULTAR URL BAR) --- */
+        #catalog-modal {
+            width: 100%;
+            min-height: 100vh;
+            background-color: #f8fafc;
+            position: relative;
+            z-index: 40;
+        }
+        #catalog-modal.hidden { display: none; }
+
+        .catalog-sticky-header {
+            padding-top: env(safe-area-inset-top);
+        }
 
         .brand-pill {
             background-color: #ffffff;
@@ -505,17 +495,6 @@
             animation: subtle-shimmer 4.5s infinite;
         }
 
-        /* Inputs administrativos legibles */
-        #auth-modal input, #admin-modal input {
-            color: #1e293b !important;
-            background-color: #ffffff !important;
-        }
-        #auth-modal input:focus, #admin-modal input:focus {
-            outline: none !important;
-            border-color: #3b82f6 !important;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
-        }
-
         @keyframes floatUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03); } }
         @keyframes slideInRight { from { opacity: 0; transform: translateX(-18px); } to { opacity: 1; transform: translateX(0); } }
@@ -526,120 +505,126 @@
 </head>
 <body>
 
-    <!-- FONDOS DINÁMICOS -->
-    <div class="bg-orb orb-1"></div>
-    <div class="bg-orb orb-2"></div>
+    <!-- FONDOS DINÁMICOS (SOLO VISTA LINKTREE) -->
+    <div id="bg-orbs-wrap">
+        <div class="bg-orb orb-1"></div>
+        <div class="bg-orb orb-2"></div>
+    </div>
 
-    <!-- TARJETA PRINCIPAL LINKTREE -->
-    <div class="profile-card">
-        <div class="brand-header">
-            <div class="custom-logo-container">
-                <div class="custom-bars-container">
-                    <div class="custom-bar custom-bar-top"></div>
-                    <div class="custom-bar custom-bar-middle"></div>
-                    <div class="custom-bar custom-bar-bottom"></div>
-                </div>
-            </div>
-            <div class="logo-text-group">
-                <span class="brand-name">EASYCOOL</span>
-                <span class="brand-tagline">Climatización</span>
-            </div>
-            <div class="status-badge">
-                <span class="status-dot"></span>
-                Servicio Técnico & Instalación
-            </div>
-        </div>
-
-        <div class="services-text">
-            Venta • Instalación • Mantención<br>
-            <span>Garantía de 3 Años en Equipos EasyCool</span>
-        </div>
-
-        <div class="links-wrapper">
-            <!-- 1. CATÁLOGO COMPLETO -->
-            <button type="button" onclick="openCatalogModal()" class="btn btn-catalog">
-                <div class="btn-icon" style="color: #ffffff;"><i class="fas fa-snowflake"></i></div>
-                <div class="btn-label">
-                    <span style="font-size: 11px; text-transform: uppercase; color: #dbeafe; font-weight: 700; letter-spacing: 0.5px; display: block;">Equipos Llave en Mano & Planes</span>
-                    <strong style="font-size: 15px; color: #ffffff;">Ver Catálogo y Precios</strong>
-                </div>
-                <i class="fas fa-arrow-right btn-arrow" style="opacity: 1; color: #ffffff;"></i>
-            </button>
-
-            <!-- 2. WHATSAPP -->
-            <a href="https://wa.me/56957776174?text=Hola%20Jos%C3%A9,%20vengo%20de%20la%20web%20y%20necesito%20cotizar%20un%20servicio%20de%20climatizaci%C3%B3n." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
-                <div class="btn-icon"><i class="fab fa-whatsapp"></i></div>
-                <div class="btn-label"><strong>Cotizar por WhatsApp</strong></div>
-                <i class="fas fa-chevron-right btn-arrow"></i>
-            </a>
-
-            <!-- 3. GUARDAR CONTACTO -->
-            <button type="button" onclick="downloadVCard()" class="btn btn-save">
-                <div class="btn-icon"><i class="fas fa-user-plus"></i></div>
-                <div class="btn-label">Guardar Contacto</div>
-                <i class="fas fa-download btn-arrow"></i>
-            </button>
-
-            <!-- 4. INSTAGRAM -->
-            <a href="https://www.instagram.com/easycool_climatizacion/" class="btn" target="_blank" rel="noopener noreferrer">
-                <div class="btn-icon" style="color: #ec4899;"><i class="fab fa-instagram"></i></div>
-                <div class="btn-label">Ver Nuestros Trabajos</div>
-                <i class="fas fa-chevron-right btn-arrow"></i>
-            </a>
-
-            <!-- 5. GOOGLE REVIEWS -->
-            <a href="https://g.page/r/Ccgzu2uxiaSiEBI/review" class="btn" target="_blank" rel="noopener noreferrer">
-                <div class="btn-icon" style="color: #4285F4;"><i class="fab fa-google"></i></div>
-                <div class="btn-label">Nuestras Opiniones</div>
-                <i class="fas fa-star btn-arrow" style="color: #fbbf24; opacity: 1;"></i>
-            </a>
-
-            <!-- 6. LLAMADA -->
-            <a href="tel:+56957776174" class="btn">
-                <div class="btn-icon"><i class="fas fa-phone-alt"></i></div>
-                <div class="btn-label">Llamar a Ejecutivo</div>
-                <i class="fas fa-phone btn-arrow"></i>
-            </a>
-
-            <!-- 7. TRANSFERENCIA -->
-            <div id="btn-banco" class="btn" style="opacity: 0.9; border-style: dashed;" onclick="toggleBank()">
-                <div class="btn-icon"><i class="fas fa-university"></i></div>
-                <div class="btn-label">Datos Transferencia</div>
-                <i id="bank-arrow" class="fas fa-chevron-down btn-arrow" style="opacity: 1;"></i>
-            </div>
-
-            <div id="bank-info" class="bank-details">
-                <div class="bank-content">
-                    <div class="bank-row">
-                        <span class="bank-label">Titular</span>
-                        <div class="bank-value">Easycool Climatizacion</div>
-                    </div>
-                    <div class="bank-row">
-                        <span class="bank-label">RUT</span>
-                        <div class="bank-value">77.448.234-2</div>
-                    </div>
-                    <div class="bank-row">
-                        <span class="bank-label">Banco / Tipo</span>
-                        <div class="bank-value">Banco Bci / Cta Corriente</div>
-                    </div>
-                    <div class="bank-row">
-                        <span class="bank-label">Nº Cuenta</span>
-                        <div class="bank-value">97512508</div>
-                    </div>
-                    <div class="bank-row">
-                        <span class="bank-label">Correo</span>
-                        <div class="bank-value" style="font-size: 11px;">ventas@easycoolclimatizacion.com</div>
+    <!-- ======================================================== -->
+    <!-- VISTA 1: TARJETA PRINCIPAL LINKTREE                      -->
+    <!-- ======================================================== -->
+    <div id="linktree-view" class="linktree-shell">
+        <div class="profile-card">
+            <div class="brand-header">
+                <div class="custom-logo-container">
+                    <div class="custom-bars-container">
+                        <div class="custom-bar custom-bar-top"></div>
+                        <div class="custom-bar custom-bar-middle"></div>
+                        <div class="custom-bar custom-bar-bottom"></div>
                     </div>
                 </div>
-                <button type="button" class="copy-all-btn" onclick="copyFullBankData()">
-                    <i class="fas fa-copy"></i> COPIAR TODOS LOS DATOS
+                <div class="logo-text-group">
+                    <span class="brand-name">EASYCOOL</span>
+                    <span class="brand-tagline">Climatización</span>
+                </div>
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    Servicio Técnico & Instalación
+                </div>
+            </div>
+
+            <div class="services-text">
+                Venta • Instalación • Mantención<br>
+                <span>Garantía de 3 Años en Equipos EasyCool</span>
+            </div>
+
+            <div class="links-wrapper">
+                <!-- 1. CATÁLOGO COMPLETO -->
+                <button type="button" onclick="openCatalogModal(true)" class="btn btn-catalog">
+                    <div class="btn-icon" style="color: #ffffff;"><i class="fas fa-snowflake"></i></div>
+                    <div class="btn-label">
+                        <span style="font-size: 11px; text-transform: uppercase; color: #dbeafe; font-weight: 700; letter-spacing: 0.5px; display: block;">Equipos Llave en Mano & Planes</span>
+                        <strong style="font-size: 15px; color: #ffffff;">Ver Catálogo y Precios</strong>
+                    </div>
+                    <i class="fas fa-arrow-right btn-arrow" style="opacity: 1; color: #ffffff;"></i>
                 </button>
-            </div>
-        </div>
 
-        <div class="footer">
-            <p>© 2026 EasyCool Climatización • RUT 77.448.234-2</p>
-            <p>Santiago de Chile 🇨🇱</p>
+                <!-- 2. WHATSAPP -->
+                <a href="https://wa.me/56957776174?text=Hola%20Jos%C3%A9,%20vengo%20de%20la%20web%20y%20necesito%20cotizar%20un%20servicio%20de%20climatizaci%C3%B3n." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                    <div class="btn-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="btn-label"><strong>Cotizar por WhatsApp</strong></div>
+                    <i class="fas fa-chevron-right btn-arrow"></i>
+                </a>
+
+                <!-- 3. GUARDAR CONTACTO -->
+                <button type="button" onclick="downloadVCard()" class="btn btn-save">
+                    <div class="btn-icon"><i class="fas fa-user-plus"></i></div>
+                    <div class="btn-label">Guardar Contacto</div>
+                    <i class="fas fa-download btn-arrow"></i>
+                </button>
+
+                <!-- 4. INSTAGRAM -->
+                <a href="https://www.instagram.com/easycool_climatizacion/" class="btn" target="_blank" rel="noopener noreferrer">
+                    <div class="btn-icon" style="color: #ec4899;"><i class="fab fa-instagram"></i></div>
+                    <div class="btn-label">Ver Nuestros Trabajos</div>
+                    <i class="fas fa-chevron-right btn-arrow"></i>
+                </a>
+
+                <!-- 5. GOOGLE REVIEWS -->
+                <a href="https://g.page/r/Ccgzu2uxiaSiEBI/review" class="btn" target="_blank" rel="noopener noreferrer">
+                    <div class="btn-icon" style="color: #4285F4;"><i class="fab fa-google"></i></div>
+                    <div class="btn-label">Nuestras Opiniones</div>
+                    <i class="fas fa-star btn-arrow" style="color: #fbbf24; opacity: 1;"></i>
+                </a>
+
+                <!-- 6. LLAMADA -->
+                <a href="tel:+56957776174" class="btn">
+                    <div class="btn-icon"><i class="fas fa-phone-alt"></i></div>
+                    <div class="btn-label">Llamar a Ejecutivo</div>
+                    <i class="fas fa-phone btn-arrow"></i>
+                </a>
+
+                <!-- 7. TRANSFERENCIA -->
+                <div id="btn-banco" class="btn" style="opacity: 0.9; border-style: dashed;" onclick="toggleBank()">
+                    <div class="btn-icon"><i class="fas fa-university"></i></div>
+                    <div class="btn-label">Datos Transferencia</div>
+                    <i id="bank-arrow" class="fas fa-chevron-down btn-arrow" style="opacity: 1;"></i>
+                </div>
+
+                <div id="bank-info" class="bank-details">
+                    <div class="bank-content">
+                        <div class="bank-row">
+                            <span class="bank-label">Titular</span>
+                            <div class="bank-value">Easycool Climatizacion</div>
+                        </div>
+                        <div class="bank-row">
+                            <span class="bank-label">RUT</span>
+                            <div class="bank-value">77.448.234-2</div>
+                        </div>
+                        <div class="bank-row">
+                            <span class="bank-label">Banco / Tipo</span>
+                            <div class="bank-value">Banco Bci / Cta Corriente</div>
+                        </div>
+                        <div class="bank-row">
+                            <span class="bank-label">Nº Cuenta</span>
+                            <div class="bank-value">97512508</div>
+                        </div>
+                        <div class="bank-row">
+                            <span class="bank-label">Correo</span>
+                            <div class="bank-value" style="font-size: 11px;">ventas@easycoolclimatizacion.com</div>
+                        </div>
+                    </div>
+                    <button type="button" class="copy-all-btn" onclick="copyFullBankData()">
+                        <i class="fas fa-copy"></i> COPIAR TODOS LOS DATOS
+                    </button>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>© 2026 EasyCool Climatización • RUT 77.448.234-2</p>
+                <p>Santiago de Chile 🇨🇱</p>
+            </div>
         </div>
     </div>
 
@@ -654,28 +639,30 @@
     </div>
 
     <!-- ======================================================== -->
-    <!-- MODAL COMPLETO DEL CATÁLOGO & PLANES DE MANTENIMIENTO    -->
+    <!-- VISTA 2: CATÁLOGO NATIVO & PLANES DE MANTENIMIENTO       -->
     <!-- ======================================================== -->
-    <div id="catalog-modal" class="fixed inset-0 z-50 bg-slate-900/90 backdrop-blur-md hidden overflow-y-auto">
+    <div id="catalog-modal" class="hidden">
         <div class="min-h-screen bg-slate-50 font-montserrat text-brand-dark flex flex-col">
 
             <!-- Header Catálogo -->
-            <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+            <header class="catalog-sticky-header bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50 shadow-sm">
                 <div class="max-w-4xl mx-auto px-3.5 sm:px-6 py-2.5 flex justify-between items-center">
-                    <!-- Logo EASYCOOL (5 toques abre simulador de caja y generador para GitHub - PIN 1811) -->
                     <div class="flex flex-row items-center font-montserrat select-none gap-2.5">
-                        <div id="secret-admin-trigger" onclick="handleSecretLogoClick()" class="relative w-[44px] h-[44px] sm:w-[50px] sm:h-[50px] bg-brand-blue rounded-full flex flex-col justify-center items-end pr-[8px] sm:pr-[10px] gap-[3px] shadow-sm flex-shrink-0 cursor-pointer active:scale-95 transition-transform" title="Toque 5 veces para simulador interno">
-                            <div class="h-[6px] w-[27px] sm:w-[32px] bg-brand-bar1 rounded-full pointer-events-none"></div>
-                            <div class="h-[6px] w-[21px] sm:w-[25px] bg-brand-bar2 rounded-full pointer-events-none"></div>
-                            <div class="h-[6px] w-[15px] sm:w-[18px] bg-brand-bar3 rounded-full pointer-events-none"></div>
+                        <div class="relative w-[44px] h-[44px] sm:w-[50px] sm:h-[50px] bg-brand-blue rounded-full flex flex-col justify-center items-end pr-[8px] sm:pr-[10px] gap-[3px] shadow-sm flex-shrink-0">
+                            <div class="h-[6px] w-[27px] sm:w-[32px] bg-brand-bar1 rounded-full"></div>
+                            <div class="h-[6px] w-[21px] sm:w-[25px] bg-brand-bar2 rounded-full"></div>
+                            <div class="h-[6px] w-[15px] sm:w-[18px] bg-brand-bar3 rounded-full"></div>
                         </div>
-                        <div class="flex flex-col items-start leading-none pointer-events-none">
+                        <div class="flex flex-col items-start leading-none">
                             <h2 class="text-brand-dark font-[900] text-[17px] sm:text-[20px] tracking-tight">EASYCOOL</h2>
                             <p class="text-brand-gray font-[600] text-[10px] sm:text-[11px] tracking-wide mt-0.5">Catálogo Oficial</p>
                         </div>
                     </div>
 
                     <div class="flex items-center gap-1.5">
+                        <button type="button" id="btn-fullscreen-toggle" onclick="toggleNativeFullscreen()" class="hidden inline-flex items-center justify-center bg-slate-100 hover:bg-slate-200 text-slate-600 w-8 h-8 rounded-xl text-xs transition-colors" title="Pantalla completa">
+                            <i id="icon-fullscreen-toggle" class="fas fa-expand"></i>
+                        </button>
                         <button type="button" onclick="shareCatalogLink()" class="inline-flex items-center gap-1.5 bg-blue-50 hover:bg-blue-100 text-brand-blue font-bold px-3 py-2 rounded-xl text-xs transition-colors" title="Compartir link directo al catálogo">
                             <i class="fas fa-share-alt"></i>
                             <span>Compartir</span>
@@ -731,7 +718,7 @@
                     </div>
                 </div>
 
-                <!-- SELECTOR DE MARCA ORDENADO (ESCALERA DE VALOR: HISENSE -> TRANE -> DAIKIN) -->
+                <!-- SELECTOR DE MARCA ORDENADO -->
                 <div class="mb-3">
                     <p class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1.5 px-1 flex items-center justify-between">
                         <span>1. Selecciona la Marca:</span>
@@ -805,7 +792,7 @@
                             </span>
                         </div>
 
-                        <p id="display-delivery-note" class="text-[10.5px] text-slate-600 font-semibold mt-1.5">
+                        <p class="text-[10.5px] text-slate-600 font-semibold mt-1.5">
                             Equipo nuevo sellado + Despacho a domicilio + Kit canaletas + Instalación certificada
                         </p>
                     </div>
@@ -834,8 +821,8 @@
                                 <i class="fas fa-ruler-combined text-brand-blue"></i>
                                 Medidas Reales y Confort (Ficha Oficial):
                             </span>
-                            <span id="spec-efficiency-badge" class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
-                                Clase A Frío/Calor
+                            <span class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">
+                                Clase A • Ref. $250/kWh Stgo
                             </span>
                         </div>
 
@@ -851,13 +838,13 @@
                                 <span id="spec-outdoor-meta" class="text-[10px] text-slate-500 block mt-0.5">Peso: 20,5 kg</span>
                             </div>
                             <div class="bg-white p-2.5 rounded-xl border border-slate-200/90">
-                                <span class="text-[9.5px] font-bold uppercase text-slate-400 block">Silencio y Consumo</span>
+                                <span class="text-[9.5px] font-bold uppercase text-slate-400 block">Silencio y Consumo Luz</span>
                                 <strong id="spec-noise" class="text-brand-blue text-xs block mt-0.5">Mín. 38 dB(A)</strong>
-                                <span id="spec-consumption" class="text-[10px] text-slate-500 block mt-0.5">Inverter ~$70–$175/hr</span>
+                                <span id="spec-consumption" class="text-[10px] text-slate-600 font-semibold block mt-0.5">~$75–$220/hr Inverter (870 W nom.)</span>
                             </div>
                         </div>
 
-                        <div id="spec-extra-note" class="mt-2 bg-white px-2.5 py-2 rounded-xl border border-slate-200/80 text-[10.5px] text-slate-600 flex items-start gap-1.5">
+                        <div class="mt-2 bg-white px-2.5 py-2 rounded-xl border border-slate-200/80 text-[10.5px] text-slate-600 flex items-start gap-1.5">
                             <i class="fas fa-check-circle text-emerald-500 mt-0.5"></i>
                             <span id="spec-extra-text">App ConnectLife Wi-Fi • Autolimpieza y modo deshumidificador • Eficiencia Clase A.</span>
                         </div>
@@ -928,7 +915,7 @@
                 </div>
 
                 <!-- ACCESOS RÁPIDOS A OTROS SERVICIOS -->
-                <div class="mt-3 grid grid-cols-3 gap-1.5 text-center">
+                <div class="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-1.5 text-center">
                     <a href="#solo-instalacion" class="bg-white hover:bg-blue-50 text-slate-700 hover:text-brand-blue font-bold text-[10.5px] sm:text-xs py-2 px-2 rounded-xl border border-slate-200 shadow-xs transition-colors">
                         <i class="fas fa-tools text-brand-blue mr-1"></i>Solo Inst.
                     </a>
@@ -937,6 +924,9 @@
                     </a>
                     <a href="#mantenimiento" class="bg-white hover:bg-emerald-50 text-slate-700 hover:text-emerald-700 font-bold text-[10.5px] sm:text-xs py-2 px-2 rounded-xl border border-slate-200 shadow-xs transition-colors">
                         <i class="fas fa-clipboard-check text-emerald-600 mr-1"></i>Mantención
+                    </a>
+                    <a href="#diagnostico" class="bg-white hover:bg-amber-50 text-slate-700 hover:text-amber-700 font-bold text-[10.5px] sm:text-xs py-2 px-2 rounded-xl border border-slate-200 shadow-xs transition-colors">
+                        <i class="fas fa-stethoscope text-amber-600 mr-1"></i>Diagnóstico
                     </a>
                 </div>
 
@@ -989,7 +979,7 @@
                             <span class="text-[9.5px] text-slate-400">IVA incluido</span>
                         </div>
                     </div>
-                    <a id="inst-link-wa" href="https://wa.me/56957776174?text=Hola%20Jos%C3%A9,%20ya%20tengo%20mi%20equipo%20y%20deseo%20cotizar%20Solo%20Instalaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-brand-dark hover:bg-brand-navy text-white font-bold text-xs uppercase tracking-wide flex items-center justify-center gap-2 transition-colors">
+                    <a href="https://wa.me/56957776174?text=Hola%20Jos%C3%A9,%20ya%20tengo%20mi%20equipo%20y%20deseo%20cotizar%20Solo%20Instalaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-brand-dark hover:bg-brand-navy text-white font-bold text-xs uppercase tracking-wide flex items-center justify-center gap-2 transition-colors">
                         <i class="fab fa-whatsapp text-emerald-400 text-sm"></i>
                         <span>Agendar Solo Instalación</span>
                     </a>
@@ -1024,10 +1014,10 @@
                         </button>
                     </div>
 
-                    <!-- Tarjetas Principales de Bombas (4 modelos clave) -->
+                    <!-- Tarjetas Principales de Bombas -->
                     <div id="bombas-cards-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-3"></div>
 
-                    <!-- Opciones Especiales (Ocultas y con Estanque) -->
+                    <!-- Opciones Especiales -->
                     <div class="bg-slate-50 border border-slate-200/90 rounded-xl p-3">
                         <span class="text-[10px] font-black uppercase text-slate-500 tracking-wider block mb-2">
                             Opciones Especiales (Ocultas y con Estanque):
@@ -1052,7 +1042,7 @@
             <!-- ========================================== -->
             <!-- SECCIÓN DE PLANES DE MANTENIMIENTO         -->
             <!-- ========================================== -->
-            <section id="mantenimiento" class="bg-slate-100 py-8 sm:py-12 border-t border-slate-200">
+            <section id="mantenimiento" class="scroll-mt-16 bg-slate-100 py-8 sm:py-12 border-t border-slate-200">
                 <div class="max-w-4xl mx-auto px-3 sm:px-6">
                     <div class="text-center mb-6">
                         <span class="inline-block bg-blue-100 text-brand-blue px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider mb-2">
@@ -1252,6 +1242,39 @@
                             <p>• <strong>Salas de Servidores, Cassette, Ducto, Piso-Cielo y Rooftop:</strong> Cotización en UF + IVA previo levantamiento técnico.</p>
                         </div>
                     </div>
+
+                    <!-- TARJETA SIEMPRE VISIBLE: VISITA TÉCNICA DE DIAGNÓSTICO DE FALLA -->
+                    <div id="diagnostico" class="mt-5 scroll-mt-20 bg-white rounded-2xl p-4 sm:p-5 border border-amber-300 shadow-sm">
+                        <div class="flex items-start justify-between gap-2 flex-wrap">
+                            <div>
+                                <span class="inline-flex items-center gap-1 text-[10px] font-black uppercase text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full">
+                                    <i class="fas fa-stethoscope"></i>
+                                    ¿No enfría, gotea o marca error?
+                                </span>
+                                <h4 class="text-base sm:text-lg font-black text-brand-dark mt-1.5 leading-tight">
+                                    Visita Técnica: Diagnóstico de Falla
+                                </h4>
+                            </div>
+                            <div class="text-right">
+                                <span id="maint-disp-diagnostico" class="text-xl sm:text-2xl font-[900] text-brand-dark block leading-none">$35.000</span>
+                                <span class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full inline-block mt-1">IVA Incluido • Informe PDF</span>
+                            </div>
+                        </div>
+
+                        <p class="text-xs text-slate-600 mt-2 leading-snug">
+                            Revisión instrumental en terreno con <strong>termómetro láser Fluke y pinza amperimétrica</strong>, identificación de causa raíz, entrega de <strong>Informe Técnico Digital en PDF</strong> y presupuesto cerrado de reparación.
+                        </p>
+
+                        <div class="mt-2.5 bg-slate-50 border border-slate-200/90 rounded-xl p-2.5 text-[10.5px] text-slate-600 space-y-1">
+                            <p>• <strong>Transparencia:</strong> Si tu equipo solo necesita limpieza y decides hacerla en la misma visita, pagas únicamente la mantención (<span id="maint-disp-diag-desde-base" class="font-bold text-brand-dark">desde $45.000</span>).</p>
+                            <p>• <strong>¿Cotizas instalación nueva?</strong> Pre-evaluación <strong>gratuita por WhatsApp</strong> enviando 3 fotos de tu espacio.</p>
+                        </div>
+
+                        <a id="maint-link-diagnostico" href="#" target="_blank" rel="noopener noreferrer" class="mt-3 w-full py-2.5 px-4 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-extrabold text-xs uppercase tracking-wide flex items-center justify-center gap-2 transition-colors shadow-xs">
+                            <i class="fab fa-whatsapp text-sm"></i>
+                            <span id="maint-btn-text-diagnostico">Agendar Diagnóstico ($35.000)</span>
+                        </a>
+                    </div>
                 </div>
             </section>
 
@@ -1284,7 +1307,7 @@
             <!-- Selector de Capacidad -->
             <div class="px-3 sm:px-4 py-2 bg-slate-50 border-b border-slate-200 flex items-center justify-between flex-wrap gap-2">
                 <span class="text-[10.5px] font-extrabold text-slate-500 uppercase">Capacidad:</span>
-                <div class="grid grid-cols-4 gap-1 w-full sm:w-auto" id="compare-cap-buttons">
+                <div class="grid grid-cols-4 gap-1 w-full sm:w-auto">
                     <button type="button" onclick="renderCompareTable('9k')" id="cmp-btn-9k" class="px-2 py-1.5 rounded-lg text-[11px] sm:text-xs font-bold bg-white border border-slate-200 text-slate-700">9.000</button>
                     <button type="button" onclick="renderCompareTable('12k')" id="cmp-btn-12k" class="px-2 py-1.5 rounded-lg text-[11px] sm:text-xs font-bold bg-brand-blue text-white shadow-xs">12.000</button>
                     <button type="button" onclick="renderCompareTable('18k')" id="cmp-btn-18k" class="px-2 py-1.5 rounded-lg text-[11px] sm:text-xs font-bold bg-white border border-slate-200 text-slate-700">18.000</button>
@@ -1292,193 +1315,112 @@
                 </div>
             </div>
 
-            <!-- Franja común: lo que ya incluyen las 3 marcas (evita texto repetido) -->
+            <!-- Franja común -->
             <div class="px-3 sm:px-4 py-2 bg-blue-50/90 border-b border-blue-200/80 text-[10px] sm:text-[11px] text-brand-navy font-semibold text-center leading-snug">
                 <strong class="text-brand-blue uppercase">Todos incluyen:</strong> Inverter Clase A • Gas R32 • Wi-Fi • Despacho + Instalación (3 m) • <strong>3 Años Garantía EasyCool</strong>
             </div>
 
-            <!-- Matriz comparativa con cabecera fija -->
+            <!-- Matriz comparativa -->
             <div class="overflow-y-auto flex-grow bg-white" id="compare-table-body"></div>
         </div>
     </div>
 
-    <!-- ======================================================== -->
-    <!-- MODAL DE CLAVE ADMINISTRATIVA (PIN 1811)                 -->
-    <!-- ======================================================== -->
-    <div id="auth-modal" class="fixed inset-0 z-[80] bg-slate-900/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl shadow-2xl border border-slate-200 max-w-sm w-full p-6 text-center text-brand-dark font-montserrat">
-            <div class="w-12 h-12 bg-blue-100 text-brand-blue rounded-full flex items-center justify-center mx-auto mb-3">
-                <i class="fas fa-calculator text-xl"></i>
-            </div>
-            <h3 class="text-lg font-black text-brand-dark">Simulador Interno EasyCool</h3>
-            <p class="text-xs text-slate-500 mt-1 mb-4">Ingresa tu PIN para simular ganancias, revisar IVA F29 y generar el bloque para GitHub.</p>
-
-            <form onsubmit="handleAuthSubmit(event)" class="space-y-3">
-                <input type="password" id="admin-pass-input" placeholder="Ingresa PIN" inputmode="numeric" class="w-full text-center tracking-widest text-lg font-bold py-2.5 px-3 border border-slate-300 rounded-xl">
-                <p id="auth-error-msg" class="text-xs text-rose-600 font-bold hidden">Clave incorrecta.</p>
-                <div class="flex gap-2 pt-2">
-                    <button type="button" onclick="closeAuthModal()" class="w-1/2 py-2.5 rounded-xl border border-slate-200 text-slate-600 font-bold text-xs hover:bg-slate-50">Cancelar</button>
-                    <button type="submit" class="w-1/2 py-2.5 rounded-xl bg-brand-blue text-white font-extrabold text-xs shadow-md hover:bg-blue-600 transition-colors">Ingresar</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- ======================================================== -->
-    <!-- MODAL SIMULADOR DE CAJA Y GENERADOR DE BLOQUE GITHUB     -->
-    <!-- ======================================================== -->
-    <div id="admin-modal" class="fixed inset-0 z-[85] bg-slate-900/75 backdrop-blur-sm hidden flex items-center justify-center p-2.5 sm:p-4">
-        <div class="bg-white rounded-3xl shadow-2xl border border-slate-200 max-w-3xl w-full max-h-[93vh] flex flex-col overflow-hidden text-brand-dark font-montserrat">
-            <div class="p-4 bg-gradient-to-r from-brand-navy via-brand-dark to-brand-navyDark text-white flex justify-between items-center border-b border-brand-blue/30">
-                <div>
-                    <span class="text-[10px] uppercase font-black text-brand-bar3 tracking-wider">Solo Simulador Local • Generador para GitHub</span>
-                    <h3 class="text-base sm:text-lg font-[900]">Simulador de Ganancia, F29 y Bloque GitHub</h3>
-                </div>
-                <button type="button" onclick="closeAdminPanel()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-slate-200 flex items-center justify-center font-bold">✕</button>
-            </div>
-
-            <!-- Aviso Claro sobre GitHub Pages -->
-            <div class="bg-amber-50 border-b border-amber-300 px-4 py-2 text-[10.5px] text-amber-950 font-semibold flex items-start gap-2">
-                <i class="fas fa-exclamation-triangle text-amber-600 mt-0.5"></i>
-                <span><strong>Importante:</strong> Lo que cambies aquí es solo para <strong>simular en tu celular</strong>. Para que tus clientes vean los precios nuevos, toca <strong>"Copiar Bloque GitHub"</strong> abajo y reemplaza <code>CONFIG_PRECIOS_INICIAL</code> al inicio de <code>index.html</code> en GitHub (o edita los números directo en GitHub).</span>
-            </div>
-
-            <!-- Controles Maestros -->
-            <div class="bg-slate-100 px-4 py-3 border-b border-slate-200 space-y-2.5 text-xs overflow-y-auto max-h-[34vh]">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    <div class="bg-amber-50 p-2.5 rounded-xl border border-amber-300 flex items-center justify-between gap-2">
-                        <div>
-                            <span class="block text-amber-950 font-black text-[11px]">🚚 Flete Equipos Grandes (18k/22k/24k):</span>
-                            <span class="text-[9.5px] text-amber-800">Pon 0 si trasladas en vehículo propio</span>
-                        </div>
-                        <div class="flex items-center gap-1 flex-shrink-0">
-                            <span class="text-amber-700 font-bold">$</span>
-                            <input type="number" id="cfg-flete" step="5000" class="w-24 p-1 text-right font-black border border-amber-400 rounded" oninput="updateGlobalParams()">
-                        </div>
-                    </div>
-                    <div class="bg-white p-2.5 rounded-xl border border-slate-200 flex items-center justify-between gap-2">
-                        <div>
-                            <span class="block text-slate-800 font-black text-[11px]">Redondeo Comercial ($X9.900):</span>
-                            <span class="text-[9.5px] text-slate-500">Ajusta precios a terminación atractiva</span>
-                        </div>
-                        <label class="inline-flex items-center cursor-pointer">
-                            <input type="checkbox" id="cfg-rounding" class="w-5 h-5 accent-blue-600" onchange="updateGlobalParams()">
-                        </label>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    <div class="bg-white p-2.5 rounded-xl border border-slate-200">
-                        <span class="block text-[10px] font-black uppercase text-slate-500 mb-1.5">Mano de Obra Neta por BTU:</span>
-                        <div class="grid grid-cols-3 gap-1.5">
-                            <div>
-                                <span class="text-[9.5px] text-slate-500 block">9k–12k</span>
-                                <input type="number" id="cfg-labor-9a12" step="5000" class="w-full p-1 text-right font-black border border-slate-300 rounded text-[11px]" oninput="updateGlobalParams()">
-                            </div>
-                            <div>
-                                <span class="text-[9.5px] text-slate-500 block">18k</span>
-                                <input type="number" id="cfg-labor-18" step="5000" class="w-full p-1 text-right font-black border border-slate-300 rounded text-[11px]" oninput="updateGlobalParams()">
-                            </div>
-                            <div>
-                                <span class="text-[9.5px] text-slate-500 block">22k–24k</span>
-                                <input type="number" id="cfg-labor-22a24" step="5000" class="w-full p-1 text-right font-black border border-slate-300 rounded text-[11px]" oninput="updateGlobalParams()">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-2.5 rounded-xl border border-slate-200">
-                        <span class="block text-[10px] font-black uppercase text-slate-500 mb-1.5">Margen (%) sobre Equipo + Kit:</span>
-                        <div class="grid grid-cols-3 gap-1.5">
-                            <div>
-                                <span class="text-[9.5px] text-emerald-700 font-bold block">Hisense %</span>
-                                <input type="number" id="cfg-margin-hisense" step="1" class="w-full p-1 text-right font-black border border-slate-300 rounded text-[11px]" oninput="updateGlobalParams()">
-                            </div>
-                            <div>
-                                <span class="text-[9.5px] text-orange-700 font-bold block">Trane %</span>
-                                <input type="number" id="cfg-margin-trane" step="1" class="w-full p-1 text-right font-black border border-slate-300 rounded text-[11px]" oninput="updateGlobalParams()">
-                            </div>
-                            <div>
-                                <span class="text-[9.5px] text-brand-blue font-bold block">Daikin %</span>
-                                <input type="number" id="cfg-margin-daikin" step="1" class="w-full p-1 text-right font-black border border-slate-300 rounded text-[11px]" oninput="updateGlobalParams()">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <details class="bg-white rounded-xl border border-slate-200 p-2.5">
-                    <summary class="cursor-pointer font-black text-[10.5px] uppercase text-slate-700 flex items-center justify-between">
-                        <span>Insumos Kit Acondiparts (Neto) — Clic para editar</span>
-                        <span id="total-kit-materials-label" class="text-brand-blue">9-12k: $24.000 | 18-24k: $28.500</span>
-                    </summary>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-2.5">
-                        <div>
-                            <span class="text-[9.5px] text-slate-500 block">Soporte muro chico:</span>
-                            <input type="number" id="mat-soporte" step="100" class="w-full p-1 text-right font-black border border-slate-300 rounded" oninput="updateMaterials()">
-                        </div>
-                        <div>
-                            <span class="text-[9.5px] text-slate-500 block">Bandeja 100×50 (2m):</span>
-                            <input type="number" id="mat-canaleta100" step="50" class="w-full p-1 text-right font-black border border-slate-300 rounded" oninput="updateMaterials()">
-                        </div>
-                        <div>
-                            <span class="text-[9.5px] text-slate-500 block">Bandeja 20×10 (2m):</span>
-                            <input type="number" id="mat-canaleta20" step="50" class="w-full p-1 text-right font-black border border-slate-300 rounded" oninput="updateMaterials()">
-                        </div>
-                        <div>
-                            <span class="text-[9.5px] text-slate-500 block">Cordón (x metro):</span>
-                            <input type="number" id="mat-cordon" step="50" class="w-full p-1 text-right font-black border border-slate-300 rounded" oninput="updateMaterials()">
-                        </div>
-                        <div>
-                            <span class="text-[9.5px] text-slate-500 block">Gomas+Enchufe+Cinta:</span>
-                            <input type="number" id="mat-varios" step="100" class="w-full p-1 text-right font-black border border-slate-300 rounded" oninput="updateMaterials()">
-                        </div>
-                        <div>
-                            <span class="text-[9.5px] text-slate-500 block">Extra 18k/22k/24k:</span>
-                            <input type="number" id="mat-extra-grande" step="100" class="w-full p-1 text-right font-black border border-slate-300 rounded" oninput="updateMaterials()">
-                        </div>
-                    </div>
-                </details>
-            </div>
-
-            <!-- Pestañas dentro del Simulador -->
-            <div class="px-4 pt-2.5 pb-1.5 border-b border-slate-100 flex items-center justify-between flex-wrap gap-2">
-                <span class="text-[11px] font-black uppercase text-slate-700 tracking-wider">Simular Costos Proveedor / Tarifas:</span>
-                <div class="flex flex-wrap gap-1">
-                    <button type="button" onclick="selectAdminBrandTab('hisense')" id="adm-tab-hisense" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-brand-blue text-white shadow-sm">Hisense</button>
-                    <button type="button" onclick="selectAdminBrandTab('trane')" id="adm-tab-trane" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 text-slate-700">Trane</button>
-                    <button type="button" onclick="selectAdminBrandTab('daikin')" id="adm-tab-daikin" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 text-slate-700">Daikin</button>
-                    <button type="button" onclick="selectAdminBrandTab('bombas')" id="adm-tab-bombas" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-sky-100 text-sky-800">Bombas</button>
-                    <button type="button" onclick="selectAdminBrandTab('mantenimiento')" id="adm-tab-mantenimiento" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-100 text-emerald-800">Mantenciones & Inst.</button>
-                </div>
-            </div>
-
-            <div class="p-4 overflow-y-auto flex-grow" id="admin-equipment-editor"></div>
-
-            <div class="p-3 bg-slate-50 border-t border-slate-200 flex flex-wrap justify-between items-center gap-2">
-                <button type="button" onclick="resetDefaults()" class="text-xs text-slate-500 hover:text-rose-600 font-bold underline">
-                    Restaurar valores de GitHub
-                </button>
-                <div class="flex items-center gap-2">
-                    <button type="button" onclick="copyQuickPriceConfig()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 shadow-sm transition-colors" title="Copia CONFIG_PRECIOS_INICIAL listo para pegar en GitHub">
-                        <i class="fas fa-copy"></i>
-                        <span>Copiar Bloque GitHub</span>
-                    </button>
-                    <button type="button" onclick="closeAdminPanel()" class="bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold px-4 py-2 rounded-xl text-xs uppercase tracking-wider">
-                        Cerrar
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- ========================================== -->
-    <!-- SCRIPTS INTEGRADOS                         -->
+    <!-- SCRIPTS PÚBLICOS (100% LIMPIO)             -->
     <!-- ========================================== -->
     <script>
-        // --- 1. CONTROL DE MODALES Y LINKS DIRECTOS ---
-        function openCatalogModal() {
-            const modal = document.getElementById('catalog-modal');
-            modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
+        // --- 1. CONTROL DE VISTAS NATIVAS, PANTALLA COMPLETA Y LINKS DIRECTOS ---
+        function setStatusBarColor(hexColor) {
+            const meta = document.getElementById('theme-color-meta');
+            if (meta) meta.setAttribute('content', hexColor);
+        }
+
+        function isFullscreenSupported() {
+            const docEl = document.documentElement;
+            return Boolean(
+                document.fullscreenEnabled ||
+                document.webkitFullscreenEnabled ||
+                docEl.requestFullscreen ||
+                docEl.webkitRequestFullscreen
+            );
+        }
+
+        function isInFullscreen() {
+            return Boolean(document.fullscreenElement || document.webkitFullscreenElement);
+        }
+
+        function enterNativeFullscreen() {
+            if (!isFullscreenSupported() || isInFullscreen()) return;
+            const docEl = document.documentElement;
+            try {
+                const req = docEl.requestFullscreen || docEl.webkitRequestFullscreen;
+                if (req) {
+                    const p = req.call(docEl, { navigationUI: 'hide' });
+                    if (p && typeof p.catch === 'function') p.catch(() => {});
+                }
+            } catch (e) {}
+        }
+
+        function exitNativeFullscreen() {
+            if (!isInFullscreen()) return;
+            try {
+                const exit = document.exitFullscreen || document.webkitExitFullscreen;
+                if (exit) {
+                    const p = exit.call(document);
+                    if (p && typeof p.catch === 'function') p.catch(() => {});
+                }
+            } catch (e) {}
+        }
+
+        function toggleNativeFullscreen() {
+            if (isInFullscreen()) {
+                exitNativeFullscreen();
+            } else {
+                enterNativeFullscreen();
+            }
+        }
+
+        function updateFullscreenButtonUI() {
+            const btn = document.getElementById('btn-fullscreen-toggle');
+            const icon = document.getElementById('icon-fullscreen-toggle');
+            if (!btn || !icon) return;
+
+            const isStandalone = window.matchMedia && window.matchMedia('(display-mode: standalone)').matches;
+            if (!isFullscreenSupported() || isStandalone) {
+                btn.classList.add('hidden');
+                return;
+            }
+            btn.classList.remove('hidden');
+            if (isInFullscreen()) {
+                icon.className = 'fas fa-compress';
+                btn.title = 'Salir de pantalla completa';
+            } else {
+                icon.className = 'fas fa-expand';
+                btn.title = 'Ver en pantalla completa';
+            }
+        }
+
+        document.addEventListener('fullscreenchange', updateFullscreenButtonUI);
+        document.addEventListener('webkitfullscreenchange', updateFullscreenButtonUI);
+
+        function openCatalogModal(fromUserClick = false) {
+            const linktree = document.getElementById('linktree-view');
+            const orbs = document.getElementById('bg-orbs-wrap');
+            const catalog = document.getElementById('catalog-modal');
+
+            if (linktree) linktree.classList.add('hidden');
+            if (orbs) orbs.classList.add('hidden');
+            if (catalog) catalog.classList.remove('hidden');
+
+            document.body.classList.add('catalog-open');
+            setStatusBarColor('#ffffff');
+            window.scrollTo(0, 0);
+
+            if (fromUserClick) {
+                enterNativeFullscreen();
+            }
+
+            updateFullscreenButtonUI();
             selectBrand(currentBrand);
             renderSoloInstallPrices();
             renderBombasPrices();
@@ -1486,10 +1428,28 @@
         }
 
         function closeCatalogModal() {
-            const modal = document.getElementById('catalog-modal');
-            modal.classList.add('hidden');
-            document.body.style.overflow = 'auto';
-            if (window.location.hash === '#catalogo' || window.location.hash === '#mantenimiento' || window.location.hash === '#bombas') {
+            exitNativeFullscreen();
+
+            const linktree = document.getElementById('linktree-view');
+            const orbs = document.getElementById('bg-orbs-wrap');
+            const catalog = document.getElementById('catalog-modal');
+
+            if (catalog) catalog.classList.add('hidden');
+            if (linktree) linktree.classList.remove('hidden');
+            if (orbs) orbs.classList.remove('hidden');
+
+            document.body.classList.remove('catalog-open');
+            setStatusBarColor('#0f172a');
+            window.scrollTo(0, 0);
+
+            if (
+                window.location.hash === '#catalogo' ||
+                window.location.hash === '#mantenimiento' ||
+                window.location.hash === '#diagnostico' ||
+                window.location.hash === '#bombas' ||
+                window.location.hash === '#bombas-condensado' ||
+                window.location.hash === '#solo-instalacion'
+            ) {
                 history.replaceState(null, '', window.location.pathname + window.location.search);
             }
         }
@@ -1500,7 +1460,7 @@
             if (navigator.share) {
                 navigator.share({
                     title: 'Catálogo EasyCool Climatización',
-                    text: 'Revisa nuestro catálogo oficial de equipos llave en mano y planes de mantenimiento:',
+                    text: 'Revisa nuestro catálogo oficial de equipos llave en mano (3 años de garantía), bombas de condensado y planes de mantenimiento:',
                     url: catalogUrl
                 }).catch(() => copyText(catalogUrl, '¡Link directo al Catálogo copiado!'));
             } else {
@@ -1512,17 +1472,29 @@
             const hash = window.location.hash.toLowerCase();
             const params = new URLSearchParams(window.location.search);
             if (hash === '#catalogo' || params.has('catalogo')) {
-                openCatalogModal();
-            } else if (hash === '#bombas' || params.has('bombas')) {
-                openCatalogModal();
+                openCatalogModal(false);
+            } else if (hash === '#solo-instalacion') {
+                openCatalogModal(false);
+                setTimeout(() => {
+                    const sec = document.getElementById('solo-instalacion');
+                    if (sec) sec.scrollIntoView({ behavior: 'smooth' });
+                }, 150);
+            } else if (hash === '#bombas' || hash === '#bombas-condensado' || params.has('bombas')) {
+                openCatalogModal(false);
                 setTimeout(() => {
                     const sec = document.getElementById('bombas-condensado');
                     if (sec) sec.scrollIntoView({ behavior: 'smooth' });
                 }, 150);
             } else if (hash === '#mantenimiento' || params.has('mantenimiento')) {
-                openCatalogModal();
+                openCatalogModal(false);
                 setTimeout(() => {
                     const sec = document.getElementById('mantenimiento');
+                    if (sec) sec.scrollIntoView({ behavior: 'smooth' });
+                }, 150);
+            } else if (hash === '#diagnostico' || params.has('diagnostico')) {
+                openCatalogModal(false);
+                setTimeout(() => {
+                    const sec = document.getElementById('diagnostico');
                     if (sec) sec.scrollIntoView({ behavior: 'smooth' });
                 }, 150);
             }
@@ -1600,18 +1572,7 @@ Correo: ventas@easycoolclimatizacion.com`;
             }, 2600);
         }
 
-        // --- 3. MOTOR FINANCIERO AUTOMÁTICO Y DATOS DE FICHAS TÉCNICAS ---
-        const ADMIN_PIN = "1811";
-
-        let fleteEquiposGrandes = CONFIG_PRECIOS_INICIAL.fleteEquiposGrandes;
-        let redondeoComercial = CONFIG_PRECIOS_INICIAL.redondeoComercial;
-        let laborByTier = JSON.parse(JSON.stringify(CONFIG_PRECIOS_INICIAL.manoDeObra));
-        let marginByBrand = JSON.parse(JSON.stringify(CONFIG_PRECIOS_INICIAL.margenPorMarca));
-        let materials = JSON.parse(JSON.stringify(CONFIG_PRECIOS_INICIAL.insumos));
-        let soloInstalacion = JSON.parse(JSON.stringify(CONFIG_PRECIOS_INICIAL.soloInstalacion));
-        let maintenancePrices = JSON.parse(JSON.stringify(CONFIG_PRECIOS_INICIAL.mantenimientos));
-        let bombasCondensado = JSON.parse(JSON.stringify(CONFIG_PRECIOS_INICIAL.bombasCondensado));
-
+        // --- 3. FICHAS TÉCNICAS Y LECTURA DIRECTA DE PRECIOS PÚBLICOS ---
         const BOMBAS_CATALOGO = [
             {
                 key: 'wipcoolP16',
@@ -1696,43 +1657,39 @@ Correo: ventas@easycoolclimatizacion.com`;
                 ],
                 items: [
                     {
-                        btu: "9.000 BTU", tier: "9a12", isLarge: false, cmpKey: "9k",
-                        baseCost: CONFIG_PRECIOS_INICIAL.equiposProveedor.hisense["9.000 BTU"],
+                        btu: "9.000 BTU", cmpKey: "9k",
                         modelCode: "AS-09UW4RLRKA", sqm: "Hasta 18 m²", note: "Dormitorios o home office",
                         indoorDim: "79,8 × 25,6 × 19,1 cm", indoorWeight: "8,0 kg",
                         outdoorDim: "66,0 × 48,2 × 24,0 cm", outdoorWeight: "20,5 kg",
-                        noiseMin: "38 dB(A)", noiseNote: "5 velocidades + Modo Sleep",
-                        consumption: "~$70–$175/hr Inverter (870 W nom.)",
+                        noiseMin: "38 dB(A)",
+                        consumption: "~$75–$220/hr Inverter (870 W nom.)",
                         extraSpec: "App ConnectLife Wi-Fi • Autolimpieza y modo deshumidificador • Eficiencia EER 3,22 / COP 3,64 (Clase A)."
                     },
                     {
-                        btu: "12.000 BTU", tier: "9a12", isLarge: false, cmpKey: "12k",
-                        baseCost: CONFIG_PRECIOS_INICIAL.equiposProveedor.hisense["12.000 BTU"],
+                        btu: "12.000 BTU", cmpKey: "12k",
                         modelCode: "AS-12UW4RLRKA", sqm: "Hasta 24 m²", note: "Dormitorio principal o estar",
                         indoorDim: "79,8 × 25,6 × 19,1 cm", indoorWeight: "8,0 kg",
                         outdoorDim: "66,0 × 48,2 × 24,0 cm", outdoorWeight: "20,5 kg",
-                        noiseMin: "38 dB(A)", noiseNote: "5 velocidades + Modo Sleep",
-                        consumption: "~$85–$220/hr Inverter (1.090 W nom.)",
+                        noiseMin: "38 dB(A)",
+                        consumption: "~$90–$275/hr Inverter (1.090 W nom.)",
                         extraSpec: "Condensador más chico del segmento (66 cm) • App ConnectLife Wi-Fi • Autolimpieza y Clase A."
                     },
                     {
-                        btu: "18.000 BTU", tier: "18", isLarge: true, cmpKey: "18k",
-                        baseCost: CONFIG_PRECIOS_INICIAL.equiposProveedor.hisense["18.000 BTU"],
+                        btu: "18.000 BTU", cmpKey: "18k",
                         modelCode: "AS-18UW4RMSKA", sqm: "Hasta 36 m²", note: "Living, comedor o espacios abiertos",
                         indoorDim: "89,6 × 30,0 × 21,4 cm", indoorWeight: "10,5 kg",
                         outdoorDim: "78,0 × 54,0 × 26,0 cm", outdoorWeight: "29,0 kg",
-                        noiseMin: "36 dB(A)", noiseNote: "Caudal potente 900 m³/h",
-                        consumption: "~$125–$320/hr Inverter (1.615 W nom.)",
+                        noiseMin: "36 dB(A)",
+                        consumption: "~$115–$405/hr Inverter (1.615 W nom.)",
                         extraSpec: "17.753 BTU reales en frío / 18.436 BTU en calor • Función Super + Autolimpieza • Clase A."
                     },
                     {
-                        btu: "22.000 BTU", tier: "22a24", isLarge: true, cmpKey: "24k",
-                        baseCost: CONFIG_PRECIOS_INICIAL.equiposProveedor.hisense["22.000 BTU"],
+                        btu: "22.000 BTU", cmpKey: "24k",
                         modelCode: "AS-22UR4RBTKA", sqm: "Hasta 45 m²", note: "Living-comedor amplio o local",
                         indoorDim: "100,8 × 32,5 × 21,7 cm", indoorWeight: "13,0 kg",
                         outdoorDim: "86,0 × 65,0 × 31,0 cm", outdoorWeight: "39,0 kg",
-                        noiseMin: "38 dB(A)", noiseNote: "Alto caudal 1.000 m³/h",
-                        consumption: "~$155–$400/hr Inverter (1.995 W nom.)",
+                        noiseMin: "38 dB(A)",
+                        consumption: "~$125–$500/hr Inverter (1.995 W nom.)",
                         extraSpec: "21.850 BTU nominales • 4 filtros de aire puro HEPA de serie • App ConnectLife Wi-Fi • Clase A."
                     }
                 ]
@@ -1751,33 +1708,30 @@ Correo: ventas@easycoolclimatizacion.com`;
                 ],
                 items: [
                     {
-                        btu: "12.000 BTU", tier: "9a12", isLarge: false, cmpKey: "12k",
-                        baseCost: CONFIG_PRECIOS_INICIAL.equiposProveedor.trane["12.000 BTU"],
+                        btu: "12.000 BTU", cmpKey: "12k",
                         modelCode: "3MXW1112AB000AA", sqm: "Hasta 24 m²", note: "Dormitorio silencioso o home office",
                         indoorDim: "80,5 × 29,2 × 19,9 cm", indoorWeight: "8,8 kg",
                         outdoorDim: "71,0 × 49,6 × 24,5 cm", outdoorWeight: "22,0 kg",
-                        noiseMin: "24 dB(A)", noiseNote: "El más silencioso en 12k",
-                        consumption: "~$60–$215/hr Inverter (300–1.090 W)",
+                        noiseMin: "24 dB(A)",
+                        consumption: "~$75–$275/hr Inverter (300–1.090 W)",
                         extraSpec: "Mayor caudal en 12k (650 m³/h) • Frío desde 0 °C • Compresor HIGHLY • Clase A."
                     },
                     {
-                        btu: "18.000 BTU", tier: "18", isLarge: true, cmpKey: "18k",
-                        baseCost: CONFIG_PRECIOS_INICIAL.equiposProveedor.trane["18.000 BTU"],
+                        btu: "18.000 BTU", cmpKey: "18k",
                         modelCode: "3MXW1118AB000AA", sqm: "Hasta 36 m²", note: "Living amplio, oficinas o comercio",
                         indoorDim: "87,5 × 30,4 × 21,2 cm", indoorWeight: "10,0 kg",
                         outdoorDim: "82,0 × 64,3 × 30,5 cm", outdoorWeight: "31,0 kg",
-                        noiseMin: "28 dB(A)", noiseNote: "Alto caudal 900 m³/h",
-                        consumption: "~$80–$310/hr Inverter (400–1.560 W)",
+                        noiseMin: "28 dB(A)",
+                        consumption: "~$100–$390/hr Inverter (400–1.560 W)",
                         extraSpec: "Deshumidificación potente 2,0 L/h • Frío desde 0 °C • Serpentín 100% Cobre con Blue Fin • Clase A."
                     },
                     {
-                        btu: "24.000 BTU", tier: "22a24", isLarge: true, cmpKey: "24k",
-                        baseCost: CONFIG_PRECIOS_INICIAL.equiposProveedor.trane["24.000 BTU"],
+                        btu: "24.000 BTU", cmpKey: "24k",
                         modelCode: "3MXW1124AB000AA", sqm: "Hasta 50 m²", note: "Gran superficie, oficinas o racks",
                         indoorDim: "97,5 × 31,8 × 22,0 cm", indoorWeight: "11,6 kg",
                         outdoorDim: "82,0 × 64,3 × 30,5 cm", outdoorWeight: "38,0 kg",
-                        noiseMin: "29 dB(A)", noiseNote: "El más silencioso en 24k",
-                        consumption: "~$85–$390/hr Inverter (400–1.960 W)",
+                        noiseMin: "29 dB(A)",
+                        consumption: "~$100–$490/hr Inverter (400–1.960 W)",
                         extraSpec: "Pico hasta 25.250 BTU • Deshumidificación 2,8 L/h • Frío desde 0 °C • Serpentín 100% Cobre."
                     }
                 ]
@@ -1786,118 +1740,65 @@ Correo: ventas@easycoolclimatizacion.com`;
                 name: "Daikin",
                 fullName: "Daikin Serie EL Inverter",
                 series: "Líder Mundial • Menor Consumo Inverter • Clase A",
-                idealFor: "El más económico en la cuenta de luz (modula hasta 220 W), muro más compacto y control por voz.",
+                idealFor: "El más económico en la cuenta de luz (modula hasta 220 W en temperatura estable), muro más compacto y control por voz.",
                 badgeText: "Menor Consumo Inverter ⚡",
                 highlights: [
-                    "⚡ Menor consumo eléctrico: baja hasta 220–350 W en mantención",
+                    "⚡ Menor consumo eléctrico: baja hasta 220–350 W en temp. estable",
                     "🎙️ Control por voz nativo: Hey Google & Alexa + Wi-Fi",
                     "📐 Unidad interior más compacta (ideal muros angostos)",
                     "💨 7 Velocidades + 3 curvas Sueño (25 dB) + Gold Fin + Ultra Voltaje"
                 ],
                 items: [
                     {
-                        btu: "9.000 BTU", tier: "9a12", isLarge: false, cmpKey: "9k",
-                        baseCost: CONFIG_PRECIOS_INICIAL.equiposProveedor.daikin["9.000 BTU"],
+                        btu: "9.000 BTU", cmpKey: "9k",
                         modelCode: "FTXS09EL215", sqm: "Hasta 18 m²", note: "Dormitorios (máximo ahorro eléctrico)",
                         indoorDim: "70,8 × 26,0 × 18,5 cm", indoorWeight: "7,5 kg",
                         outdoorDim: "73,2 × 55,5 × 33,0 cm", outdoorWeight: "24,5 kg",
-                        noiseMin: "25 dB(A)", noiseNote: "7 velocidades + Plasma Frío",
-                        consumption: "⚡ Desde ~$45/hr mantención (220–789 W)",
+                        noiseMin: "25 dB(A)",
+                        consumption: "⚡ Desde ~$58/hr temp. estable (230–789 W)",
                         extraSpec: "Campeón en ahorro de luz del catálogo (EER 3,38 / COP 3,68) • Diseño seco antimoho • Alexa/Google."
                     },
                     {
-                        btu: "12.000 BTU", tier: "9a12", isLarge: false, cmpKey: "12k",
-                        baseCost: CONFIG_PRECIOS_INICIAL.equiposProveedor.daikin["12.000 BTU"],
+                        btu: "12.000 BTU", cmpKey: "12k",
                         modelCode: "FTXS12EL215", sqm: "Hasta 24 m²", note: "Dormitorio principal / home office",
                         indoorDim: "78,3 × 26,0 × 18,5 cm", indoorWeight: "8,0 kg",
                         outdoorDim: "73,2 × 55,5 × 33,0 cm", outdoorWeight: "25,5 kg",
-                        noiseMin: "26 dB(A)", noiseNote: "7 velocidades + Plasma Frío",
-                        consumption: "⚡ Desde ~$45/hr mantención (220–1.059 W)",
-                        extraSpec: "Menor consumo mínimo Inverter (220 W) • Ancho compacto 78,3 cm • Ultra Voltaje 130–275 V + Gold Fin."
+                        noiseMin: "26 dB(A)",
+                        consumption: "⚡ Desde ~$55/hr temp. estable (220–1.059 W)",
+                        extraSpec: "Menor consumo mínimo Inverter (220 W en temperatura estable) • Ancho compacto 78,3 cm • Ultra Voltaje 130–275 V + Gold Fin."
                     },
                     {
-                        btu: "18.000 BTU", tier: "18", isLarge: true, cmpKey: "18k",
-                        baseCost: CONFIG_PRECIOS_INICIAL.equiposProveedor.daikin["18.000 BTU"],
+                        btu: "18.000 BTU", cmpKey: "18k",
                         modelCode: "FTXS18EL215", sqm: "Hasta 36 m²", note: "Living o comedor con bajo consumo",
                         indoorDim: "83,5 × 27,5 × 20,0 cm", indoorWeight: "9,5 kg",
                         outdoorDim: "80,2 × 55,5 × 35,0 cm", outdoorWeight: "28,0 kg",
-                        noiseMin: "25 dB(A)", noiseNote: "El más silencioso en 18k",
-                        consumption: "⚡ Desde ~$50/hr mantención (250–1.461 W)",
-                        extraSpec: "Menor consumo en mantención 18k (250 W) • Interior más compacto (83,5 cm) • Alexa & Hey Google."
+                        noiseMin: "25 dB(A)",
+                        consumption: "⚡ Desde ~$63/hr temp. estable (250–1.461 W)",
+                        extraSpec: "Menor consumo en temperatura estable 18k (250 W) • Interior más compacto (83,5 cm) • Alexa & Hey Google."
                     },
                     {
-                        btu: "24.000 BTU", tier: "22a24", isLarge: true, cmpKey: "24k",
-                        baseCost: CONFIG_PRECIOS_INICIAL.equiposProveedor.daikin["24.000 BTU"],
+                        btu: "24.000 BTU", cmpKey: "24k",
                         modelCode: "FTXS24EL215", sqm: "Hasta 50 m²", note: "Amplias superficies y máxima eficiencia",
                         indoorDim: "94,3 × 33,3 × 24,6 cm", indoorWeight: "13,0 kg",
                         outdoorDim: "87,3 × 55,5 × 37,6 cm", outdoorWeight: "35,5 kg",
-                        noiseMin: "32 dB(A)", noiseNote: "Gran caudal 1.100 m³/h",
-                        consumption: "⚡ Desde ~$65/hr mantención (320–2.009 W)",
-                        extraSpec: "Menor consumo mínimo en 24k (320–350 W) • Calefacción hasta 28.000 BTU • Gold Fin + Alexa/Google."
+                        noiseMin: "32 dB(A)",
+                        consumption: "⚡ Desde ~$88/hr temp. estable (350–2.009 W)",
+                        extraSpec: "Menor consumo mínimo en 24k (320–350 W en temperatura estable) • Calefacción hasta 28.000 BTU • Gold Fin + Alexa/Google."
                     }
                 ]
             }
         };
 
-        const defaultCatalogData = JSON.parse(JSON.stringify(catalogData));
-        const defaultMaterials = JSON.parse(JSON.stringify(materials));
-        const defaultMaintenancePrices = JSON.parse(JSON.stringify(maintenancePrices));
-        const defaultSoloInstalacion = JSON.parse(JSON.stringify(soloInstalacion));
-        const defaultBombasCondensado = JSON.parse(JSON.stringify(bombasCondensado));
-        const defaultLaborByTier = JSON.parse(JSON.stringify(laborByTier));
-        const defaultMarginByBrand = JSON.parse(JSON.stringify(marginByBrand));
-
         let currentBrand = 'hisense';
         let currentBtuIndex = 0;
         let currentPumpMode = 'mismaVisita';
-        let adminSelectedBrand = 'hisense';
 
         function formatCLP(value) {
-            return '$' + Math.round(value).toLocaleString('es-CL');
+            return '$' + Math.round(value || 0).toLocaleString('es-CL');
         }
 
-        function getKitCostForItem(isLarge) {
-            const baseKit = (materials.soporte || 0)
-                + (materials.canaleta100 || 0)
-                + (materials.canaleta20 || 0)
-                + ((materials.cordonMetro || 0) * (materials.cordonMetrosCant || 3))
-                + (materials.accesoriosVarios || 0);
-            return baseKit + (isLarge ? (materials.extraInsumoGrande || 0) : 0);
-        }
-
-        function calculatePricing(brandKey, item) {
-            const marginPct = marginByBrand[brandKey] ?? 15;
-            const labor = laborByTier[item.tier] ?? 115000;
-            const kitCost = getKitCostForItem(item.isLarge);
-            const flete = item.isLarge ? (fleteEquiposGrandes || 0) : 0;
-
-            const compraNeta = (item.baseCost || 0) + kitCost;
-            const ivaCredito = Math.round(compraNeta * 0.19);
-            const pagoProveedorBruto = compraNeta + ivaCredito;
-
-            const subtotalNetoBase = (compraNeta * (1 + marginPct / 100)) + labor;
-            const brutoSinRedondeo = (subtotalNetoBase * 1.19) + flete;
-
-            let totalCliente = Math.round(brutoSinRedondeo);
-            if (redondeoComercial && totalCliente > 20000) {
-                totalCliente = (Math.round(totalCliente / 10000) * 10000) - 100;
-            }
-
-            const ventaNetaReal = Math.round(totalCliente / 1.19);
-            const ivaDebito = totalCliente - ventaNetaReal;
-            const ivaF29 = Math.max(0, ivaDebito - ivaCredito);
-            const gananciaBolsillo = totalCliente - pagoProveedorBruto - ivaF29 - flete;
-
-            return {
-                total: totalCliente,
-                compraNeta,
-                pagoProveedorBruto,
-                ivaCredito,
-                ivaDebito,
-                ivaF29,
-                flete,
-                gananciaBolsillo
-            };
+        function getPublicEquipmentPrice(brandKey, btuLabel) {
+            return (PRECIOS_PUBLICOS.equipos[brandKey] && PRECIOS_PUBLICOS.equipos[brandKey][btuLabel]) || 0;
         }
 
         function applyAdvisor(brandKey) {
@@ -1979,7 +1880,7 @@ Correo: ventas@easycoolclimatizacion.com`;
         function renderDisplayDetails() {
             const data = catalogData[currentBrand];
             const item = data.items[currentBtuIndex] || data.items[0];
-            const pricing = calculatePricing(currentBrand, item);
+            const publicTotal = getPublicEquipmentPrice(currentBrand, item.btu);
 
             document.getElementById('display-badge-cap').innerText = item.btu;
             document.getElementById('display-model-code').innerText = item.modelCode;
@@ -1988,7 +1889,7 @@ Correo: ventas@easycoolclimatizacion.com`;
             const totalElem = document.getElementById('display-final-total');
             totalElem.classList.remove('fade-swap');
             void totalElem.offsetWidth;
-            totalElem.innerText = formatCLP(pricing.total);
+            totalElem.innerText = formatCLP(publicTotal);
             totalElem.classList.add('fade-swap');
 
             document.getElementById('spec-indoor-dim').innerText = item.indoorDim;
@@ -2000,7 +1901,7 @@ Correo: ventas@easycoolclimatizacion.com`;
             document.getElementById('spec-extra-text').innerText = item.extraSpec;
 
             const message = encodeURIComponent(
-                `Hola José, deseo cotizar el Split ${data.name} ${item.btu} (Modelo ${item.modelCode}, ${item.sqm}) llave en mano con despacho, instalación e insumos incluidos por ${formatCLP(pricing.total)} (IVA incluido).`
+                `Hola José, deseo cotizar el Split ${data.name} ${item.btu} (Modelo ${item.modelCode}, ${item.sqm}) llave en mano con despacho, instalación e insumos incluidos por ${formatCLP(publicTotal)} (IVA incluido).`
             );
             document.getElementById('btn-quote-whatsapp').href = `https://wa.me/56957776174?text=${message}`;
             document.getElementById('btn-quote-text').innerText = `Cotizar ${data.name} ${item.btu} con José`;
@@ -2033,17 +1934,15 @@ Correo: ventas@easycoolclimatizacion.com`;
                 }
             });
 
-            // Filtrar solo marcas disponibles en esa capacidad (en 9k muestra 2 columnas limpias: Hisense vs Daikin)
             const entries = ['hisense', 'trane', 'daikin']
                 .map(bKey => {
                     const item = catalogData[bKey].items.find(i => i.cmpKey === cmpKey);
                     if (!item) return null;
-                    const pricing = calculatePricing(bKey, item);
                     return {
                         bKey,
                         brand: catalogData[bKey],
                         item,
-                        price: pricing.total,
+                        price: getPublicEquipmentPrice(bKey, item.btu),
                         noiseVal: parseFirstNumber(item.noiseMin),
                         indoorWidth: parseFirstNumber(item.indoorDim),
                         outdoorWidth: parseFirstNumber(item.outdoorDim)
@@ -2059,21 +1958,21 @@ Correo: ventas@easycoolclimatizacion.com`;
 
             const shortConsumption = {
                 hisense: {
-                    '9k':  { main: 'Estándar', sub: 'Clase A • 870 W' },
-                    '12k': { main: 'Estándar', sub: 'Clase A • 1.090 W' },
-                    '18k': { main: 'Estándar', sub: 'Clase A • 1.615 W' },
-                    '24k': { main: 'Estándar', sub: 'Clase A • 1.995 W' }
+                    '9k':  { main: 'Estándar', sub: '~$75–$220/hr (870 W)' },
+                    '12k': { main: 'Estándar', sub: '~$90–$275/hr (1.090 W)' },
+                    '18k': { main: 'Estándar', sub: '~$115–$405/hr (1.615 W)' },
+                    '24k': { main: 'Estándar', sub: '~$125–$500/hr (1.995 W)' }
                 },
                 trane: {
-                    '12k': { main: 'Bajo', sub: 'Desde ~$60/hr (300 W)' },
-                    '18k': { main: 'Bajo', sub: 'Desde ~$80/hr (400 W)' },
-                    '24k': { main: 'Bajo', sub: 'Desde ~$85/hr (400 W)' }
+                    '12k': { main: 'Bajo', sub: 'Desde ~$75/hr (300 W)' },
+                    '18k': { main: 'Bajo', sub: 'Desde ~$100/hr (400 W)' },
+                    '24k': { main: 'Bajo', sub: 'Desde ~$100/hr (400 W)' }
                 },
                 daikin: {
-                    '9k':  { main: 'Mínimo ⚡', sub: 'Desde ~$45/hr (220 W)' },
-                    '12k': { main: 'Mínimo ⚡', sub: 'Desde ~$45/hr (220 W)' },
-                    '18k': { main: 'Mínimo ⚡', sub: 'Desde ~$50/hr (250 W)' },
-                    '24k': { main: 'Mínimo ⚡', sub: 'Desde ~$65/hr (320 W)' }
+                    '9k':  { main: 'Mínimo ⚡', sub: 'Desde ~$58/hr (230 W)' },
+                    '12k': { main: 'Mínimo ⚡', sub: 'Desde ~$55/hr (220 W)' },
+                    '18k': { main: 'Mínimo ⚡', sub: 'Desde ~$63/hr (250 W)' },
+                    '24k': { main: 'Mínimo ⚡', sub: 'Desde ~$88/hr (350 W)' }
                 }
             };
 
@@ -2129,7 +2028,7 @@ Correo: ventas@easycoolclimatizacion.com`;
                 </div>
             `;
 
-            const rowLuz = buildMatrixRow('⚡', 'Cuenta de Luz (Consumo Inverter)', entries.map(e => {
+            const rowLuz = buildMatrixRow('⚡', 'Cuenta de Luz en Temp. Estable (Ref. $250/kWh Stgo)', entries.map(e => {
                 const c = shortConsumption[e.bKey][cmpKey] || { main: 'Clase A', sub: '' };
                 const isWinner = e.bKey === 'daikin';
                 return `
@@ -2189,7 +2088,7 @@ Correo: ventas@easycoolclimatizacion.com`;
             `).join(''));
 
             const actionRow = `
-                <div class="grid ${colGridClass} divide-x divide-slate-200 bg-slate-50">
+                <div class="grid ${colGridClass} divide-x divide-slate-200 bg-slate-50 border-b border-slate-200">
                     ${entries.map(e => `
                         <div class="p-2.5 sm:p-3 text-center">
                             <button type="button" onclick="chooseFromCompare('${e.bKey}', '${cmpKey}')" class="w-full py-2 px-2 rounded-xl bg-brand-blue hover:bg-blue-600 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs transition-all shadow-xs">
@@ -2197,6 +2096,9 @@ Correo: ventas@easycoolclimatizacion.com`;
                             </button>
                         </div>
                     `).join('')}
+                </div>
+                <div class="px-3 py-2 bg-white text-[9.5px] text-slate-500 text-center leading-snug">
+                    *Consumo eléctrico estimado con tarifa ref. Santiago ($250/kWh). El valor mínimo corresponde al compresor Inverter en temperatura estable (23–24 °C).
                 </div>
             `;
 
@@ -2213,13 +2115,14 @@ Correo: ventas@easycoolclimatizacion.com`;
 
         // --- 5. SOLO INSTALACIÓN, BOMBAS DE CONDENSADO & MANTENIMIENTOS ---
         function renderSoloInstallPrices() {
+            const s = PRECIOS_PUBLICOS.soloInstalacion;
             const setText = (id, text) => {
                 const el = document.getElementById(id);
                 if (el) el.innerText = text;
             };
-            setText('inst-disp-9a12', formatCLP(soloInstalacion['9a12']));
-            setText('inst-disp-18', formatCLP(soloInstalacion['18']));
-            setText('inst-disp-24', formatCLP(soloInstalacion['24']));
+            setText('inst-disp-9a12', formatCLP(s['9a12']));
+            setText('inst-disp-18', formatCLP(s['18']));
+            setText('inst-disp-24', formatCLP(s['24']));
         }
 
         function setPumpMode(mode) {
@@ -2243,13 +2146,14 @@ Correo: ventas@easycoolclimatizacion.com`;
             const specialGrid = document.getElementById('bombas-special-grid');
             if (!mainGrid || !specialGrid) return;
 
+            const bombas = PRECIOS_PUBLICOS.bombasCondensado;
             const isUnica = currentPumpMode === 'visitaUnica';
             const modeLabel = isUnica ? 'Visita única (solo bomba)' : 'Instalada en misma visita (inst. o mant.)';
             const altLabel = isUnica ? 'Misma visita' : 'Visita única';
 
             const featuredItems = BOMBAS_CATALOGO.filter(b => b.featured);
             mainGrid.innerHTML = featuredItems.map(b => {
-                const prices = bombasCondensado[b.key] || { mismaVisita: 0, visitaUnica: 0 };
+                const prices = bombas[b.key] || { mismaVisita: 0, visitaUnica: 0 };
                 const activePrice = isUnica ? prices.visitaUnica : prices.mismaVisita;
                 const altPrice = isUnica ? prices.mismaVisita : prices.visitaUnica;
                 const msg = encodeURIComponent(
@@ -2283,7 +2187,7 @@ Correo: ventas@easycoolclimatizacion.com`;
 
             const specialItems = BOMBAS_CATALOGO.filter(b => !b.featured);
             specialGrid.innerHTML = specialItems.map(b => {
-                const prices = bombasCondensado[b.key] || { mismaVisita: 0, visitaUnica: 0 };
+                const prices = bombas[b.key] || { mismaVisita: 0, visitaUnica: 0 };
                 const activePrice = isUnica ? prices.visitaUnica : prices.mismaVisita;
                 const msg = encodeURIComponent(
                     `Hola José, deseo cotizar la bomba especial ${b.name} en modalidad "${modeLabel}" por ${formatCLP(activePrice)} (IVA incluido).`
@@ -2305,8 +2209,9 @@ Correo: ventas@easycoolclimatizacion.com`;
         }
 
         function renderMaintenancePrices() {
-            const m = maintenancePrices;
+            const m = PRECIOS_PUBLICOS.mantenimientos;
             const ahorroPack = Math.max(0, (m.packEstacional * 2) - m.paseAnual);
+            const diagPrice = m.diagnosticoFalla || 35000;
 
             const setText = (id, text) => {
                 const el = document.getElementById(id);
@@ -2330,6 +2235,11 @@ Correo: ventas@easycoolclimatizacion.com`;
             setText('maint-disp-anual', formatCLP(m.paseAnual));
             setText('maint-disp-ahorro', ahorroPack > 0 ? `(Ahorras ${formatCLP(ahorroPack)})` : '');
             setLink('maint-link-anual', `Hola José, deseo contratar el Pase Anual Clima Todo el Año (${formatCLP(m.paseAnual)})`, `Contratar Pase Anual (${formatCLP(m.paseAnual)})`);
+
+            setText('maint-disp-diagnostico', formatCLP(diagPrice));
+            setText('maint-disp-diag-desde-base', `desde ${formatCLP(m.base)}`);
+            setText('maint-btn-text-diagnostico', `Agendar Diagnóstico (${formatCLP(diagPrice)})`);
+            setLink('maint-link-diagnostico', `Hola José, necesito agendar una Visita Técnica de Diagnóstico de Falla (${formatCLP(diagPrice)} IVA incluido con Informe PDF) para mi aire acondicionado.`);
 
             setText('maint-disp-com3', formatCLP(m.comunidad3a4));
             setText('maint-disp-com5', formatCLP(m.comunidad5mas));
@@ -2373,368 +2283,6 @@ Correo: ventas@easycoolclimatizacion.com`;
                 btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
                 btn.classList.add('bg-brand-blue', 'text-white', 'shadow');
             }
-        }
-
-        // --- 6. SIMULADOR INTERNO Y GENERADOR DE BLOQUE GITHUB (PIN 1811) ---
-        let logoClickCount = 0;
-        let logoClickResetTimeout = null;
-
-        function handleSecretLogoClick() {
-            logoClickCount++;
-            clearTimeout(logoClickResetTimeout);
-            logoClickResetTimeout = setTimeout(() => { logoClickCount = 0; }, 2500);
-            if (logoClickCount >= 5) {
-                logoClickCount = 0;
-                clearTimeout(logoClickResetTimeout);
-                openAuthModal();
-            }
-        }
-
-        function openAuthModal() {
-            const modal = document.getElementById('auth-modal');
-            const input = document.getElementById('admin-pass-input');
-            document.getElementById('auth-error-msg').classList.add('hidden');
-            input.value = '';
-            modal.classList.remove('hidden');
-            input.focus();
-        }
-
-        function closeAuthModal() {
-            document.getElementById('auth-modal').classList.add('hidden');
-        }
-
-        function handleAuthSubmit(e) {
-            e.preventDefault();
-            const input = document.getElementById('admin-pass-input');
-            if (input.value.trim() === ADMIN_PIN) {
-                closeAuthModal();
-                openAdminPanel();
-            } else {
-                document.getElementById('auth-error-msg').classList.remove('hidden');
-                input.value = '';
-                input.focus();
-            }
-        }
-
-        function openAdminPanel() {
-            document.getElementById('admin-modal').classList.remove('hidden');
-            syncAdminHeaderInputs();
-            selectAdminBrandTab(adminSelectedBrand);
-        }
-
-        function syncAdminHeaderInputs() {
-            document.getElementById('cfg-flete').value = fleteEquiposGrandes;
-            document.getElementById('cfg-rounding').checked = redondeoComercial;
-            document.getElementById('cfg-labor-9a12').value = laborByTier['9a12'];
-            document.getElementById('cfg-labor-18').value = laborByTier['18'];
-            document.getElementById('cfg-labor-22a24').value = laborByTier['22a24'];
-            document.getElementById('cfg-margin-hisense').value = marginByBrand.hisense;
-            document.getElementById('cfg-margin-trane').value = marginByBrand.trane;
-            document.getElementById('cfg-margin-daikin').value = marginByBrand.daikin;
-
-            document.getElementById('mat-soporte').value = materials.soporte;
-            document.getElementById('mat-canaleta100').value = materials.canaleta100;
-            document.getElementById('mat-canaleta20').value = materials.canaleta20;
-            document.getElementById('mat-cordon').value = materials.cordonMetro;
-            document.getElementById('mat-varios').value = materials.accesoriosVarios;
-            document.getElementById('mat-extra-grande').value = materials.extraInsumoGrande;
-            updateTotalMaterialsLabel();
-        }
-
-        function closeAdminPanel() {
-            document.getElementById('admin-modal').classList.add('hidden');
-            renderBrandView();
-            renderSoloInstallPrices();
-            renderBombasPrices();
-            renderMaintenancePrices();
-        }
-
-        function updateTotalMaterialsLabel() {
-            const label = document.getElementById('total-kit-materials-label');
-            if (label) {
-                label.innerText = `9-12k: ${formatCLP(getKitCostForItem(false))} | 18-24k: ${formatCLP(getKitCostForItem(true))}`;
-            }
-        }
-
-        function selectAdminBrandTab(tabKey) {
-            adminSelectedBrand = tabKey;
-            ['hisense', 'trane', 'daikin', 'bombas', 'mantenimiento'].forEach(b => {
-                const btn = document.getElementById('adm-tab-' + b);
-                if (!btn) return;
-                if (b === tabKey) {
-                    if (b === 'mantenimiento') {
-                        btn.className = 'px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-600 text-white shadow-sm';
-                    } else if (b === 'bombas') {
-                        btn.className = 'px-2.5 py-1 rounded-lg text-xs font-bold bg-sky-600 text-white shadow-sm';
-                    } else {
-                        btn.className = 'px-2.5 py-1 rounded-lg text-xs font-bold bg-brand-blue text-white shadow-sm';
-                    }
-                } else {
-                    if (b === 'mantenimiento') {
-                        btn.className = 'px-2.5 py-1 rounded-lg text-xs font-bold bg-emerald-50 text-emerald-800 border border-emerald-200';
-                    } else if (b === 'bombas') {
-                        btn.className = 'px-2.5 py-1 rounded-lg text-xs font-bold bg-sky-50 text-sky-800 border border-sky-200';
-                    } else {
-                        btn.className = 'px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 text-slate-700';
-                    }
-                }
-            });
-            renderAdminEquipmentEditor();
-        }
-
-        function renderAdminEquipmentEditor() {
-            const container = document.getElementById('admin-equipment-editor');
-            if (!container) return;
-
-            if (adminSelectedBrand === 'bombas') {
-                let html = `
-                    <div class="bg-sky-50/70 border border-sky-200 rounded-2xl p-3">
-                        <div class="flex items-center justify-between mb-2 flex-wrap gap-1">
-                            <h4 class="font-black text-sky-900 text-xs uppercase flex items-center gap-1.5">
-                                <span class="w-2 h-2 rounded-full bg-sky-500"></span>
-                                Bombas de Condensado Instaladas (IVA Incluido)
-                            </h4>
-                            <span class="text-[10px] text-sky-700 font-semibold bg-white px-2 py-0.5 rounded border border-sky-200">
-                                Misma Visita vs. Visita Única
-                            </span>
-                        </div>
-                        <div class="space-y-2">
-                            ${BOMBAS_CATALOGO.map(b => {
-                                const vals = bombasCondensado[b.key] || { mismaVisita: 0, visitaUnica: 0 };
-                                return `
-                                    <div class="bg-white p-2.5 rounded-xl border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                                        <div>
-                                            <span class="text-xs font-black text-slate-800 block">${b.name}</span>
-                                            <span class="text-[10px] text-slate-500 block">${b.range}</span>
-                                        </div>
-                                        <div class="grid grid-cols-2 gap-2">
-                                            <div class="flex items-center gap-1">
-                                                <span class="text-[10px] font-bold text-slate-500">Misma:</span>
-                                                <input type="number" step="5000" value="${vals.mismaVisita}" oninput="updateBombaCost('${b.key}', 'mismaVisita', this.value)" class="w-24 text-right font-black text-xs p-1 border border-slate-300 rounded">
-                                            </div>
-                                            <div class="flex items-center gap-1">
-                                                <span class="text-[10px] font-bold text-slate-500">Única:</span>
-                                                <input type="number" step="5000" value="${vals.visitaUnica}" oninput="updateBombaCost('${b.key}', 'visitaUnica', this.value)" class="w-24 text-right font-black text-xs p-1 border border-slate-300 rounded">
-                                            </div>
-                                        </div>
-                                    </div>
-                                `;
-                            }).join('')}
-                        </div>
-                    </div>
-                `;
-                container.innerHTML = html;
-                return;
-            }
-
-            if (adminSelectedBrand === 'mantenimiento') {
-                const camposInst = [
-                    { key: '9a12', label: 'Solo Instalación: 9.000 – 12.000 BTU' },
-                    { key: '18', label: 'Solo Instalación: 18.000 BTU' },
-                    { key: '24', label: 'Solo Instalación: 24.000 BTU' }
-                ];
-                const camposMaint = [
-                    { key: 'base', label: 'Residencial: Mantención Base' },
-                    { key: 'packEstacional', label: 'Residencial: Pack Estacional' },
-                    { key: 'paseAnual', label: 'Residencial: Pase Anual (2 visitas)' },
-                    { key: 'comunidad3a4', label: 'Edificios: 3 a 4 Equipos (c/u)' },
-                    { key: 'comunidad5mas', label: 'Edificios: 5+ Equipos (c/u)' },
-                    { key: 'kitSanitario', label: 'Upgrade: Kit Sanitario (+)' },
-                    { key: 'moduloWifi', label: 'Upgrade: IR Wi-Fi Universal (+)' },
-                    { key: 'escudoInverter', label: 'Upgrade: Escudo Inverter (+)' },
-                    { key: 'lavadoProfundo', label: 'Upgrade: Lavado Profundo (+)' },
-                    { key: 'garantia3Anos', label: 'Upgrade: Ext. Garantía 3 Años (+)' },
-                    { key: 'comercioSemestral', label: 'B2B: Comercio Semestral (+IVA)' },
-                    { key: 'continuidadTrimestral', label: 'B2B: Continuidad Trimestral (+IVA)' },
-                    { key: 'visitaMinimaB2B', label: 'B2B: Visita Mínima 1-3 eq. (+IVA)' }
-                ];
-
-                let html = `
-                    <div class="bg-blue-50/60 border border-blue-200 rounded-2xl p-3 mb-3">
-                        <h4 class="font-black text-brand-dark text-xs uppercase mb-2">Solo Instalación (IVA Incluido)</h4>
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                            ${camposInst.map(c => `
-                                <div class="bg-white p-2 rounded-xl border border-slate-200 flex items-center justify-between gap-2">
-                                    <span class="text-[10.5px] font-bold text-slate-700">${c.label}</span>
-                                    <input type="number" step="1000" value="${soloInstalacion[c.key]}" oninput="updateSoloInstCost('${c.key}', this.value)" class="w-24 text-right font-black text-xs p-1 border border-slate-300 rounded">
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                    <div class="bg-emerald-50/60 border border-emerald-200 rounded-2xl p-3">
-                        <h4 class="font-black text-emerald-900 text-xs uppercase mb-2">Planes de Mantenimiento y Upgrades</h4>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                            ${camposMaint.map(c => `
-                                <div class="bg-white p-2.5 rounded-xl border border-slate-200 flex items-center justify-between gap-2">
-                                    <span class="text-[11px] font-bold text-slate-700 leading-tight">${c.label}</span>
-                                    <div class="flex items-center gap-1 flex-shrink-0">
-                                        <span class="text-xs font-bold text-slate-400">$</span>
-                                        <input type="number" step="500" value="${maintenancePrices[c.key]}" oninput="updateMaintenanceCost('${c.key}', this.value)" class="w-24 text-right font-black text-xs p-1 border border-slate-300 rounded">
-                                    </div>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                `;
-                container.innerHTML = html;
-                return;
-            }
-
-            const brand = catalogData[adminSelectedBrand];
-            if (!brand) return;
-
-            let html = `
-                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-3">
-                    <div class="flex items-center justify-between mb-2">
-                        <h4 class="font-black text-brand-dark text-xs uppercase flex items-center gap-1.5">
-                            <span class="w-2 h-2 rounded-full bg-brand-blue"></span>
-                            ${brand.fullName} — Costo Neto Proveedor & Caja Real
-                        </h4>
-                        <span class="text-[10px] text-slate-500 font-semibold bg-white px-2 py-0.5 rounded border border-slate-200">
-                            Margen: ${marginByBrand[adminSelectedBrand]}%
-                        </span>
-                    </div>
-                    <div class="space-y-2.5">
-            `;
-
-            brand.items.forEach((item, idx) => {
-                const p = calculatePricing(adminSelectedBrand, item);
-                html += `
-                    <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                        <div class="space-y-0.5">
-                            <div class="flex items-center gap-1.5 flex-wrap">
-                                <span class="text-xs font-black text-slate-800">${item.btu} (${item.sqm})</span>
-                                ${item.isLarge ? `<span class="text-[9.5px] font-bold bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">🚚 +Flete ${formatCLP(p.flete)}</span>` : ''}
-                            </div>
-                            <div class="text-[11px] font-bold text-brand-blue">
-                                Precio Cliente: <strong id="adm-sale-${adminSelectedBrand}-${idx}">${formatCLP(p.total)}</strong> (IVA incl.)
-                            </div>
-                            <div id="adm-cash-${adminSelectedBrand}-${idx}" class="text-[10px] text-slate-600 font-semibold">
-                                Prov. Bruto: ${formatCLP(p.pagoProveedorBruto)} • F29 SII: ${formatCLP(p.ivaF29)} • <span class="text-emerald-700 font-black">Al Bolsillo: ${formatCLP(p.gananciaBolsillo)}</span>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-2 self-end sm:self-auto">
-                            <span class="text-[10px] font-bold text-slate-500">Neto Prov.:</span>
-                            <div class="flex items-center gap-1">
-                                <span class="text-xs font-bold text-slate-400">$</span>
-                                <input type="number" step="100" value="${item.baseCost}" oninput="updateBaseCost('${adminSelectedBrand}', ${idx}, this.value)" class="w-24 text-right font-black text-xs p-1.5 border border-slate-300 rounded">
-                            </div>
-                        </div>
-                    </div>
-                `;
-            });
-
-            html += `</div></div>`;
-            container.innerHTML = html;
-        }
-
-        function refreshAdminSaleLabels() {
-            if (adminSelectedBrand === 'mantenimiento') return;
-            const brand = catalogData[adminSelectedBrand];
-            if (!brand) return;
-            brand.items.forEach((item, idx) => {
-                const p = calculatePricing(adminSelectedBrand, item);
-                const saleEl = document.getElementById(`adm-sale-${adminSelectedBrand}-${idx}`);
-                const cashEl = document.getElementById(`adm-cash-${adminSelectedBrand}-${idx}`);
-                if (saleEl) saleEl.innerText = formatCLP(p.total);
-                if (cashEl) {
-                    cashEl.innerHTML = `Prov. Bruto: ${formatCLP(p.pagoProveedorBruto)} • F29 SII: ${formatCLP(p.ivaF29)} • <span class="text-emerald-700 font-black">Al Bolsillo: ${formatCLP(p.gananciaBolsillo)}</span>`;
-                }
-            });
-        }
-
-        function updateBaseCost(brandKey, index, value) {
-            catalogData[brandKey].items[index].baseCost = parseFloat(value) || 0;
-            refreshAdminSaleLabels();
-            renderBrandView();
-        }
-
-        function updateMaintenanceCost(key, value) {
-            maintenancePrices[key] = parseFloat(value) || 0;
-            renderMaintenancePrices();
-        }
-
-        function updateSoloInstCost(key, value) {
-            soloInstalacion[key] = parseFloat(value) || 0;
-            renderSoloInstallPrices();
-        }
-
-        function updateBombaCost(key, field, value) {
-            if (!bombasCondensado[key]) bombasCondensado[key] = { mismaVisita: 0, visitaUnica: 0 };
-            bombasCondensado[key][field] = parseFloat(value) || 0;
-            renderBombasPrices();
-        }
-
-        function updateGlobalParams() {
-            fleteEquiposGrandes = parseFloat(document.getElementById('cfg-flete').value) || 0;
-            redondeoComercial = document.getElementById('cfg-rounding').checked;
-            laborByTier['9a12'] = parseFloat(document.getElementById('cfg-labor-9a12').value) || 0;
-            laborByTier['18'] = parseFloat(document.getElementById('cfg-labor-18').value) || 0;
-            laborByTier['22a24'] = parseFloat(document.getElementById('cfg-labor-22a24').value) || 0;
-            marginByBrand.hisense = parseFloat(document.getElementById('cfg-margin-hisense').value) || 0;
-            marginByBrand.trane = parseFloat(document.getElementById('cfg-margin-trane').value) || 0;
-            marginByBrand.daikin = parseFloat(document.getElementById('cfg-margin-daikin').value) || 0;
-            refreshAdminSaleLabels();
-            renderBrandView();
-        }
-
-        function updateMaterials() {
-            materials.soporte = parseFloat(document.getElementById('mat-soporte').value) || 0;
-            materials.canaleta100 = parseFloat(document.getElementById('mat-canaleta100').value) || 0;
-            materials.canaleta20 = parseFloat(document.getElementById('mat-canaleta20').value) || 0;
-            materials.cordonMetro = parseFloat(document.getElementById('mat-cordon').value) || 0;
-            materials.accesoriosVarios = parseFloat(document.getElementById('mat-varios').value) || 0;
-            materials.extraInsumoGrande = parseFloat(document.getElementById('mat-extra-grande').value) || 0;
-            updateTotalMaterialsLabel();
-            refreshAdminSaleLabels();
-            renderBrandView();
-        }
-
-        function copyQuickPriceConfig() {
-            const equiposProveedor = {};
-            ['hisense', 'trane', 'daikin'].forEach(brandKey => {
-                equiposProveedor[brandKey] = {};
-                catalogData[brandKey].items.forEach(item => {
-                    equiposProveedor[brandKey][item.btu] = item.baseCost;
-                });
-            });
-
-            const exportObj = {
-                equiposProveedor,
-                fleteEquiposGrandes,
-                redondeoComercial,
-                manoDeObra: laborByTier,
-                margenPorMarca: marginByBrand,
-                insumos: materials,
-                soloInstalacion,
-                mantenimientos: maintenancePrices,
-                bombasCondensado
-            };
-
-            const codeSnippet = `const CONFIG_PRECIOS_INICIAL = ${JSON.stringify(exportObj, null, 4)};`;
-            copyText(codeSnippet, '¡Bloque copiado! Pégalo arriba en index.html en GitHub');
-        }
-
-        function resetDefaults() {
-            for (const b in defaultCatalogData) {
-                catalogData[b] = JSON.parse(JSON.stringify(defaultCatalogData[b]));
-            }
-            materials = JSON.parse(JSON.stringify(defaultMaterials));
-            maintenancePrices = JSON.parse(JSON.stringify(defaultMaintenancePrices));
-            soloInstalacion = JSON.parse(JSON.stringify(defaultSoloInstalacion));
-            bombasCondensado = JSON.parse(JSON.stringify(defaultBombasCondensado));
-            laborByTier = JSON.parse(JSON.stringify(defaultLaborByTier));
-            marginByBrand = JSON.parse(JSON.stringify(defaultMarginByBrand));
-            fleteEquiposGrandes = CONFIG_PRECIOS_INICIAL.fleteEquiposGrandes;
-            redondeoComercial = CONFIG_PRECIOS_INICIAL.redondeoComercial;
-
-            syncAdminHeaderInputs();
-            renderAdminEquipmentEditor();
-            renderBrandView();
-            renderSoloInstallPrices();
-            renderBombasPrices();
-            renderMaintenancePrices();
-            showToast('¡Valores de GitHub restaurados!');
         }
 
         window.onload = function() {

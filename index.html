@@ -41,83 +41,126 @@
     ========================================================================= -->
     <script>
         const PRECIOS_PUBLICOS = {
-    "equipos": {
-        "hisense": {
-            "9.000 BTU": 469900,
-            "12.000 BTU": 499900,
-            "18.000 BTU": 689900,
-            "22.000 BTU": 809900
-        },
-        "trane": {
-            "12.000 BTU": 509900,
-            "18.000 BTU": 739900,
-            "24.000 BTU": 879900
-        },
-        "daikin": {
-            "9.000 BTU": 509900,
-            "12.000 BTU": 519900,
-            "18.000 BTU": 759900,
-            "24.000 BTU": 899900
+            equipos: {
+                hisense: {
+                    "9.000 BTU":  469900,
+                    "12.000 BTU": 499900,
+                    "18.000 BTU": 689900,
+                    "22.000 BTU": 809900
+                },
+                trane: {
+                    "12.000 BTU": 509900,
+                    "18.000 BTU": 739900,
+                    "24.000 BTU": 879900
+                },
+                daikin: {
+                    "9.000 BTU":  509900,
+                    "12.000 BTU": 519900,
+                    "18.000 BTU": 759900,
+                    "24.000 BTU": 899900
+                }
+            },
+            soloInstalacion: {
+                "9a12": 149900,
+                "18":   179900,
+                "24":   219900
+            },
+            mantenimientos: {
+                base:                  45000,
+                packEstacional:        55000,
+                paseAnual:             89900,
+                diagnosticoFalla:      35000,
+                comunidad3a4:          38000,
+                comunidad5mas:         35000,
+                kitSanitario:          15000,
+                moduloWifi:            29990,
+                escudoInverter:        30000,
+                lavadoProfundo:        39900,
+                garantia3Anos:         55000,
+                comercioSemestral:     49000,
+                continuidadTrimestral: 45000,
+                visitaMinimaB2B:      165000
+            },
+            bombasCondensado: {
+                wipcoolP16:      { mismaVisita: 100000, visitaUnica: 130000 },
+                wipcoolP32:      { mismaVisita: 120000, visitaUnica: 150000 },
+                aspenMiniOrange: { mismaVisita: 160000, visitaUnica: 190000 },
+                aspenMaxiOrange: { mismaVisita: 190000, visitaUnica: 220000 },
+                wipcoolP12:      { mismaVisita:  95000, visitaUnica: 125000 },
+                aspenMiniAqua:   { mismaVisita: 150000, visitaUnica: 180000 },
+                aspenHiFlow:     { mismaVisita: 110000, visitaUnica: 140000 }
+            }
+        };
+    </script>
+
+    <!-- Fuentes: Inter y Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS con Respaldo Automático (jsDelivr) -->
+    <script>
+        function loadTailwindFallback() {
+            if (window.__twFallbackLoaded) return;
+            window.__twFallbackLoaded = true;
+            var s = document.createElement('script');
+            s.src = 'https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4';
+            document.head.appendChild(s);
         }
-    },
-    "soloInstalacion": {
-        "18": 179900,
-        "24": 219900,
-        "9a12": 149900
-    },
-    "mantenimientos": {
-        "base": 45000,
-        "packEstacional": 55000,
-        "paseAnual": 89900,
-        "diagnosticoFalla": 35000,
-        "comunidad3a4": 38000,
-        "comunidad5mas": 35000,
-        "kitSanitario": 15000,
-        "moduloWifi": 29990,
-        "escudoInverter": 30000,
-        "lavadoProfundo": 39900,
-        "garantia3Anos": 55000,
-        "comercioSemestral": 49000,
-        "continuidadTrimestral": 45000,
-        "visitaMinimaB2B": 165000
-    },
-    "bombasCondensado": {
-        "wipcoolP16": {
-            "mismaVisita": 100000,
-            "visitaUnica": 130000
-        },
-        "aspenMiniOrange": {
-            "mismaVisita": 170000,
-            "visitaUnica": 190000
-        },
-        "wipcoolP32": {
-            "mismaVisita": 120000,
-            "visitaUnica": 150000
-        },
-        "aspenMaxiOrange": {
-            "mismaVisita": 190000,
-            "visitaUnica": 220000
-        },
-        "wipcoolP12": {
-            "mismaVisita": 95000,
-            "visitaUnica": 125000
-        },
-        "aspenMiniAqua": {
-            "mismaVisita": 150000,
-            "visitaUnica": 180000
-        },
-        "aspenHiFlow": {
-            "mismaVisita": 110000,
-            "visitaUnica": 140000
+    </script>
+    <script src="https://cdn.tailwindcss.com" onerror="loadTailwindFallback()"></script>
+    <script>
+        if (typeof tailwind !== 'undefined') {
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            'montserrat': ['Montserrat', 'sans-serif'],
+                            'inter': ['Inter', 'sans-serif']
+                        },
+                        colors: {
+                            brand: {
+                                blue: '#4981F3',
+                                dark: '#212B3B',
+                                navy: '#152136',
+                                navyDark: '#0E1726',
+                                gray: '#9FA5B1',
+                                bar1: '#F1F6FF',
+                                bar2: '#E4EEFF',
+                                bar3: '#D2E3FF'
+                            }
+                        }
+                    }
+                }
+            };
         }
-    }
-};
     </script>
 
     <!-- Iconos FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
+        /* --- BLINDAJE CRÍTICO: EVITA FUGAS VISUALES SI UN CDN TARDA O FALLA --- */
+        .hidden { display: none !important; }
+        #catalog-modal.hidden, #compare-modal.hidden { display: none !important; }
+
+        /* Colores de marca EasyCool como respaldo nativo (compatible con Tailwind v3 y v4) */
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .bg-brand-blue { background-color: #4981F3; }
+        .text-brand-blue { color: #4981F3; }
+        .border-brand-blue { border-color: #4981F3; }
+        .bg-brand-dark { background-color: #212B3B; }
+        .text-brand-dark { color: #212B3B; }
+        .bg-brand-navy { background-color: #152136; }
+        .text-brand-navy { color: #152136; }
+        .text-brand-gray { color: #9FA5B1; }
+        .bg-brand-bar1 { background-color: #F1F6FF; }
+        .text-brand-bar1 { color: #F1F6FF; }
+        .bg-brand-bar2 { background-color: #E4EEFF; }
+        .text-brand-bar2 { color: #E4EEFF; }
+        .bg-brand-bar3 { background-color: #D2E3FF; }
+        .text-brand-bar3 { color: #D2E3FF; }
+
         /* --- SISTEMA DE DISEÑO (DARK PREMIUM LINKTREE + SCROLL NATIVO CATÁLOGO) --- */
         :root {
             --bg-deep: #0f172a;
@@ -430,7 +473,6 @@
             position: relative;
             z-index: 40;
         }
-        #catalog-modal.hidden { display: none; }
 
         .catalog-sticky-header {
             padding-top: env(safe-area-inset-top);
@@ -875,7 +917,7 @@
                     </div>
 
                     <!-- Instrumental Certificado -->
-                    <div class="bg-gradient-to-br from-brand-navy via-[#1e2f4a] to-brand-navyDark text-white rounded-2xl p-3.5 shadow-md border border-brand-blue/30">
+                    <div class="bg-gradient-to-br from-brand-navy via-[#1e2f4a] to-brand-navyDark bg-brand-navy text-white rounded-2xl p-3.5 shadow-md border border-brand-blue/30">
                         <div class="flex items-center gap-2 mb-2">
                             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
                             <h4 class="text-[11px] sm:text-xs font-black uppercase tracking-wider text-brand-bar3">
@@ -1283,9 +1325,9 @@
     <!-- ======================================================== -->
     <!-- MODAL COMPARADOR LADO A LADO DE LAS 3 MARCAS             -->
     <!-- ======================================================== -->
-    <div id="compare-modal" class="fixed inset-0 z-[70] bg-slate-900/80 backdrop-blur-sm hidden flex items-center justify-center p-2 sm:p-4" onclick="if(event.target === this) closeCompareModal()">
+    <div id="compare-modal" class="hidden fixed inset-0 z-[70] bg-slate-900/80 backdrop-blur-sm items-center justify-center p-2 sm:p-4" onclick="if(event.target === this) closeCompareModal()">
         <div class="bg-white rounded-3xl shadow-2xl border border-slate-200 max-w-3xl w-full max-h-[92vh] flex flex-col overflow-hidden text-brand-dark font-montserrat">
-            <div class="px-4 py-3.5 bg-gradient-to-r from-brand-navy to-brand-dark text-white flex justify-between items-center gap-2">
+            <div class="px-4 py-3.5 bg-gradient-to-r from-brand-navy to-brand-dark bg-brand-navy text-white flex justify-between items-center gap-2">
                 <div>
                     <span class="text-[10px] font-bold uppercase tracking-wider text-brand-bar3 block">Comparativa Rápida • Fichas Oficiales</span>
                     <h3 class="text-sm sm:text-lg font-black leading-tight">Hisense vs. Trane vs. Daikin</h3>
@@ -1901,11 +1943,14 @@ Correo: ventas@easycoolclimatizacion.com`;
             const currentItem = catalogData[currentBrand].items[currentBtuIndex] || catalogData[currentBrand].items[0];
             const modal = document.getElementById('compare-modal');
             modal.classList.remove('hidden');
+            modal.classList.add('flex');
             renderCompareTable(currentItem.cmpKey || '12k');
         }
 
         function closeCompareModal() {
-            document.getElementById('compare-modal').classList.add('hidden');
+            const modal = document.getElementById('compare-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
         }
 
         function parseFirstNumber(str) {

@@ -41,88 +41,77 @@
     ========================================================================= -->
     <script>
         const PRECIOS_PUBLICOS = {
-            equipos: {
-                hisense: {
-                    "9.000 BTU":  469900,
-                    "12.000 BTU": 499900,
-                    "18.000 BTU": 689900,
-                    "22.000 BTU": 809900
-                },
-                trane: {
-                    "12.000 BTU": 509900,
-                    "18.000 BTU": 739900,
-                    "24.000 BTU": 879900
-                },
-                daikin: {
-                    "9.000 BTU":  509900,
-                    "12.000 BTU": 519900,
-                    "18.000 BTU": 759900,
-                    "24.000 BTU": 899900
-                }
-            },
-            soloInstalacion: {
-                "9a12": 149900,
-                "18":   179900,
-                "24":   219900
-            },
-            mantenimientos: {
-                base:                  45000,
-                packEstacional:        55000,
-                paseAnual:             89900,
-                diagnosticoFalla:      35000,
-                comunidad3a4:          38000,
-                comunidad5mas:         35000,
-                kitSanitario:          15000,
-                moduloWifi:            29990,
-                escudoInverter:        30000,
-                lavadoProfundo:        39900,
-                garantia3Anos:         55000,
-                comercioSemestral:     49000,
-                continuidadTrimestral: 45000,
-                visitaMinimaB2B:      165000
-            },
-            bombasCondensado: {
-                wipcoolP16:      { mismaVisita: 100000, visitaUnica: 130000 },
-                wipcoolP32:      { mismaVisita: 120000, visitaUnica: 150000 },
-                aspenMiniOrange: { mismaVisita: 160000, visitaUnica: 190000 },
-                aspenMaxiOrange: { mismaVisita: 190000, visitaUnica: 220000 },
-                wipcoolP12:      { mismaVisita:  95000, visitaUnica: 125000 },
-                aspenMiniAqua:   { mismaVisita: 150000, visitaUnica: 180000 },
-                aspenHiFlow:     { mismaVisita: 110000, visitaUnica: 140000 }
-            }
-        };
-    </script>
-
-    <!-- Fuentes: Inter y Montserrat -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'montserrat': ['Montserrat', 'sans-serif'],
-                        'inter': ['Inter', 'sans-serif']
-                    },
-                    colors: {
-                        brand: {
-                            blue: '#4981F3',
-                            dark: '#212B3B',
-                            navy: '#152136',
-                            navyDark: '#0E1726',
-                            gray: '#9FA5B1',
-                            bar1: '#F1F6FF',
-                            bar2: '#E4EEFF',
-                            bar3: '#D2E3FF'
-                        }
-                    }
-                }
-            }
+    "equipos": {
+        "hisense": {
+            "9.000 BTU": 469900,
+            "12.000 BTU": 499900,
+            "18.000 BTU": 689900,
+            "22.000 BTU": 809900
+        },
+        "trane": {
+            "12.000 BTU": 509900,
+            "18.000 BTU": 739900,
+            "24.000 BTU": 879900
+        },
+        "daikin": {
+            "9.000 BTU": 509900,
+            "12.000 BTU": 519900,
+            "18.000 BTU": 759900,
+            "24.000 BTU": 899900
         }
+    },
+    "soloInstalacion": {
+        "18": 179900,
+        "24": 219900,
+        "9a12": 149900
+    },
+    "mantenimientos": {
+        "base": 45000,
+        "packEstacional": 55000,
+        "paseAnual": 89900,
+        "diagnosticoFalla": 35000,
+        "comunidad3a4": 38000,
+        "comunidad5mas": 35000,
+        "kitSanitario": 15000,
+        "moduloWifi": 29990,
+        "escudoInverter": 30000,
+        "lavadoProfundo": 39900,
+        "garantia3Anos": 55000,
+        "comercioSemestral": 49000,
+        "continuidadTrimestral": 45000,
+        "visitaMinimaB2B": 165000
+    },
+    "bombasCondensado": {
+        "wipcoolP16": {
+            "mismaVisita": 100000,
+            "visitaUnica": 130000
+        },
+        "aspenMiniOrange": {
+            "mismaVisita": 170000,
+            "visitaUnica": 190000
+        },
+        "wipcoolP32": {
+            "mismaVisita": 120000,
+            "visitaUnica": 150000
+        },
+        "aspenMaxiOrange": {
+            "mismaVisita": 190000,
+            "visitaUnica": 220000
+        },
+        "wipcoolP12": {
+            "mismaVisita": 95000,
+            "visitaUnica": 125000
+        },
+        "aspenMiniAqua": {
+            "mismaVisita": 150000,
+            "visitaUnica": 180000
+        },
+        "aspenHiFlow": {
+            "mismaVisita": 110000,
+            "visitaUnica": 140000
+        }
+    }
+};
     </script>
 
     <!-- Iconos FontAwesome -->

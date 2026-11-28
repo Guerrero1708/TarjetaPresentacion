@@ -677,28 +677,25 @@
 
             <!-- Header Catálogo -->
             <header class="catalog-sticky-header bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50 shadow-sm">
-                <div class="max-w-4xl mx-auto px-3.5 sm:px-6 py-2.5 flex justify-between items-center">
-                    <div class="flex flex-row items-center font-montserrat select-none gap-2.5">
-                        <div class="relative w-[44px] h-[44px] sm:w-[50px] sm:h-[50px] bg-brand-blue rounded-full flex flex-col justify-center items-end pr-[8px] sm:pr-[10px] gap-[3px] shadow-sm flex-shrink-0">
-                            <div class="h-[6px] w-[27px] sm:w-[32px] bg-brand-bar1 rounded-full"></div>
-                            <div class="h-[6px] w-[21px] sm:w-[25px] bg-brand-bar2 rounded-full"></div>
-                            <div class="h-[6px] w-[15px] sm:w-[18px] bg-brand-bar3 rounded-full"></div>
+                <div class="max-w-4xl mx-auto px-3 sm:px-6 py-2.5 flex justify-between items-center gap-2">
+                    <div class="flex flex-row items-center font-montserrat select-none gap-2 sm:gap-2.5 min-w-0">
+                        <div class="relative w-[38px] h-[38px] sm:w-[50px] sm:h-[50px] bg-brand-blue rounded-full flex flex-col justify-center items-end pr-[7px] sm:pr-[10px] gap-[2.5px] sm:gap-[3px] shadow-sm flex-shrink-0">
+                            <div class="h-[5px] sm:h-[6px] w-[23px] sm:w-[32px] bg-brand-bar1 rounded-full"></div>
+                            <div class="h-[5px] sm:h-[6px] w-[18px] sm:w-[25px] bg-brand-bar2 rounded-full"></div>
+                            <div class="h-[5px] sm:h-[6px] w-[13px] sm:w-[18px] bg-brand-bar3 rounded-full"></div>
                         </div>
                         <div class="flex flex-col items-start leading-none">
-                            <h2 class="text-brand-dark font-[900] text-[17px] sm:text-[20px] tracking-tight">EASYCOOL</h2>
-                            <p class="text-brand-gray font-[600] text-[10px] sm:text-[11px] tracking-wide mt-0.5">Catálogo Oficial</p>
+                            <h2 class="text-brand-dark font-[900] text-[15px] sm:text-[20px] tracking-tight">EASYCOOL</h2>
+                            <p class="text-brand-gray font-[600] text-[9.5px] sm:text-[11px] tracking-wide mt-0.5">Catálogo Oficial</p>
                         </div>
                     </div>
 
-                    <div class="flex items-center gap-1.5">
-                        <button type="button" id="btn-fullscreen-toggle" onclick="toggleNativeFullscreen()" class="hidden inline-flex items-center justify-center bg-slate-100 hover:bg-slate-200 text-slate-600 w-8 h-8 rounded-xl text-xs transition-colors" title="Pantalla completa">
-                            <i id="icon-fullscreen-toggle" class="fas fa-expand"></i>
-                        </button>
-                        <button type="button" onclick="shareCatalogLink()" class="inline-flex items-center gap-1.5 bg-blue-50 hover:bg-blue-100 text-brand-blue font-bold px-3 py-2 rounded-xl text-xs transition-colors" title="Compartir link directo al catálogo">
+                    <div class="flex items-center gap-1.5 flex-shrink-0">
+                        <button type="button" onclick="shareCatalogLink()" class="inline-flex items-center gap-1 bg-blue-50 hover:bg-blue-100 text-brand-blue font-bold px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl text-[11px] sm:text-xs transition-colors" title="Compartir link directo al catálogo">
                             <i class="fas fa-share-alt"></i>
                             <span>Compartir</span>
                         </button>
-                        <button type="button" onclick="closeCatalogModal()" class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-3 py-2 rounded-xl text-xs transition-colors">
+                        <button type="button" onclick="closeCatalogModal()" class="inline-flex items-center gap-1 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl text-[11px] sm:text-xs transition-colors">
                             <i class="fas fa-times"></i>
                             <span>Cerrar</span>
                         </button>
@@ -1276,23 +1273,21 @@
 
                     <!-- TARJETA SIEMPRE VISIBLE: VISITA TÉCNICA DE DIAGNÓSTICO DE FALLA -->
                     <div id="diagnostico" class="mt-5 scroll-mt-20 bg-white rounded-2xl p-4 sm:p-5 border border-amber-300 shadow-sm">
-                        <div class="flex items-start justify-between gap-2 flex-wrap">
-                            <div>
-                                <span class="inline-flex items-center gap-1 text-[10px] font-black uppercase text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full">
-                                    <i class="fas fa-stethoscope"></i>
-                                    ¿No enfría, gotea o marca error?
-                                </span>
-                                <h4 class="text-base sm:text-lg font-black text-brand-dark mt-1.5 leading-tight">
-                                    Visita Técnica: Diagnóstico de Falla
-                                </h4>
-                            </div>
-                            <div class="text-right">
-                                <span id="maint-disp-diagnostico" class="text-xl sm:text-2xl font-[900] text-brand-dark block leading-none">$35.000</span>
-                                <span class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full inline-block mt-1">IVA Incluido • Informe PDF</span>
+                        <div class="text-center">
+                            <span class="inline-flex items-center justify-center gap-1 text-[10px] font-black uppercase text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full">
+                                <i class="fas fa-stethoscope"></i>
+                                ¿No enfría, gotea o marca error?
+                            </span>
+                            <h4 class="text-base sm:text-lg font-black text-brand-dark mt-1.5 leading-tight">
+                                Visita Técnica: Diagnóstico de Falla
+                            </h4>
+                            <div class="mt-2.5 inline-flex items-center justify-center gap-2 flex-wrap bg-amber-50/80 border border-amber-200/90 px-3.5 py-2 rounded-xl">
+                                <span id="maint-disp-diagnostico" class="text-2xl font-[900] text-brand-dark leading-none">$35.000</span>
+                                <span class="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">IVA Incluido • Informe PDF</span>
                             </div>
                         </div>
 
-                        <p class="text-xs text-slate-600 mt-2 leading-snug">
+                        <p class="text-xs text-slate-600 mt-3 leading-snug text-center sm:text-left">
                             Revisión instrumental en terreno con <strong>termómetro láser Fluke y pinza amperimétrica</strong>, identificación de causa raíz, entrega de <strong>Informe Técnico Digital en PDF</strong> y presupuesto cerrado de reparación.
                         </p>
 
@@ -1310,13 +1305,14 @@
             </section>
 
             <!-- Footer Catálogo -->
-            <footer class="bg-white border-t border-slate-200 mt-auto pb-24 sm:pb-8">
-                <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-6 text-center text-xs text-slate-500">
+            <footer class="bg-white border-t border-slate-200 mt-auto pb-28 sm:pb-8">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 pt-6 flex flex-col items-center justify-center text-center text-xs text-slate-500">
                     <p class="font-bold text-brand-dark">EasyCool Climatización • RUT 77.448.234-2</p>
-                    <p class="mt-1">
-                        Atención personalizada con José Guerrero:
-                        <a href="https://wa.me/56957776174" target="_blank" rel="noopener noreferrer" class="text-brand-blue font-bold">+56 9 5777 6174</a>
-                    </p>
+                    <p class="mt-1.5 text-slate-500">Atención personalizada con José Guerrero</p>
+                    <a href="https://wa.me/56957776174" target="_blank" rel="noopener noreferrer" class="mt-1.5 inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 rounded-full bg-blue-50 hover:bg-blue-100 text-brand-blue font-extrabold text-xs whitespace-nowrap transition-colors">
+                        <i class="fab fa-whatsapp text-emerald-600 text-sm"></i>
+                        <span>+56 9 5777 6174</span>
+                    </a>
                 </div>
             </footer>
         </div>
@@ -1360,81 +1356,329 @@
     <!-- SCRIPTS PÚBLICOS (100% LIMPIO)             -->
     <!-- ========================================== -->
     <script>
-        // --- 1. CONTROL DE VISTAS NATIVAS, PANTALLA COMPLETA Y LINKS DIRECTOS ---
+        const WA_PHONE = '56957776174';
+
+        // --- DATOS TÉCNICOS OFICIALES POR MARCA Y CAPACIDAD (REF. $250/kWh STGO) ---
+        const BRAND_SPECS = {
+            hisense: {
+                name: 'Hisense Hi-Vida Inverter',
+                shortName: 'Hisense',
+                subtitle: 'Split Muro Inverter • Serie Hi-Vida • Clase A',
+                idealFor: 'Especialista en aire puro (4 filtros HEPA) y balcones/loggias pequeñas.',
+                badge: '<i class="fas fa-leaf text-emerald-600"></i> 4 Filtros HEPA • R32',
+                badgeClass: 'inline-flex items-center gap-1 text-[9.5px] sm:text-[10px] font-black text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-1 rounded-full',
+                highlights: [
+                    '🍃 4 Filtros: HEPA + Ag+ + Catechin + Fotocatalítico',
+                    '📦 Condensador compacto (66 cm en 9k–12k)',
+                    '🌙 Modo Dimmer (apaga luz LED)',
+                    '❄️ Calefacción hasta -15 °C'
+                ],
+                capacities: {
+                    '9.000 BTU': {
+                        model: 'AS-09UW4RLRKA',
+                        sqmShort: 'Hasta 18 m²',
+                        sqmGuide: 'Hasta 18 m² • Dormitorios',
+                        indoorDim: '79,8 × 25,6 × 19,1 cm',
+                        indoorMeta: 'Peso: 8,0 kg • Ancho 80 cm',
+                        outdoorDim: '66,0 × 48,2 × 24,0 cm',
+                        outdoorMeta: 'Peso: 20,5 kg • Balcón chico',
+                        noise: 'Mín. 38 dB(A)',
+                        noiseShort: '38 dB',
+                        consumption: '~$75–$220/hr Inverter (870 W nom.)',
+                        consumptionShort: '~$75–$220/hr',
+                        extra: '4 Filtros HEPA + Iones de Plata • Modo Dimmer nocturno • App ConnectLife Wi-Fi • Eficiencia Clase A.'
+                    },
+                    '12.000 BTU': {
+                        model: 'AS-12UW4RLRKA',
+                        sqmShort: 'Hasta 24 m²',
+                        sqmGuide: 'Hasta 24 m² • Dormitorio grande / Living',
+                        indoorDim: '79,8 × 25,6 × 19,1 cm',
+                        indoorMeta: 'Peso: 8,0 kg • Ancho 80 cm',
+                        outdoorDim: '66,0 × 48,2 × 24,0 cm',
+                        outdoorMeta: 'Peso: 20,5 kg • Balcón chico',
+                        noise: 'Mín. 38 dB(A)',
+                        noiseShort: '38 dB',
+                        consumption: '~$90–$275/hr Inverter (1.090 W nom.)',
+                        consumptionShort: '~$90–$275/hr',
+                        extra: '4 Filtros HEPA + Iones de Plata • Condensador ultra compacto (66 cm) • Calefacción hasta -15 °C • Wi-Fi.'
+                    },
+                    '18.000 BTU': {
+                        model: 'AS-18UW4RMSKA',
+                        sqmShort: 'Hasta 36 m²',
+                        sqmGuide: 'Hasta 36 m² • Living-Comedor amplio',
+                        indoorDim: '89,6 × 30,0 × 21,4 cm',
+                        indoorMeta: 'Peso: 10,5 kg • Ancho 90 cm',
+                        outdoorDim: '78,0 × 54,0 × 26,0 cm',
+                        outdoorMeta: 'Peso: 29,0 kg • Compacto',
+                        noise: 'Mín. 36 dB(A)',
+                        noiseShort: '36 dB',
+                        consumption: '~$115–$405/hr Inverter (1.615 W nom.)',
+                        consumptionShort: '~$115–$405/hr',
+                        extra: 'Potencia nominal 17.753 BTU/h • 4 Filtros HEPA + Ag+ • Alcance hasta 30 m de cañería • Wi-Fi.'
+                    },
+                    '22.000 BTU': {
+                        model: 'AS-22UR4RBTKA',
+                        sqmShort: 'Hasta 45 m²',
+                        sqmGuide: 'Hasta 45 m² • Espacios amplios / Locales',
+                        indoorDim: '100,8 × 32,5 × 21,7 cm',
+                        indoorMeta: 'Peso: 13,0 kg • Ancho 101 cm',
+                        outdoorDim: '86,0 × 65,0 × 31,0 cm',
+                        outdoorMeta: 'Peso: 39,0 kg',
+                        noise: 'Mín. 38 dB(A)',
+                        noiseShort: '38 dB',
+                        consumption: '~$125–$500/hr Inverter (1.995 W nom.)',
+                        consumptionShort: '~$125–$500/hr',
+                        extra: '22.000 BTU reales • 4 Filtros HEPA + Ag+ • Modo Dimmer nocturno • Alcance hasta 30 m • Wi-Fi.'
+                    }
+                }
+            },
+            trane: {
+                name: 'Trane Hi-Wall Heavy Duty',
+                shortName: 'Trane',
+                subtitle: 'Split Muro Inverter • Serie Heavy Duty • Clase A',
+                idealFor: 'Campeón del silencio nocturno (24 dB), alto caudal y uso continuo en oficinas.',
+                badge: '<i class="fas fa-volume-mute text-orange-600"></i> Silencio 24 dB • SEC',
+                badgeClass: 'inline-flex items-center gap-1 text-[9.5px] sm:text-[10px] font-black text-orange-800 bg-orange-50 border border-orange-200 px-2.5 py-1 rounded-full',
+                highlights: [
+                    '🤫 Ultra silencio 24 dB (Susurro)',
+                    '🏅 Certificación SEC + Serpentín 100% Cobre',
+                    '🖥️ Frío desde 0 °C exterior (Oficinas/Servidores)',
+                    '💨 Mayor caudal de aire + Sensor I Feel'
+                ],
+                capacities: {
+                    '12.000 BTU': {
+                        model: '3MXW1112AB000AA',
+                        sqmShort: 'Hasta 24 m²',
+                        sqmGuide: 'Hasta 24 m² • Dormitorios / Oficinas',
+                        indoorDim: '80,5 × 29,2 × 19,9 cm',
+                        indoorMeta: 'Peso: 8,8 kg • Ancho 81 cm',
+                        outdoorDim: '71,0 × 49,6 × 24,5 cm',
+                        outdoorMeta: 'Peso: 22,0 kg',
+                        noise: 'Ultra silencio 24 dB(A)',
+                        noiseShort: '24 dB',
+                        consumption: 'Desde ~$75/hr en temp. estable (300–1.090 W)',
+                        consumptionShort: 'Desde ~$75/hr',
+                        extra: 'Certificación SEC • Serpentín 100% Cobre + Blue Fin • Enfría incluso a 0 °C exterior • Sensor I Feel • Wi-Fi.'
+                    },
+                    '18.000 BTU': {
+                        model: '3MXW1118AB000AA',
+                        sqmShort: 'Hasta 36 m²',
+                        sqmGuide: 'Hasta 36 m² • Living-Comedor / Oficinas',
+                        indoorDim: '87,5 × 30,4 × 21,2 cm',
+                        indoorMeta: 'Peso: 10,0 kg • Ancho 88 cm',
+                        outdoorDim: '82,0 × 64,3 × 30,5 cm',
+                        outdoorMeta: 'Peso: 31,0 kg',
+                        noise: 'Silencio 28 dB(A)',
+                        noiseShort: '28 dB',
+                        consumption: 'Desde ~$100/hr en temp. estable (400–1.560 W)',
+                        consumptionShort: 'Desde ~$100/hr',
+                        extra: 'Alto caudal 900 m³/h • Certificación SEC • Serpentín 100% Cobre + Blue Fin • Frío desde 0 °C exterior • Wi-Fi.'
+                    },
+                    '24.000 BTU': {
+                        model: '3MXW1124AB000AA',
+                        sqmShort: 'Hasta 50 m²',
+                        sqmGuide: 'Hasta 50 m² • Living amplio / Comercio',
+                        indoorDim: '97,5 × 31,8 × 22,0 cm',
+                        indoorMeta: 'Peso: 11,6 kg • Ancho 98 cm',
+                        outdoorDim: '82,0 × 64,3 × 30,5 cm',
+                        outdoorMeta: 'Peso: 38,0 kg • Más compacto 24k',
+                        noise: 'Silencio 29 dB(A)',
+                        noiseShort: '29 dB',
+                        consumption: 'Desde ~$100/hr en temp. estable (400–1.960 W)',
+                        consumptionShort: 'Desde ~$100/hr',
+                        extra: '24.000 BTU Heavy Duty • Certificación SEC • Serpentín 100% Cobre + Blue Fin • Frío desde 0 °C exterior • Wi-Fi.'
+                    }
+                }
+            },
+            daikin: {
+                name: 'Daikin Serie EL Inverter',
+                shortName: 'Daikin',
+                subtitle: 'Split Muro Inverter • Serie EL Japón • Clase A',
+                idealFor: 'Menor consumo eléctrico real (desde 220 W en temp. estable), diseño angosto y Alexa/Google.',
+                badge: '<i class="fas fa-bolt text-brand-blue"></i> Menor Consumo • Alexa',
+                badgeClass: 'inline-flex items-center gap-1 text-[9.5px] sm:text-[10px] font-black text-brand-blue bg-blue-50 border border-blue-200 px-2.5 py-1 rounded-full',
+                highlights: [
+                    '⚡ Baja hasta 220 W en temp. estable',
+                    '🗣️ Control por voz: Alexa & Hey Google',
+                    '📐 Unidad interior más angosta (71–94 cm)',
+                    '🛡️ Protección Gold Fin + 7 Velocidades'
+                ],
+                capacities: {
+                    '9.000 BTU': {
+                        model: 'FTXS09EL215',
+                        sqmShort: 'Hasta 18 m²',
+                        sqmGuide: 'Hasta 18 m² • Dormitorios',
+                        indoorDim: '70,8 × 26,0 × 18,5 cm',
+                        indoorMeta: 'Peso: 7,5 kg • Ultra angosto 71 cm',
+                        outdoorDim: '73,2 × 55,5 × 33,0 cm',
+                        outdoorMeta: 'Peso: 24,5 kg',
+                        noise: 'Ultra silencio 25 dB(A)',
+                        noiseShort: '25 dB',
+                        consumption: 'Desde ~$58/hr en temp. estable (230–789 W)',
+                        consumptionShort: 'Desde ~$58/hr',
+                        extra: 'Máxima eficiencia (EER 3,38 / COP 3,68) • Alexa & Hey Google • 7 velocidades • Plasma Frío • Gold Fin.'
+                    },
+                    '12.000 BTU': {
+                        model: 'FTXS12EL215',
+                        sqmShort: 'Hasta 24 m²',
+                        sqmGuide: 'Hasta 24 m² • Dormitorio grande / Living',
+                        indoorDim: '78,3 × 26,0 × 18,5 cm',
+                        indoorMeta: 'Peso: 8,0 kg • Más angosto 78 cm',
+                        outdoorDim: '73,2 × 55,5 × 33,0 cm',
+                        outdoorMeta: 'Peso: 25,5 kg',
+                        noise: 'Muy bajo 26 dB(A)',
+                        noiseShort: '26 dB',
+                        consumption: 'Desde ~$55/hr en temp. estable (220–1.059 W)',
+                        consumptionShort: 'Desde ~$55/hr',
+                        extra: 'Baja hasta 220 W en temp. estable • Alexa & Hey Google • 7 velocidades • Plasma Frío • Gold Fin.'
+                    },
+                    '18.000 BTU': {
+                        model: 'FTXS18EL215',
+                        sqmShort: 'Hasta 36 m²',
+                        sqmGuide: 'Hasta 36 m² • Living-Comedor',
+                        indoorDim: '83,5 × 27,5 × 20,0 cm',
+                        indoorMeta: 'Peso: 9,5 kg • Ultra compacto 84 cm',
+                        outdoorDim: '80,2 × 55,5 × 35,0 cm',
+                        outdoorMeta: 'Peso: 28,0 kg',
+                        noise: 'Ultra silencio 25 dB(A)',
+                        noiseShort: '25 dB',
+                        consumption: 'Desde ~$63/hr en temp. estable (250–1.461 W)',
+                        consumptionShort: 'Desde ~$63/hr',
+                        extra: 'Baja hasta 250 W en temp. estable • Alexa & Hey Google • 7 velocidades • Ultra Voltaje • Gold Fin.'
+                    },
+                    '24.000 BTU': {
+                        model: 'FTXS24EL215',
+                        sqmShort: 'Hasta 50 m²',
+                        sqmGuide: 'Hasta 50 m² • Living amplio / Comercio',
+                        indoorDim: '94,3 × 33,3 × 24,6 cm',
+                        indoorMeta: 'Peso: 13,0 kg • Más compacto 94 cm',
+                        outdoorDim: '87,3 × 55,5 × 37,6 cm',
+                        outdoorMeta: 'Peso: 35,5 kg',
+                        noise: 'Bajo 32 dB(A)',
+                        noiseShort: '32 dB',
+                        consumption: 'Desde ~$88/hr en temp. estable (350–2.009 W)',
+                        consumptionShort: 'Desde ~$88/hr',
+                        extra: 'Baja hasta 350 W en temp. estable • Alexa & Hey Google • 7 velocidades • Ultra Voltaje • Gold Fin.'
+                    }
+                }
+            }
+        };
+
+        const BOMBAS_INFO = {
+            principales: [
+                {
+                    key: 'wipcoolP16',
+                    name: 'Wipcool P-16 (Mini)',
+                    badge: '★ Más Vendida',
+                    badgeClass: 'bg-sky-100 text-sky-800',
+                    noise: '~19 dB(A) Ultra silenciosa',
+                    range: 'Split Muro 9.000 a 24.000 BTU',
+                    desc: 'Estándar ideal para departamentos, casas y dormitorios (caudal 16 L/h, altura hasta 10 m).'
+                },
+                {
+                    key: 'aspenMiniOrange',
+                    name: 'Aspen Mini Orange',
+                    badge: '👑 Premium UK',
+                    badgeClass: 'bg-amber-100 text-amber-900',
+                    noise: '21–26 dB(A) Silenciosa',
+                    range: 'Split Muro 9.000 a 24.000 BTU',
+                    desc: 'Marca líder mundial (Reino Unido) de altísima vida útil para hogar y oficinas exigentes.'
+                },
+                {
+                    key: 'wipcoolP32',
+                    name: 'Wipcool P-32 (Alto Caudal)',
+                    badge: 'Comercial',
+                    badgeClass: 'bg-slate-200 text-slate-800',
+                    noise: '~23–28 dB(A)',
+                    range: 'Split 24k–36k / Oficinas y Locales',
+                    desc: 'Mayor capacidad de evacuación (hasta 32 L/h) para uso continuo o espacios húmedos.'
+                },
+                {
+                    key: 'aspenMaxiOrange',
+                    name: 'Aspen Maxi Orange',
+                    badge: 'Heavy Duty 15 m',
+                    badgeClass: 'bg-orange-100 text-orange-900',
+                    noise: '~35 dB(A) Uso comercial',
+                    range: 'Comerciales 24k–60k / Servidores',
+                    desc: 'Potencia profesional con elevación hasta 15 m. Recomendada en comercios y livings (no dormitorios).'
+                }
+            ],
+            especiales: [
+                {
+                    key: 'wipcoolP12',
+                    name: 'Wipcool P-12 / P-12-C',
+                    desc: 'Compacta oculta o esquina (Split 9k–12k)'
+                },
+                {
+                    key: 'aspenMiniAqua',
+                    name: 'Aspen Mini Aqua',
+                    desc: 'Ultra delgada 100% oculta (Split 9k–18k)'
+                },
+                {
+                    key: 'aspenHiFlow',
+                    name: 'Aspen Hi Flow Tank',
+                    desc: 'Con estanque rígido (Fan Coil / Ducto)'
+                }
+            ]
+        };
+
+        let currentBrand = 'hisense';
+        let currentBtu = '9.000 BTU';
+        let currentPumpMode = 'mismaVisita';
+        let currentCompareCap = '12k';
+
+        // --- UTILIDADES ---
+        function formatCLP(num) {
+            return '$' + Math.round(num || 0).toLocaleString('es-CL');
+        }
+
+        function buildWaUrl(message) {
+            return `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(message)}`;
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            if (!toast) return;
+            toast.innerHTML = `<i class="fas fa-check-circle"></i> ${msg}`;
+            toast.classList.add('show');
+            clearTimeout(window._ecToastTimer);
+            window._ecToastTimer = setTimeout(() => toast.classList.remove('show'), 2800);
+        }
+
+        function copyTextSafe(text, okMsg) {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text)
+                    .then(() => showToast(okMsg))
+                    .catch(() => fallbackCopyText(text, okMsg));
+            } else {
+                fallbackCopyText(text, okMsg);
+            }
+        }
+
+        function fallbackCopyText(text, okMsg) {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.setAttribute('readonly', '');
+            ta.style.position = 'fixed';
+            ta.style.left = '-9999px';
+            document.body.appendChild(ta);
+            ta.select();
+            try {
+                document.execCommand('copy');
+                showToast(okMsg);
+            } catch (e) {
+                showToast('No se pudo copiar automáticamente');
+            }
+            document.body.removeChild(ta);
+        }
+
+        // --- 1. CONTROL DE VISTAS NATIVAS Y LINKS DIRECTOS ---
         function setStatusBarColor(hexColor) {
             const meta = document.getElementById('theme-color-meta');
             if (meta) meta.setAttribute('content', hexColor);
         }
 
-        function isFullscreenSupported() {
-            const docEl = document.documentElement;
-            return Boolean(
-                document.fullscreenEnabled ||
-                document.webkitFullscreenEnabled ||
-                docEl.requestFullscreen ||
-                docEl.webkitRequestFullscreen
-            );
-        }
-
-        function isInFullscreen() {
-            return Boolean(document.fullscreenElement || document.webkitFullscreenElement);
-        }
-
-        function enterNativeFullscreen() {
-            if (!isFullscreenSupported() || isInFullscreen()) return;
-            const docEl = document.documentElement;
-            try {
-                const req = docEl.requestFullscreen || docEl.webkitRequestFullscreen;
-                if (req) {
-                    const p = req.call(docEl, { navigationUI: 'hide' });
-                    if (p && typeof p.catch === 'function') p.catch(() => {});
-                }
-            } catch (e) {}
-        }
-
-        function exitNativeFullscreen() {
-            if (!isInFullscreen()) return;
-            try {
-                const exit = document.exitFullscreen || document.webkitExitFullscreen;
-                if (exit) {
-                    const p = exit.call(document);
-                    if (p && typeof p.catch === 'function') p.catch(() => {});
-                }
-            } catch (e) {}
-        }
-
-        function toggleNativeFullscreen() {
-            if (isInFullscreen()) {
-                exitNativeFullscreen();
-            } else {
-                enterNativeFullscreen();
-            }
-        }
-
-        function updateFullscreenButtonUI() {
-            const btn = document.getElementById('btn-fullscreen-toggle');
-            const icon = document.getElementById('icon-fullscreen-toggle');
-            if (!btn || !icon) return;
-
-            const isStandalone = window.matchMedia && window.matchMedia('(display-mode: standalone)').matches;
-            if (!isFullscreenSupported() || isStandalone) {
-                btn.classList.add('hidden');
-                return;
-            }
-            btn.classList.remove('hidden');
-            if (isInFullscreen()) {
-                icon.className = 'fas fa-compress';
-                btn.title = 'Salir de pantalla completa';
-            } else {
-                icon.className = 'fas fa-expand';
-                btn.title = 'Ver en pantalla completa';
-            }
-        }
-
-        document.addEventListener('fullscreenchange', updateFullscreenButtonUI);
-        document.addEventListener('webkitfullscreenchange', updateFullscreenButtonUI);
-
-        function openCatalogModal(fromUserClick = false) {
+        function openCatalogModal(updateHash = true) {
             const linktree = document.getElementById('linktree-view');
             const orbs = document.getElementById('bg-orbs-wrap');
             const catalog = document.getElementById('catalog-modal');
@@ -1447,11 +1691,10 @@
             setStatusBarColor('#ffffff');
             window.scrollTo(0, 0);
 
-            if (fromUserClick) {
-                enterNativeFullscreen();
+            if (updateHash && window.location.hash !== '#catalogo') {
+                try { history.replaceState(null, '', '#catalogo'); } catch (e) {}
             }
 
-            updateFullscreenButtonUI();
             selectBrand(currentBrand);
             renderSoloInstallPrices();
             renderBombasPrices();
@@ -1459,12 +1702,11 @@
         }
 
         function closeCatalogModal() {
-            exitNativeFullscreen();
-
             const linktree = document.getElementById('linktree-view');
             const orbs = document.getElementById('bg-orbs-wrap');
             const catalog = document.getElementById('catalog-modal');
 
+            closeCompareModal();
             if (catalog) catalog.classList.add('hidden');
             if (linktree) linktree.classList.remove('hidden');
             if (orbs) orbs.classList.remove('hidden');
@@ -1473,698 +1715,347 @@
             setStatusBarColor('#0f172a');
             window.scrollTo(0, 0);
 
-            if (
-                window.location.hash === '#catalogo' ||
-                window.location.hash === '#mantenimiento' ||
-                window.location.hash === '#diagnostico' ||
-                window.location.hash === '#bombas' ||
-                window.location.hash === '#bombas-condensado' ||
-                window.location.hash === '#solo-instalacion'
-            ) {
-                history.replaceState(null, '', window.location.pathname + window.location.search);
+            if (window.location.hash) {
+                try { history.replaceState(null, '', window.location.pathname + window.location.search); } catch (e) {}
             }
         }
 
         function shareCatalogLink() {
-            const baseUrl = window.location.origin + window.location.pathname;
-            const catalogUrl = `${baseUrl}#catalogo`;
+            const url = window.location.origin && window.location.origin !== 'null'
+                ? `${window.location.origin}${window.location.pathname}#catalogo`
+                : 'https://guerrero1708.github.io/#catalogo';
+
             if (navigator.share) {
                 navigator.share({
-                    title: 'Catálogo EasyCool Climatización',
-                    text: 'Revisa nuestro catálogo oficial de equipos llave en mano (3 años de garantía), bombas de condensado y planes de mantenimiento:',
-                    url: catalogUrl
-                }).catch(() => copyText(catalogUrl, '¡Link directo al Catálogo copiado!'));
+                    title: 'EasyCool Climatización | Catálogo Oficial 2026',
+                    text: 'Revisa los equipos Inverter Llave en Mano (3 años de garantía), Bombas de Condensado y Planes de Mantenimiento:',
+                    url: url
+                }).catch(() => {});
             } else {
-                copyText(catalogUrl, '¡Link directo al Catálogo copiado!');
+                copyTextSafe(url, '¡Enlace del catálogo copiado!');
             }
         }
 
-        function checkDirectCatalogLink() {
-            const hash = window.location.hash.toLowerCase();
-            const params = new URLSearchParams(window.location.search);
-            if (hash === '#catalogo' || params.has('catalogo')) {
-                openCatalogModal(false);
-            } else if (hash === '#solo-instalacion') {
-                openCatalogModal(false);
-                setTimeout(() => {
-                    const sec = document.getElementById('solo-instalacion');
-                    if (sec) sec.scrollIntoView({ behavior: 'smooth' });
-                }, 150);
-            } else if (hash === '#bombas' || hash === '#bombas-condensado' || params.has('bombas')) {
-                openCatalogModal(false);
-                setTimeout(() => {
-                    const sec = document.getElementById('bombas-condensado');
-                    if (sec) sec.scrollIntoView({ behavior: 'smooth' });
-                }, 150);
-            } else if (hash === '#mantenimiento' || params.has('mantenimiento')) {
-                openCatalogModal(false);
-                setTimeout(() => {
-                    const sec = document.getElementById('mantenimiento');
-                    if (sec) sec.scrollIntoView({ behavior: 'smooth' });
-                }, 150);
-            } else if (hash === '#diagnostico' || params.has('diagnostico')) {
-                openCatalogModal(false);
-                setTimeout(() => {
-                    const sec = document.getElementById('diagnostico');
-                    if (sec) sec.scrollIntoView({ behavior: 'smooth' });
-                }, 150);
-            }
-        }
-
-        // --- 2. UTILIDADES LINKTREE Y PORTAPAPELES ---
-        function downloadVCard() {
-            const vcard = `BEGIN:VCARD
-VERSION:3.0
-FN:José Guerrero - EasyCool Climatización
-ORG:EasyCool Climatización
-TITLE:Ejecutivo Comercial Climatización
-TEL;TYPE=CELL:+56957776174
-EMAIL:ventas@easycoolclimatizacion.com
-URL:https://guerrero1708.github.io/
-NOTE:Venta, Instalación y Mantención de Aire Acondicionado con 3 Años de Garantía.
-END:VCARD`;
-            const blob = new Blob([vcard], { type: 'text/vcard' });
-            const url = URL.createObjectURL(blob);
-            const link = document.createElement('a');
-            link.href = url;
-            link.setAttribute('download', 'Contacto_EasyCool.vcf');
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            URL.revokeObjectURL(url);
-            showToast('¡Abriendo Contactos!');
-        }
-
+        // --- 2. ACCIONES LINKTREE (BANCO Y VCARD) ---
         function toggleBank() {
-            const content = document.getElementById('bank-info');
+            const info = document.getElementById('bank-info');
             const arrow = document.getElementById('bank-arrow');
-            content.classList.toggle('active');
-            arrow.classList.toggle('fa-chevron-down', !content.classList.contains('active'));
-            arrow.classList.toggle('fa-chevron-up', content.classList.contains('active'));
+            if (!info) return;
+            const isOpen = info.classList.toggle('active');
+            if (arrow) arrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
         }
 
         function copyFullBankData() {
-            const dataToCopy = `Nombre: Easycool Climatizacion
-RUT: 77.448.234-2
-Banco: Banco Bci
-Tipo Cuenta: Cta Corriente
-Nº Cuenta: 97512508
-Correo: ventas@easycoolclimatizacion.com`;
-            copyText(dataToCopy, '¡Datos Bancarios Copiados!');
+            const text = [
+                'Datos de Transferencia — EasyCool Climatización',
+                'Titular: Easycool Climatizacion',
+                'RUT: 77.448.234-2',
+                'Banco: Banco Bci',
+                'Tipo de Cuenta: Cuenta Corriente',
+                'N° Cuenta: 97512508',
+                'Correo: ventas@easycoolclimatizacion.com'
+            ].join('\n');
+            copyTextSafe(text, '¡Datos bancarios copiados!');
         }
 
-        function copyText(text, customMessage) {
-            const toastMsg = customMessage || '¡Copiado al Portapapeles!';
-            const textArea = document.createElement('textarea');
-            textArea.value = text;
-            textArea.setAttribute('readonly', '');
-            textArea.style.position = 'fixed';
-            textArea.style.left = '-9999px';
-            textArea.style.top = '0';
-            document.body.appendChild(textArea);
-            textArea.focus();
-            textArea.select();
-            try {
-                document.execCommand('copy');
-                showToast(toastMsg);
-            } catch (err) {
-                showToast('No se pudo copiar automáticamente');
-            }
-            document.body.removeChild(textArea);
+        function downloadVCard() {
+            const vcard = [
+                'BEGIN:VCARD',
+                'VERSION:3.0',
+                'FN:José Guerrero - EasyCool Climatización',
+                'ORG:EasyCool Climatización',
+                'TITLE:Servicio Técnico & Instalación HVAC',
+                'TEL;TYPE=CELL,VOICE:+56957776174',
+                'EMAIL;TYPE=WORK:ventas@easycoolclimatizacion.com',
+                'URL:https://guerrero1708.github.io/#catalogo',
+                'NOTE:RUT 77.448.234-2 - Santiago de Chile',
+                'END:VCARD'
+            ].join('\r\n');
+            const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'EasyCool_Climatizacion.vcf';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            showToast('Contacto descargado (.vcf)');
         }
 
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            toast.textContent = message;
-            toast.className = 'show';
-            clearTimeout(window._toastTimer);
-            window._toastTimer = setTimeout(() => {
-                toast.className = toast.className.replace('show', '');
-            }, 2600);
-        }
-
-        // --- 3. FICHAS TÉCNICAS Y LECTURA DIRECTA DE PRECIOS PÚBLICOS ---
-        const BOMBAS_CATALOGO = [
-            {
-                key: 'wipcoolP16',
-                featured: true,
-                name: 'Wipcool P-16',
-                subtitle: 'Estándar Silenciosa',
-                badge: '★ Más Vendida Hogar',
-                badgeClass: 'bg-emerald-100 text-emerald-800',
-                borderClass: 'border-emerald-300 bg-emerald-50/30',
-                noise: '~19 dB(A)',
-                range: 'Split Muro 9.000 a 24.000 BTU',
-                desc: 'Ultra silenciosa y confiable. Ideal para dormitorios y departamentos.'
-            },
-            {
-                key: 'aspenMiniOrange',
-                featured: true,
-                name: 'Aspen Mini Orange',
-                subtitle: 'Premium Reino Unido',
-                badge: '👑 Alta Durabilidad',
-                badgeClass: 'bg-amber-100 text-amber-800',
-                borderClass: 'border-slate-200 bg-white',
-                noise: '21–26 dB(A)',
-                range: 'Split Muro 9.000 a 24.000 BTU',
-                desc: 'Marca líder mundial (UK). Máxima vida útil para hogar y oficinas.'
-            },
-            {
-                key: 'wipcoolP32',
-                featured: true,
-                name: 'Wipcool P-32',
-                subtitle: 'Alto Caudal (Maxi)',
-                badge: '🏢 Oficinas / Comercio',
-                badgeClass: 'bg-sky-100 text-sky-800',
-                borderClass: 'border-slate-200 bg-white',
-                noise: '~23–28 dB(A)',
-                range: 'Split 24.000 a 36.000 BTU',
-                desc: 'Mayor capacidad de bombeo (hasta 32 L/h) para uso continuo.'
-            },
-            {
-                key: 'aspenMaxiOrange',
-                featured: true,
-                name: 'Aspen Maxi Orange',
-                subtitle: 'Heavy Duty (hasta 15 m)',
-                badge: '⚡ Uso Pesado',
-                badgeClass: 'bg-indigo-100 text-indigo-800',
-                borderClass: 'border-slate-200 bg-white',
-                noise: '~35 dB (Comercial)',
-                range: '24k–60k, Ducto, Piso-Cielo, Servidores',
-                desc: 'Eleva agua hasta 15 m de altura. Uso exclusivo comercial/técnico.'
-            },
-            {
-                key: 'wipcoolP12',
-                featured: false,
-                name: 'Wipcool P-12 / P-12-C',
-                range: 'Oculta o esquina (9k–12k BTU)'
-            },
-            {
-                key: 'aspenMiniAqua',
-                featured: false,
-                name: 'Aspen Mini Aqua',
-                range: '100% oculta ultra delgada (9k–18k)'
-            },
-            {
-                key: 'aspenHiFlow',
-                featured: false,
-                name: 'Aspen Hi Flow Tank',
-                range: 'Con estanque (Fan Coil / Ducto)'
-            }
-        ];
-
-        const catalogData = {
-            hisense: {
-                name: "Hisense",
-                fullName: "Hisense Hi-Vida Inverter",
-                series: "Split Muro Inverter • Serie Hi-Vida • Clase A",
-                idealFor: "Especialista en aire puro (4 filtros HEPA) y balcones/loggias pequeñas.",
-                badgeText: "4 Filtros HEPA • R32",
-                highlights: [
-                    "🍃 4 Filtros: HEPA + Ag+ + Catechin + Fotocatalítico",
-                    "📦 Condensador ultra compacto (ideal loggias)",
-                    "🌙 Función Dimmer (apaga luz LED)",
-                    "❄️ Calefacción hasta -15 °C"
-                ],
-                items: [
-                    {
-                        btu: "9.000 BTU", cmpKey: "9k",
-                        modelCode: "AS-09UW4RLRKA", sqm: "Hasta 18 m²", note: "Dormitorios o home office",
-                        indoorDim: "79,8 × 25,6 × 19,1 cm", indoorWeight: "8,0 kg",
-                        outdoorDim: "66,0 × 48,2 × 24,0 cm", outdoorWeight: "20,5 kg",
-                        noiseMin: "38 dB(A)",
-                        consumption: "~$75–$220/hr Inverter (870 W nom.)",
-                        extraSpec: "App ConnectLife Wi-Fi • Autolimpieza y modo deshumidificador • Eficiencia EER 3,22 / COP 3,64 (Clase A)."
-                    },
-                    {
-                        btu: "12.000 BTU", cmpKey: "12k",
-                        modelCode: "AS-12UW4RLRKA", sqm: "Hasta 24 m²", note: "Dormitorio principal o estar",
-                        indoorDim: "79,8 × 25,6 × 19,1 cm", indoorWeight: "8,0 kg",
-                        outdoorDim: "66,0 × 48,2 × 24,0 cm", outdoorWeight: "20,5 kg",
-                        noiseMin: "38 dB(A)",
-                        consumption: "~$90–$275/hr Inverter (1.090 W nom.)",
-                        extraSpec: "Condensador más chico del segmento (66 cm) • App ConnectLife Wi-Fi • Autolimpieza y Clase A."
-                    },
-                    {
-                        btu: "18.000 BTU", cmpKey: "18k",
-                        modelCode: "AS-18UW4RMSKA", sqm: "Hasta 36 m²", note: "Living, comedor o espacios abiertos",
-                        indoorDim: "89,6 × 30,0 × 21,4 cm", indoorWeight: "10,5 kg",
-                        outdoorDim: "78,0 × 54,0 × 26,0 cm", outdoorWeight: "29,0 kg",
-                        noiseMin: "36 dB(A)",
-                        consumption: "~$115–$405/hr Inverter (1.615 W nom.)",
-                        extraSpec: "17.753 BTU reales en frío / 18.436 BTU en calor • Función Super + Autolimpieza • Clase A."
-                    },
-                    {
-                        btu: "22.000 BTU", cmpKey: "24k",
-                        modelCode: "AS-22UR4RBTKA", sqm: "Hasta 45 m²", note: "Living-comedor amplio o local",
-                        indoorDim: "100,8 × 32,5 × 21,7 cm", indoorWeight: "13,0 kg",
-                        outdoorDim: "86,0 × 65,0 × 31,0 cm", outdoorWeight: "39,0 kg",
-                        noiseMin: "38 dB(A)",
-                        consumption: "~$125–$500/hr Inverter (1.995 W nom.)",
-                        extraSpec: "21.850 BTU nominales • 4 filtros de aire puro HEPA de serie • App ConnectLife Wi-Fi • Clase A."
-                    }
-                ]
-            },
-            trane: {
-                name: "Trane",
-                fullName: "Trane Hi-Wall Heavy Duty",
-                series: "Split Muro Full Inverter • Certificado SEC • Clase A",
-                idealFor: "Campeón en silencio nocturno (24 dB), alto caudal y uso intenso u oficinas.",
-                badgeText: "Full Cobre • SEC • R32",
-                highlights: [
-                    "🤫 Ultra silencioso desde 24 dB(A) (susurro)",
-                    "🛡️ Certificado SEC + Serpentín 100% Cobre + Blue Fin",
-                    "💻 Modo frío desde 0 °C (apto oficinas/servidores)",
-                    "🌡️ Sensor I Feel en el control remoto + Wi-Fi"
-                ],
-                items: [
-                    {
-                        btu: "12.000 BTU", cmpKey: "12k",
-                        modelCode: "3MXW1112AB000AA", sqm: "Hasta 24 m²", note: "Dormitorio silencioso o home office",
-                        indoorDim: "80,5 × 29,2 × 19,9 cm", indoorWeight: "8,8 kg",
-                        outdoorDim: "71,0 × 49,6 × 24,5 cm", outdoorWeight: "22,0 kg",
-                        noiseMin: "24 dB(A)",
-                        consumption: "~$75–$275/hr Inverter (300–1.090 W)",
-                        extraSpec: "Mayor caudal en 12k (650 m³/h) • Frío desde 0 °C • Compresor HIGHLY • Clase A."
-                    },
-                    {
-                        btu: "18.000 BTU", cmpKey: "18k",
-                        modelCode: "3MXW1118AB000AA", sqm: "Hasta 36 m²", note: "Living amplio, oficinas o comercio",
-                        indoorDim: "87,5 × 30,4 × 21,2 cm", indoorWeight: "10,0 kg",
-                        outdoorDim: "82,0 × 64,3 × 30,5 cm", outdoorWeight: "31,0 kg",
-                        noiseMin: "28 dB(A)",
-                        consumption: "~$100–$390/hr Inverter (400–1.560 W)",
-                        extraSpec: "Deshumidificación potente 2,0 L/h • Frío desde 0 °C • Serpentín 100% Cobre con Blue Fin • Clase A."
-                    },
-                    {
-                        btu: "24.000 BTU", cmpKey: "24k",
-                        modelCode: "3MXW1124AB000AA", sqm: "Hasta 50 m²", note: "Gran superficie, oficinas o racks",
-                        indoorDim: "97,5 × 31,8 × 22,0 cm", indoorWeight: "11,6 kg",
-                        outdoorDim: "82,0 × 64,3 × 30,5 cm", outdoorWeight: "38,0 kg",
-                        noiseMin: "29 dB(A)",
-                        consumption: "~$100–$490/hr Inverter (400–1.960 W)",
-                        extraSpec: "Pico hasta 25.250 BTU • Deshumidificación 2,8 L/h • Frío desde 0 °C • Serpentín 100% Cobre."
-                    }
-                ]
-            },
-            daikin: {
-                name: "Daikin",
-                fullName: "Daikin Serie EL Inverter",
-                series: "Líder Mundial • Menor Consumo Inverter • Clase A",
-                idealFor: "El más económico en la cuenta de luz (modula hasta 220 W en temperatura estable), muro más compacto y control por voz.",
-                badgeText: "Menor Consumo Inverter ⚡",
-                highlights: [
-                    "⚡ Menor consumo eléctrico: baja hasta 220–350 W en temp. estable",
-                    "🎙️ Control por voz nativo: Hey Google & Alexa + Wi-Fi",
-                    "📐 Unidad interior más compacta (ideal muros angostos)",
-                    "💨 7 Velocidades + 3 curvas Sueño (25 dB) + Gold Fin + Ultra Voltaje"
-                ],
-                items: [
-                    {
-                        btu: "9.000 BTU", cmpKey: "9k",
-                        modelCode: "FTXS09EL215", sqm: "Hasta 18 m²", note: "Dormitorios (máximo ahorro eléctrico)",
-                        indoorDim: "70,8 × 26,0 × 18,5 cm", indoorWeight: "7,5 kg",
-                        outdoorDim: "73,2 × 55,5 × 33,0 cm", outdoorWeight: "24,5 kg",
-                        noiseMin: "25 dB(A)",
-                        consumption: "⚡ Desde ~$58/hr temp. estable (230–789 W)",
-                        extraSpec: "Campeón en ahorro de luz del catálogo (EER 3,38 / COP 3,68) • Diseño seco antimoho • Alexa/Google."
-                    },
-                    {
-                        btu: "12.000 BTU", cmpKey: "12k",
-                        modelCode: "FTXS12EL215", sqm: "Hasta 24 m²", note: "Dormitorio principal / home office",
-                        indoorDim: "78,3 × 26,0 × 18,5 cm", indoorWeight: "8,0 kg",
-                        outdoorDim: "73,2 × 55,5 × 33,0 cm", outdoorWeight: "25,5 kg",
-                        noiseMin: "26 dB(A)",
-                        consumption: "⚡ Desde ~$55/hr temp. estable (220–1.059 W)",
-                        extraSpec: "Menor consumo mínimo Inverter (220 W en temperatura estable) • Ancho compacto 78,3 cm • Ultra Voltaje 130–275 V + Gold Fin."
-                    },
-                    {
-                        btu: "18.000 BTU", cmpKey: "18k",
-                        modelCode: "FTXS18EL215", sqm: "Hasta 36 m²", note: "Living o comedor con bajo consumo",
-                        indoorDim: "83,5 × 27,5 × 20,0 cm", indoorWeight: "9,5 kg",
-                        outdoorDim: "80,2 × 55,5 × 35,0 cm", outdoorWeight: "28,0 kg",
-                        noiseMin: "25 dB(A)",
-                        consumption: "⚡ Desde ~$63/hr temp. estable (250–1.461 W)",
-                        extraSpec: "Menor consumo en temperatura estable 18k (250 W) • Interior más compacto (83,5 cm) • Alexa & Hey Google."
-                    },
-                    {
-                        btu: "24.000 BTU", cmpKey: "24k",
-                        modelCode: "FTXS24EL215", sqm: "Hasta 50 m²", note: "Amplias superficies y máxima eficiencia",
-                        indoorDim: "94,3 × 33,3 × 24,6 cm", indoorWeight: "13,0 kg",
-                        outdoorDim: "87,3 × 55,5 × 37,6 cm", outdoorWeight: "35,5 kg",
-                        noiseMin: "32 dB(A)",
-                        consumption: "⚡ Desde ~$88/hr temp. estable (350–2.009 W)",
-                        extraSpec: "Menor consumo mínimo en 24k (320–350 W en temperatura estable) • Calefacción hasta 28.000 BTU • Gold Fin + Alexa/Google."
-                    }
-                ]
-            }
-        };
-
-        let currentBrand = 'hisense';
-        let currentBtuIndex = 0;
-        let currentPumpMode = 'mismaVisita';
-
-        function formatCLP(value) {
-            return '$' + Math.round(value || 0).toLocaleString('es-CL');
-        }
-
-        function getPublicEquipmentPrice(brandKey, btuLabel) {
-            return (PRECIOS_PUBLICOS.equipos[brandKey] && PRECIOS_PUBLICOS.equipos[brandKey][btuLabel]) || 0;
-        }
-
+        // --- 3. CATÁLOGO DE EQUIPOS LLAVE EN MANO ---
         function applyAdvisor(brandKey) {
-            document.querySelectorAll('.advisor-chip').forEach(el => el.classList.remove('active'));
-            const activeChip = document.getElementById('adv-' + brandKey);
-            if (activeChip) activeChip.classList.add('active');
+            ['hisense', 'trane', 'daikin'].forEach(b => {
+                const btn = document.getElementById('adv-' + b);
+                if (btn) btn.classList.toggle('active', b === brandKey);
+            });
             selectBrand(brandKey);
         }
 
-        function selectBrand(brandKey, targetCmpKey = null) {
-            if (!catalogData[brandKey]) brandKey = 'hisense';
+        function selectBrand(brandKey) {
+            if (!BRAND_SPECS[brandKey]) return;
             currentBrand = brandKey;
+            const spec = BRAND_SPECS[brandKey];
 
-            const items = catalogData[brandKey].items;
-            if (targetCmpKey) {
-                const foundIdx = items.findIndex(i => i.cmpKey === targetCmpKey);
-                currentBtuIndex = foundIdx >= 0 ? foundIdx : 0;
-            } else {
-                currentBtuIndex = Math.min(currentBtuIndex, items.length - 1);
-            }
+            ['hisense', 'trane', 'daikin'].forEach(b => {
+                const btn = document.getElementById('brand-btn-' + b);
+                if (btn) btn.classList.toggle('active', b === brandKey);
+            });
 
-            document.querySelectorAll('.brand-pill').forEach(btn => btn.classList.remove('active'));
-            const activeBtn = document.getElementById('brand-btn-' + brandKey);
-            if (activeBtn) activeBtn.classList.add('active');
+            document.getElementById('brand-series-subtitle').textContent = spec.subtitle;
+            document.getElementById('brand-title').textContent = spec.name;
+            document.getElementById('brand-ideal-for').textContent = spec.idealFor;
 
-            document.querySelectorAll('.advisor-chip').forEach(el => el.classList.remove('active'));
-            const advBtn = document.getElementById('adv-' + brandKey);
-            if (advBtn) advBtn.classList.add('active');
+            const badgeEl = document.getElementById('brand-tier-badge');
+            badgeEl.className = spec.badgeClass;
+            badgeEl.innerHTML = spec.badge;
 
-            renderBrandView();
-        }
+            const highlightsEl = document.getElementById('brand-highlights');
+            highlightsEl.innerHTML = spec.highlights.map(h =>
+                `<span class="text-[10px] font-bold bg-slate-100 text-slate-700 border border-slate-200/80 px-2.5 py-1 rounded-full">${h}</span>`
+            ).join('');
 
-        function renderBrandView() {
-            const data = catalogData[currentBrand];
-            if (!data) return;
-
-            document.getElementById('brand-title').innerText = data.fullName;
-            document.getElementById('brand-series-subtitle').innerText = data.series;
-            document.getElementById('brand-ideal-for').innerText = data.idealFor;
-            document.getElementById('brand-tier-badge').innerHTML = `<i class="fas fa-check-circle text-emerald-600"></i> ${data.badgeText}`;
-
-            const hlContainer = document.getElementById('brand-highlights');
-            hlContainer.innerHTML = data.highlights.map(h => `
-                <span class="text-[10px] font-bold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-lg border border-slate-200/80">${h}</span>
-            `).join('');
-
+            const availableBtus = Object.keys(spec.capacities);
             const btuContainer = document.getElementById('btu-selector-container');
-            btuContainer.innerHTML = '';
-
-            data.items.forEach((item, idx) => {
-                const btn = document.createElement('button');
-                btn.type = 'button';
-                btn.className = `btu-chip p-2.5 rounded-2xl border text-center transition-all ${idx === currentBtuIndex ? 'active' : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'}`;
-                btn.onclick = () => selectBtu(idx);
-                btn.innerHTML = `
-                    <span class="block font-black text-xs sm:text-sm tracking-tight leading-tight">${item.btu.replace(' BTU', '')} <span class="text-[10px] opacity-80">BTU</span></span>
-                    <span class="btu-sqm block text-[10px] font-bold text-slate-500 mt-0.5">${item.sqm}</span>
+            btuContainer.innerHTML = availableBtus.map(btu => {
+                const capData = spec.capacities[btu];
+                const safeId = btu.replace(/[^a-zA-Z0-9]/g, '');
+                return `
+                    <button type="button" onclick="selectBtu('${btu}')" id="btu-chip-${safeId}" class="btu-chip py-2 px-2 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-center transition-all">
+                        <span class="block font-black text-xs leading-tight">${btu}</span>
+                        <span class="btu-sqm block text-[9.5px] font-semibold text-slate-500 mt-0.5">${capData.sqmShort}</span>
+                    </button>
                 `;
-                btuContainer.appendChild(btn);
-            });
+            }).join('');
 
-            renderDisplayDetails();
+            let nextBtu = currentBtu;
+            if (!spec.capacities[nextBtu]) {
+                if (currentBtu === '22.000 BTU' && spec.capacities['24.000 BTU']) nextBtu = '24.000 BTU';
+                else if (currentBtu === '24.000 BTU' && spec.capacities['22.000 BTU']) nextBtu = '22.000 BTU';
+                else if (spec.capacities['12.000 BTU']) nextBtu = '12.000 BTU';
+                else nextBtu = availableBtus[0];
+            }
+            selectBtu(nextBtu);
         }
 
-        function selectBtu(index) {
-            currentBtuIndex = index;
-            document.querySelectorAll('.btu-chip').forEach((c, idx) => {
-                if (idx === index) {
-                    c.classList.add('active');
-                    c.classList.remove('bg-slate-50', 'border-slate-200', 'text-slate-700', 'hover:bg-slate-100');
-                } else {
-                    c.classList.remove('active');
-                    c.classList.add('bg-slate-50', 'border-slate-200', 'text-slate-700', 'hover:bg-slate-100');
-                }
-            });
-            renderDisplayDetails();
+        function selectBtu(btu) {
+            const spec = BRAND_SPECS[currentBrand];
+            if (!spec || !spec.capacities[btu]) return;
+            currentBtu = btu;
+            const cap = spec.capacities[btu];
+            const price = (PRECIOS_PUBLICOS.equipos[currentBrand] && PRECIOS_PUBLICOS.equipos[currentBrand][btu]) || 0;
+
+            document.querySelectorAll('.btu-chip').forEach(el => el.classList.remove('active'));
+            const activeChip = document.getElementById('btu-chip-' + btu.replace(/[^a-zA-Z0-9]/g, ''));
+            if (activeChip) activeChip.classList.add('active');
+
+            document.getElementById('display-model-code').textContent = cap.model;
+            document.getElementById('sqm-guide-text').textContent = cap.sqmGuide;
+            document.getElementById('display-badge-cap').textContent = btu;
+
+            const priceEl = document.getElementById('display-final-total');
+            priceEl.textContent = formatCLP(price);
+            priceEl.classList.remove('fade-swap');
+            void priceEl.offsetWidth;
+            priceEl.classList.add('fade-swap');
+
+            document.getElementById('spec-indoor-dim').textContent = cap.indoorDim;
+            document.getElementById('spec-indoor-meta').textContent = cap.indoorMeta;
+            document.getElementById('spec-outdoor-dim').textContent = cap.outdoorDim;
+            document.getElementById('spec-outdoor-meta').textContent = cap.outdoorMeta;
+            document.getElementById('spec-noise').textContent = cap.noise;
+            document.getElementById('spec-consumption').textContent = cap.consumption;
+            document.getElementById('spec-extra-text').textContent = cap.extra;
+
+            const waMsg = `Hola José! Vi el catálogo web y quiero cotizar el *${spec.name} ${btu}* (${cap.model}) Llave en Mano por *${formatCLP(price)}* (IVA incluido, 3 años de garantía).`;
+            const waBtn = document.getElementById('btn-quote-whatsapp');
+            waBtn.href = buildWaUrl(waMsg);
+            document.getElementById('btn-quote-text').textContent = `Cotizar ${spec.shortName} ${btu} con José`;
         }
 
-        function renderDisplayDetails() {
-            const data = catalogData[currentBrand];
-            const item = data.items[currentBtuIndex] || data.items[0];
-            const publicTotal = getPublicEquipmentPrice(currentBrand, item.btu);
-
-            document.getElementById('display-badge-cap').innerText = item.btu;
-            document.getElementById('display-model-code').innerText = item.modelCode;
-            document.getElementById('sqm-guide-text').innerText = `${item.sqm} • ${item.note}`;
-
-            const totalElem = document.getElementById('display-final-total');
-            totalElem.classList.remove('fade-swap');
-            void totalElem.offsetWidth;
-            totalElem.innerText = formatCLP(publicTotal);
-            totalElem.classList.add('fade-swap');
-
-            document.getElementById('spec-indoor-dim').innerText = item.indoorDim;
-            document.getElementById('spec-indoor-meta').innerText = `Peso neto: ${item.indoorWeight}`;
-            document.getElementById('spec-outdoor-dim').innerText = item.outdoorDim;
-            document.getElementById('spec-outdoor-meta').innerText = `Peso neto: ${item.outdoorWeight}`;
-            document.getElementById('spec-noise').innerText = `Mín. ${item.noiseMin}`;
-            document.getElementById('spec-consumption').innerText = item.consumption;
-            document.getElementById('spec-extra-text').innerText = item.extraSpec;
-
-            const message = encodeURIComponent(
-                `Hola José, deseo cotizar el Split ${data.name} ${item.btu} (Modelo ${item.modelCode}, ${item.sqm}) llave en mano con despacho, instalación e insumos incluidos por ${formatCLP(publicTotal)} (IVA incluido).`
-            );
-            document.getElementById('btn-quote-whatsapp').href = `https://wa.me/56957776174?text=${message}`;
-            document.getElementById('btn-quote-text').innerText = `Cotizar ${data.name} ${item.btu} con José`;
-        }
-
-        // --- 4. COMPARADOR DE LAS 3 MARCAS ---
+        // --- 4. COMPARADOR LADO A LADO DE LAS 3 MARCAS ---
         function openCompareModal() {
-            const currentItem = catalogData[currentBrand].items[currentBtuIndex] || catalogData[currentBrand].items[0];
             const modal = document.getElementById('compare-modal');
+            if (!modal) return;
             modal.classList.remove('hidden');
             modal.classList.add('flex');
-            renderCompareTable(currentItem.cmpKey || '12k');
+
+            let key = '12k';
+            if (currentBtu.startsWith('9')) key = '9k';
+            else if (currentBtu.startsWith('18')) key = '18k';
+            else if (currentBtu.startsWith('22') || currentBtu.startsWith('24')) key = '24k';
+            renderCompareTable(key);
         }
 
         function closeCompareModal() {
             const modal = document.getElementById('compare-modal');
+            if (!modal) return;
             modal.classList.add('hidden');
             modal.classList.remove('flex');
         }
 
-        function parseFirstNumber(str) {
-            const match = String(str || '').replace(',', '.').match(/\d+(\.\d+)?/);
-            return match ? parseFloat(match[0]) : 9999;
+        function chooseFromCompare(brandKey, btu) {
+            closeCompareModal();
+            currentBrand = brandKey;
+            currentBtu = btu;
+            selectBrand(brandKey);
+            selectBtu(btu);
+            const target = document.getElementById('brand-title');
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
 
-        function renderCompareTable(cmpKey) {
+        function renderCompareTable(capKey) {
+            currentCompareCap = capKey;
             ['9k', '12k', '18k', '24k'].forEach(k => {
                 const btn = document.getElementById('cmp-btn-' + k);
-                if (btn) {
-                    btn.className = k === cmpKey
-                        ? 'px-2 py-1.5 rounded-lg text-[11px] sm:text-xs font-bold bg-brand-blue text-white shadow-xs'
-                        : 'px-2 py-1.5 rounded-lg text-[11px] sm:text-xs font-bold bg-white border border-slate-200 text-slate-700 hover:bg-slate-100';
+                if (!btn) return;
+                if (k === capKey) {
+                    btn.className = 'px-2 py-1.5 rounded-lg text-[11px] sm:text-xs font-black bg-brand-blue text-white shadow-xs';
+                } else {
+                    btn.className = 'px-2 py-1.5 rounded-lg text-[11px] sm:text-xs font-bold bg-white border border-slate-200 text-slate-700';
                 }
             });
 
-            const entries = ['hisense', 'trane', 'daikin']
-                .map(bKey => {
-                    const item = catalogData[bKey].items.find(i => i.cmpKey === cmpKey);
-                    if (!item) return null;
-                    return {
-                        bKey,
-                        brand: catalogData[bKey],
-                        item,
-                        price: getPublicEquipmentPrice(bKey, item.btu),
-                        noiseVal: parseFirstNumber(item.noiseMin),
-                        indoorWidth: parseFirstNumber(item.indoorDim),
-                        outdoorWidth: parseFirstNumber(item.outdoorDim)
-                    };
-                })
-                .filter(Boolean);
+            const map = {
+                '9k':  { hisense: '9.000 BTU',  trane: null,         daikin: '9.000 BTU' },
+                '12k': { hisense: '12.000 BTU', trane: '12.000 BTU', daikin: '12.000 BTU' },
+                '18k': { hisense: '18.000 BTU', trane: '18.000 BTU', daikin: '18.000 BTU' },
+                '24k': { hisense: '22.000 BTU', trane: '24.000 BTU', daikin: '24.000 BTU' }
+            }[capKey];
 
-            const colGridClass = entries.length === 2 ? 'grid-cols-2' : 'grid-cols-3';
-            const minPrice = Math.min(...entries.map(e => e.price));
-            const minNoise = Math.min(...entries.map(e => e.noiseVal));
-            const minIndoorW = Math.min(...entries.map(e => e.indoorWidth));
-            const minOutdoorW = Math.min(...entries.map(e => e.outdoorWidth));
+            const activeCols = ['hisense', 'trane', 'daikin']
+                .filter(b => map[b])
+                .map(b => {
+                    const btu = map[b];
+                    const price = PRECIOS_PUBLICOS.equipos[b][btu];
+                    const cap = BRAND_SPECS[b].capacities[btu];
+                    return { brand: b, name: BRAND_SPECS[b].shortName.toUpperCase(), btu, price, cap };
+                });
 
-            const shortConsumption = {
-                hisense: {
-                    '9k':  { main: 'Estándar', sub: '~$75–$220/hr (870 W)' },
-                    '12k': { main: 'Estándar', sub: '~$90–$275/hr (1.090 W)' },
-                    '18k': { main: 'Estándar', sub: '~$115–$405/hr (1.615 W)' },
-                    '24k': { main: 'Estándar', sub: '~$125–$500/hr (1.995 W)' }
+            const minPrice = Math.min(...activeCols.map(c => c.price));
+            const noiseWin = (capKey === '9k' || capKey === '18k') ? 'daikin' : 'trane';
+            const balconyWin = (capKey === '24k') ? 'trane' : 'hisense';
+
+            const cellWin = 'bg-emerald-50/90 text-emerald-950';
+            const colWidth = activeCols.length === 2 ? 'w-[37%]' : 'w-[25%]';
+
+            const rows = [
+                {
+                    label: '⚡ Cuenta de Luz',
+                    sub: 'Ref. $250/kWh',
+                    render: c => {
+                        if (c.brand === 'daikin') return { win: true, html: `<strong class="block text-emerald-800">🏆 Mínimo</strong><span class="block text-[9.5px]">${c.cap.consumptionShort}</span><span class="block text-[8.5px] text-slate-500">en temp. estable</span>` };
+                        if (c.brand === 'trane') return { win: false, html: `<strong class="block">Bajo</strong><span class="block text-[9.5px]">${c.cap.consumptionShort}</span><span class="block text-[8.5px] text-slate-500">en temp. estable</span>` };
+                        return { win: false, html: `<strong class="block">Estándar</strong><span class="block text-[9.5px]">${c.cap.consumptionShort}</span><span class="block text-[8.5px] text-slate-500">Inverter Clase A</span>` };
+                    }
                 },
-                trane: {
-                    '12k': { main: 'Bajo', sub: 'Desde ~$75/hr (300 W)' },
-                    '18k': { main: 'Bajo', sub: 'Desde ~$100/hr (400 W)' },
-                    '24k': { main: 'Bajo', sub: 'Desde ~$100/hr (400 W)' }
+                {
+                    label: '🤫 Silencio Noche',
+                    sub: 'Unidad interior',
+                    render: c => {
+                        const isWin = c.brand === noiseWin;
+                        const tag = c.brand === 'hisense' ? 'Normal' : isWin ? '🏆 Susurro' : 'Muy bajo';
+                        return { win: isWin, html: `<strong class="block ${isWin ? 'text-emerald-800' : ''}">${tag}</strong><span class="block text-[10px] font-bold">${c.cap.noiseShort}</span>` };
+                    }
                 },
-                daikin: {
-                    '9k':  { main: 'Mínimo ⚡', sub: 'Desde ~$58/hr (230 W)' },
-                    '12k': { main: 'Mínimo ⚡', sub: 'Desde ~$55/hr (220 W)' },
-                    '18k': { main: 'Mínimo ⚡', sub: 'Desde ~$63/hr (250 W)' },
-                    '24k': { main: 'Mínimo ⚡', sub: 'Desde ~$88/hr (350 W)' }
+                {
+                    label: '🍃 Aire / Extras',
+                    sub: 'Diferenciador',
+                    render: c => {
+                        if (c.brand === 'hisense') return { win: true, html: `<strong class="block text-emerald-800">🏆 4 Filtros HEPA</strong><span class="block text-[9px] text-slate-600">Alergias / Dimmer</span>` };
+                        if (c.brand === 'trane') return { win: false, html: `<strong class="block">Frío desde 0 °C</strong><span class="block text-[9px] text-slate-600">Full Cobre • SEC</span>` };
+                        return { win: true, html: `<strong class="block text-emerald-800">🏆 Alexa / Google</strong><span class="block text-[9px] text-slate-600">7 Vel. • Gold Fin</span>` };
+                    }
+                },
+                {
+                    label: '📐 Ancho Muro',
+                    sub: 'Unidad interior',
+                    render: c => {
+                        const isWin = c.brand === 'daikin';
+                        const ancho = c.cap.indoorDim.split('×')[0].trim();
+                        return { win: isWin, html: `<strong class="block ${isWin ? 'text-emerald-800' : ''}">${isWin ? '🏆 ' : ''}${ancho} cm</strong><span class="block text-[8.5px] text-slate-500">${c.cap.indoorDim}</span>` };
+                    }
+                },
+                {
+                    label: '📦 Ancho Balcón',
+                    sub: 'Unidad exterior',
+                    render: c => {
+                        const isWin = c.brand === balconyWin;
+                        const ancho = c.cap.outdoorDim.split('×')[0].trim();
+                        return { win: isWin, html: `<strong class="block ${isWin ? 'text-emerald-800' : ''}">${isWin ? '🏆 ' : ''}${ancho} cm</strong><span class="block text-[8.5px] text-slate-500">${c.cap.outdoorDim}</span>` };
+                    }
                 }
-            };
+            ];
 
-            const shortExtras = {
-                hisense: { title: '4 Filtros HEPA', sub: 'Aire puro / Alergias', badge: '🍃 Salud' },
-                trane:   { title: 'Frío desde 0 °C', sub: '100% Cobre • SEC', badge: '🛡️ Robusto' },
-                daikin:  { title: 'Alexa / Google', sub: '7 Vel. + Gold Fin', badge: '🎙️ Smart' }
-            };
-
-            const shortIdeal = {
-                hisense: 'Alergias y mejor precio',
-                trane:   'Dormir sin ruido u oficinas',
-                daikin:  'Ahorrar luz y control voz'
-            };
-
-            const brandAccent = {
-                hisense: 'text-emerald-700',
-                trane:   'text-orange-700',
-                daikin:  'text-brand-blue'
-            };
-
-            const stickyHeader = `
-                <div class="sticky top-0 z-10 bg-white border-b-2 border-slate-200 shadow-xs">
-                    <div class="grid ${colGridClass} divide-x divide-slate-200">
-                        ${entries.map(e => {
-                            const diff = e.price - minPrice;
-                            const isCheapest = diff === 0;
-                            const diffTag = isCheapest
-                                ? `<span class="inline-block mt-1 px-1.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[9px] sm:text-[10px] font-black">🏆 Más económico</span>`
-                                : `<span class="inline-block mt-1 px-1.5 py-0.5 rounded-full bg-slate-100 text-slate-600 text-[9px] sm:text-[10px] font-bold">Solo +${formatCLP(diff)}</span>`;
-                            return `
-                                <div class="p-2.5 sm:p-3 text-center ${e.bKey === 'daikin' ? 'bg-blue-50/40' : ''}">
-                                    <span class="block font-black text-xs sm:text-sm uppercase ${brandAccent[e.bKey]} leading-tight">${e.brand.name}</span>
-                                    <span class="block text-[9.5px] sm:text-[10px] font-bold text-slate-400 mt-0.5">${e.item.btu} • ${e.item.sqm.replace('Hasta ', '')}</span>
-                                    <div class="text-sm sm:text-xl font-[900] text-brand-dark mt-1 leading-none">${formatCLP(e.price)}</div>
-                                    ${diffTag}
-                                </div>
-                            `;
-                        }).join('')}
-                    </div>
-                </div>
+            const html = `
+                <table class="w-full border-collapse text-center">
+                    <thead class="sticky top-0 z-10 bg-white shadow-xs">
+                        <tr class="border-b border-slate-200">
+                            <th class="p-2 text-left text-[10px] font-black uppercase text-slate-400 bg-slate-50 w-[25%]">Atributo</th>
+                            ${activeCols.map(c => {
+                                const diff = c.price - minPrice;
+                                const isBase = diff === 0;
+                                return `
+                                    <th class="p-2 border-l border-slate-200 ${colWidth} ${isBase ? 'bg-emerald-50/70' : 'bg-white'}">
+                                        <span class="block text-[11px] sm:text-xs font-black text-brand-dark">${c.name}</span>
+                                        <span class="block text-[9px] font-bold text-slate-400">${c.btu}</span>
+                                        <span class="block text-xs sm:text-sm font-black ${isBase ? 'text-emerald-700' : 'text-brand-blue'} mt-0.5">${formatCLP(c.price)}</span>
+                                        <span class="block text-[8.5px] font-bold ${isBase ? 'text-emerald-700' : 'text-slate-500'}">
+                                            ${isBase ? '🏆 Mejor precio' : `+${formatCLP(diff)}`}
+                                        </span>
+                                    </th>
+                                `;
+                            }).join('')}
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 text-[10.5px] sm:text-xs">
+                        ${rows.map(r => `
+                            <tr>
+                                <td class="p-2 text-left bg-slate-50/80">
+                                    <strong class="block text-[10px] sm:text-[11px] text-brand-dark leading-tight">${r.label}</strong>
+                                    <span class="block text-[8.5px] text-slate-400">${r.sub}</span>
+                                </td>
+                                ${activeCols.map(c => {
+                                    const res = r.render(c);
+                                    return `<td class="p-2 border-l border-slate-200 ${res.win ? cellWin : ''}">${res.html}</td>`;
+                                }).join('')}
+                            </tr>
+                        `).join('')}
+                        <tr class="bg-slate-50">
+                            <td class="p-2 text-left text-[10px] font-black uppercase text-slate-400">Elegir</td>
+                            ${activeCols.map(c => `
+                                <td class="p-2 border-l border-slate-200">
+                                    <button type="button" onclick="chooseFromCompare('${c.brand}', '${c.btu}')" class="w-full py-2 px-2 rounded-xl bg-brand-blue hover:bg-blue-600 text-white font-black text-[10.5px] uppercase tracking-wide shadow-xs transition">
+                                        Elegir
+                                    </button>
+                                </td>
+                            `).join('')}
+                        </tr>
+                    </tbody>
+                </table>
             `;
 
-            const buildMatrixRow = (icon, title, cellsHtml) => `
-                <div class="border-b border-slate-200">
-                    <div class="bg-slate-100/90 px-3 py-1.5 text-[10px] font-black uppercase tracking-wider text-slate-600 flex items-center gap-1.5">
-                        <span>${icon}</span>
-                        <span>${title}</span>
-                    </div>
-                    <div class="grid ${colGridClass} divide-x divide-slate-200">
-                        ${cellsHtml}
-                    </div>
-                </div>
-            `;
-
-            const rowLuz = buildMatrixRow('⚡', 'Cuenta de Luz en Temp. Estable (Ref. $250/kWh Stgo)', entries.map(e => {
-                const c = shortConsumption[e.bKey][cmpKey] || { main: 'Clase A', sub: '' };
-                const isWinner = e.bKey === 'daikin';
-                return `
-                    <div class="p-2 sm:p-2.5 text-center ${isWinner ? 'bg-emerald-50/80' : ''}">
-                        <span class="block font-black text-[11px] sm:text-xs ${isWinner ? 'text-emerald-700' : 'text-slate-700'}">${isWinner ? '★ ' : ''}${c.main}</span>
-                        <span class="block text-[9.5px] sm:text-[10px] text-slate-500 mt-0.5 leading-tight">${c.sub}</span>
-                    </div>
-                `;
-            }).join(''));
-
-            const rowRuido = buildMatrixRow('🤫', 'Silencio Nocturno (Unidad Interior)', entries.map(e => {
-                const isWinner = e.noiseVal === minNoise;
-                const label = e.noiseVal <= 26 ? 'Susurro' : e.noiseVal <= 30 ? 'Muy bajo' : 'Normal';
-                return `
-                    <div class="p-2 sm:p-2.5 text-center ${isWinner ? 'bg-emerald-50/80' : ''}">
-                        <span class="block font-black text-[11px] sm:text-xs ${isWinner ? 'text-emerald-700' : 'text-slate-700'}">${isWinner ? '★ ' : ''}${e.item.noiseMin}</span>
-                        <span class="block text-[9.5px] sm:text-[10px] text-slate-500 mt-0.5 leading-tight">${label}</span>
-                    </div>
-                `;
-            }).join(''));
-
-            const rowVentaja = buildMatrixRow('✨', 'Ventaja Única de la Marca', entries.map(e => {
-                const ex = shortExtras[e.bKey];
-                return `
-                    <div class="p-2 sm:p-2.5 text-center">
-                        <span class="inline-block text-[9px] font-black px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 mb-1">${ex.badge}</span>
-                        <span class="block font-extrabold text-[10.5px] sm:text-xs text-brand-dark leading-tight">${ex.title}</span>
-                        <span class="block text-[9.5px] text-slate-500 mt-0.5 leading-tight">${ex.sub}</span>
-                    </div>
-                `;
-            }).join(''));
-
-            const rowMuro = buildMatrixRow('📐', 'Ancho en Muro (Unidad Interior)', entries.map(e => {
-                const isWinner = e.indoorWidth === minIndoorW;
-                return `
-                    <div class="p-2 sm:p-2.5 text-center ${isWinner ? 'bg-emerald-50/80' : ''}">
-                        <span class="block font-black text-[11px] sm:text-xs ${isWinner ? 'text-emerald-700' : 'text-slate-700'}">${isWinner ? '★ ' : ''}${Math.round(e.indoorWidth)} cm</span>
-                        <span class="block text-[9px] text-slate-400 mt-0.5 leading-tight">${e.item.indoorDim}</span>
-                    </div>
-                `;
-            }).join(''));
-
-            const rowBalcon = buildMatrixRow('📦', 'Ancho en Balcón (Unidad Exterior)', entries.map(e => {
-                const isWinner = e.outdoorWidth === minOutdoorW;
-                return `
-                    <div class="p-2 sm:p-2.5 text-center ${isWinner ? 'bg-emerald-50/80' : ''}">
-                        <span class="block font-black text-[11px] sm:text-xs ${isWinner ? 'text-emerald-700' : 'text-slate-700'}">${isWinner ? '★ ' : ''}${Math.round(e.outdoorWidth)} cm</span>
-                        <span class="block text-[9px] text-slate-400 mt-0.5 leading-tight">${e.item.outdoorDim}</span>
-                    </div>
-                `;
-            }).join(''));
-
-            const rowIdeal = buildMatrixRow('🎯', 'Ideal si buscas...', entries.map(e => `
-                <div class="p-2 sm:p-2.5 text-center text-[10px] sm:text-[11px] font-semibold text-slate-600 leading-snug">
-                    ${shortIdeal[e.bKey]}
-                </div>
-            `).join(''));
-
-            const actionRow = `
-                <div class="grid ${colGridClass} divide-x divide-slate-200 bg-slate-50 border-b border-slate-200">
-                    ${entries.map(e => `
-                        <div class="p-2.5 sm:p-3 text-center">
-                            <button type="button" onclick="chooseFromCompare('${e.bKey}', '${cmpKey}')" class="w-full py-2 px-2 rounded-xl bg-brand-blue hover:bg-blue-600 active:scale-95 text-white font-extrabold text-[11px] sm:text-xs transition-all shadow-xs">
-                                Elegir ${e.brand.name}
-                            </button>
-                        </div>
-                    `).join('')}
-                </div>
-                <div class="px-3 py-2 bg-white text-[9.5px] text-slate-500 text-center leading-snug">
-                    *Consumo eléctrico estimado con tarifa ref. Santiago ($250/kWh). El valor mínimo corresponde al compresor Inverter en temperatura estable (23–24 °C).
-                </div>
-            `;
-
-            const container = document.getElementById('compare-table-body');
-            if (container) {
-                container.innerHTML = stickyHeader + rowLuz + rowRuido + rowVentaja + rowMuro + rowBalcon + rowIdeal + actionRow;
-            }
+            document.getElementById('compare-table-body').innerHTML = html;
         }
 
-        function chooseFromCompare(brandKey, cmpKey) {
-            selectBrand(brandKey, cmpKey);
-            closeCompareModal();
-        }
-
-        // --- 5. SOLO INSTALACIÓN, BOMBAS DE CONDENSADO & MANTENIMIENTOS ---
+        // --- 5. SOLO INSTALACIÓN ---
         function renderSoloInstallPrices() {
-            const s = PRECIOS_PUBLICOS.soloInstalacion;
-            const setText = (id, text) => {
-                const el = document.getElementById(id);
-                if (el) el.innerText = text;
-            };
-            setText('inst-disp-9a12', formatCLP(s['9a12']));
-            setText('inst-disp-18', formatCLP(s['18']));
-            setText('inst-disp-24', formatCLP(s['24']));
+            const p = PRECIOS_PUBLICOS.soloInstalacion;
+            const e1 = document.getElementById('inst-disp-9a12');
+            const e2 = document.getElementById('inst-disp-18');
+            const e3 = document.getElementById('inst-disp-24');
+            if (e1) e1.textContent = formatCLP(p['9a12']);
+            if (e2) e2.textContent = formatCLP(p['18']);
+            if (e3) e3.textContent = formatCLP(p['24']);
         }
 
+        // --- 6. BOMBAS DE CONDENSADO ---
         function setPumpMode(mode) {
-            currentPumpMode = mode === 'visitaUnica' ? 'visitaUnica' : 'mismaVisita';
+            currentPumpMode = mode;
             const btnMisma = document.getElementById('pump-mode-misma');
             const btnUnica = document.getElementById('pump-mode-unica');
             if (btnMisma && btnUnica) {
-                if (currentPumpMode === 'mismaVisita') {
+                if (mode === 'mismaVisita') {
                     btnMisma.className = 'py-2 px-2 rounded-lg text-[10.5px] sm:text-xs font-extrabold transition-all bg-brand-blue text-white shadow-xs';
                     btnUnica.className = 'py-2 px-2 rounded-lg text-[10.5px] sm:text-xs font-bold transition-all text-slate-600 hover:text-brand-dark';
                 } else {
@@ -2176,158 +2067,168 @@ Correo: ventas@easycoolclimatizacion.com`;
         }
 
         function renderBombasPrices() {
+            const prices = PRECIOS_PUBLICOS.bombasCondensado;
+            const modeLabel = currentPumpMode === 'mismaVisita' ? 'en la misma visita (junto a inst. o mantención)' : 'en visita única';
             const mainGrid = document.getElementById('bombas-cards-grid');
-            const specialGrid = document.getElementById('bombas-special-grid');
-            if (!mainGrid || !specialGrid) return;
+            const specGrid = document.getElementById('bombas-special-grid');
 
-            const bombas = PRECIOS_PUBLICOS.bombasCondensado;
-            const isUnica = currentPumpMode === 'visitaUnica';
-            const modeLabel = isUnica ? 'Visita única (solo bomba)' : 'Instalada en misma visita (inst. o mant.)';
-            const altLabel = isUnica ? 'Misma visita' : 'Visita única';
-
-            const featuredItems = BOMBAS_CATALOGO.filter(b => b.featured);
-            mainGrid.innerHTML = featuredItems.map(b => {
-                const prices = bombas[b.key] || { mismaVisita: 0, visitaUnica: 0 };
-                const activePrice = isUnica ? prices.visitaUnica : prices.mismaVisita;
-                const altPrice = isUnica ? prices.mismaVisita : prices.visitaUnica;
-                const msg = encodeURIComponent(
-                    `Hola José, deseo cotizar la bomba de condensado ${b.name} (${b.subtitle}) en modalidad "${modeLabel}" por ${formatCLP(activePrice)} (IVA incluido).`
-                );
-
-                return `
-                    <div class="rounded-2xl border p-3 flex flex-col justify-between transition-all ${b.borderClass}">
-                        <div>
-                            <div class="flex items-center justify-between gap-1.5 flex-wrap mb-1.5">
-                                <span class="text-[9.5px] font-black px-2 py-0.5 rounded-full ${b.badgeClass}">${b.badge}</span>
-                                <span class="text-[10px] font-bold text-slate-500">${b.noise}</span>
-                            </div>
-                            <h5 class="text-sm font-black text-brand-dark leading-tight">${b.name} <span class="text-[11px] font-bold text-slate-500">• ${b.subtitle}</span></h5>
-                            <span class="block text-[10px] font-extrabold text-sky-700 mt-1">${b.range}</span>
-                            <p class="text-[10.5px] text-slate-600 mt-1 leading-snug">${b.desc}</p>
-                        </div>
-                        <div class="mt-3 pt-2.5 border-t border-slate-200/80 flex items-center justify-between gap-2">
+            if (mainGrid) {
+                mainGrid.innerHTML = BOMBAS_INFO.principales.map(b => {
+                    const val = (prices[b.key] && prices[b.key][currentPumpMode]) || 0;
+                    const waLink = buildWaUrl(`Hola José! Quiero cotizar la bomba de condensado *${b.name}* instalada ${modeLabel} por *${formatCLP(val)}* (IVA incluido).`);
+                    return `
+                        <div class="bg-slate-50 rounded-2xl border border-slate-200 p-3 flex flex-col justify-between">
                             <div>
-                                <strong class="text-lg font-[900] text-brand-dark block leading-none fade-swap">${formatCLP(activePrice)}</strong>
-                                <span class="text-[9.5px] text-slate-500 font-semibold block mt-0.5">${altLabel}: ${formatCLP(altPrice)}</span>
+                                <div class="flex items-center justify-between gap-1.5 mb-1">
+                                    <span class="text-[9.5px] font-black uppercase px-2 py-0.5 rounded-full ${b.badgeClass}">${b.badge}</span>
+                                    <span class="text-base font-[900] text-brand-dark">${formatCLP(val)}</span>
+                                </div>
+                                <h5 class="text-xs sm:text-sm font-black text-brand-dark">${b.name}</h5>
+                                <p class="text-[10px] font-bold text-sky-700 mt-0.5">${b.range} • ${b.noise}</p>
+                                <p class="text-[10.5px] text-slate-600 mt-1 leading-snug">${b.desc}</p>
                             </div>
-                            <a href="https://wa.me/56957776174?text=${msg}" target="_blank" rel="noopener noreferrer" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-3 py-2 rounded-xl text-[11px] flex items-center gap-1.5 shadow-xs transition-colors flex-shrink-0">
+                            <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="mt-2.5 w-full py-2 px-3 rounded-xl bg-white hover:bg-emerald-50 text-emerald-700 border border-emerald-300 font-extrabold text-[11px] text-center flex items-center justify-center gap-1.5 transition-colors">
                                 <i class="fab fa-whatsapp"></i>
-                                <span>Cotizar</span>
+                                <span>Pedir por ${formatCLP(val)}</span>
                             </a>
                         </div>
-                    </div>
-                `;
-            }).join('');
+                    `;
+                }).join('');
+            }
 
-            const specialItems = BOMBAS_CATALOGO.filter(b => !b.featured);
-            specialGrid.innerHTML = specialItems.map(b => {
-                const prices = bombas[b.key] || { mismaVisita: 0, visitaUnica: 0 };
-                const activePrice = isUnica ? prices.visitaUnica : prices.mismaVisita;
-                const msg = encodeURIComponent(
-                    `Hola José, deseo cotizar la bomba especial ${b.name} en modalidad "${modeLabel}" por ${formatCLP(activePrice)} (IVA incluido).`
-                );
+            if (specGrid) {
+                specGrid.innerHTML = BOMBAS_INFO.especiales.map(b => {
+                    const val = (prices[b.key] && prices[b.key][currentPumpMode]) || 0;
+                    const waLink = buildWaUrl(`Hola José! Quiero consultar por la bomba especial *${b.name}* instalada ${modeLabel} (${formatCLP(val)} IVA incluido).`);
+                    return `
+                        <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="bg-white hover:border-sky-400 p-2.5 rounded-xl border border-slate-200 flex flex-col justify-between transition-colors">
+                            <div>
+                                <div class="flex items-center justify-between gap-1">
+                                    <strong class="text-brand-dark font-extrabold text-[11px]">${b.name}</strong>
+                                    <span class="font-black text-sky-700 text-xs">${formatCLP(val)}</span>
+                                </div>
+                                <p class="text-[10px] text-slate-500 mt-0.5 leading-snug">${b.desc}</p>
+                            </div>
+                            <span class="text-[9.5px] font-bold text-sky-600 mt-1.5 block">Consultar WhatsApp →</span>
+                        </a>
+                    `;
+                }).join('');
+            }
+        }
 
-                return `
-                    <a href="https://wa.me/56957776174?text=${msg}" target="_blank" rel="noopener noreferrer" class="bg-white hover:border-sky-400 p-2.5 rounded-xl border border-slate-200 flex items-center justify-between sm:flex-col sm:items-start gap-1.5 transition-all">
-                        <div>
-                            <strong class="text-brand-dark block text-[11px] font-black leading-tight">${b.name}</strong>
-                            <span class="text-[9.5px] text-slate-500 block mt-0.5">${b.range}</span>
-                        </div>
-                        <div class="text-right sm:text-left sm:w-full sm:flex sm:items-center sm:justify-between sm:mt-1">
-                            <strong class="text-sky-700 font-black text-xs">${formatCLP(activePrice)}</strong>
-                            <span class="text-[9.5px] font-bold text-emerald-600 block">Pedir →</span>
-                        </div>
-                    </a>
-                `;
-            }).join('');
+        // --- 7. PLANES DE MANTENIMIENTO Y DIAGNÓSTICO ---
+        function switchMaintTab(tab) {
+            const tabs = ['residencial', 'comunidad', 'upgrades', 'empresas'];
+            tabs.forEach(t => {
+                const btn = document.getElementById('maint-btn-' + t);
+                const content = document.getElementById('maint-content-' + t);
+                if (btn) {
+                    if (t === tab) {
+                        btn.className = 'maint-tab-btn flex-shrink-0 px-3.5 py-2.5 rounded-xl text-xs font-bold transition-all bg-brand-blue text-white shadow';
+                    } else {
+                        btn.className = 'maint-tab-btn flex-shrink-0 px-3.5 py-2.5 rounded-xl text-xs font-bold transition-all bg-white text-slate-700 border border-slate-200';
+                    }
+                }
+                if (content) {
+                    if (t === tab) {
+                        content.classList.remove('hidden');
+                        content.classList.add(t === 'upgrades' ? 'grid' : 'block');
+                    } else {
+                        content.classList.add('hidden');
+                        content.classList.remove('block', 'grid');
+                    }
+                }
+            });
         }
 
         function renderMaintenancePrices() {
             const m = PRECIOS_PUBLICOS.mantenimientos;
-            const ahorroPack = Math.max(0, (m.packEstacional * 2) - m.paseAnual);
-            const diagPrice = m.diagnosticoFalla || 35000;
-
-            const setText = (id, text) => {
-                const el = document.getElementById(id);
-                if (el) el.innerText = text;
-            };
-            const setLink = (id, msg, label) => {
+            const setTxt = (id, txt) => { const el = document.getElementById(id); if (el) el.textContent = txt; };
+            const setHref = (id, msg, txt) => {
                 const el = document.getElementById(id);
                 if (el) {
-                    el.href = `https://wa.me/56957776174?text=${encodeURIComponent(msg)}`;
-                    if (label) el.innerText = label;
+                    el.href = buildWaUrl(msg);
+                    if (txt) el.textContent = txt;
                 }
             };
 
-            setText('maint-disp-desde-base', `Desde ${formatCLP(m.base)}`);
-            setText('maint-disp-base', formatCLP(m.base));
-            setLink('maint-link-base', `Hola José, deseo agendar Mantención Base Preventiva (${formatCLP(m.base)})`, `Agendar por ${formatCLP(m.base)}`);
+            const ahorroAnual = Math.max(0, (m.packEstacional * 2) - m.paseAnual);
 
-            setText('maint-disp-pack', formatCLP(m.packEstacional));
-            setLink('maint-link-pack', `Hola José, deseo agendar el Pack Estacional Cero Alergias (${formatCLP(m.packEstacional)})`);
+            setTxt('maint-disp-desde-base', `Desde ${formatCLP(m.base)}`);
+            setTxt('maint-disp-base', formatCLP(m.base));
+            setHref('maint-link-base', `Hola José! Quiero agendar la *Mantención Base Preventiva* por ${formatCLP(m.base)}.`, `Agendar por ${formatCLP(m.base)}`);
 
-            setText('maint-disp-anual', formatCLP(m.paseAnual));
-            setText('maint-disp-ahorro', ahorroPack > 0 ? `(Ahorras ${formatCLP(ahorroPack)})` : '');
-            setLink('maint-link-anual', `Hola José, deseo contratar el Pase Anual Clima Todo el Año (${formatCLP(m.paseAnual)})`, `Contratar Pase Anual (${formatCLP(m.paseAnual)})`);
+            setTxt('maint-disp-pack', formatCLP(m.packEstacional));
+            setHref('maint-link-pack', `Hola José! Quiero agendar el *Pack Estacional Cero Alergias* por ${formatCLP(m.packEstacional)}.`);
 
-            setText('maint-disp-diagnostico', formatCLP(diagPrice));
-            setText('maint-disp-diag-desde-base', `desde ${formatCLP(m.base)}`);
-            setText('maint-btn-text-diagnostico', `Agendar Diagnóstico (${formatCLP(diagPrice)})`);
-            setLink('maint-link-diagnostico', `Hola José, necesito agendar una Visita Técnica de Diagnóstico de Falla (${formatCLP(diagPrice)} IVA incluido con Informe PDF) para mi aire acondicionado.`);
+            setTxt('maint-disp-anual', formatCLP(m.paseAnual));
+            setTxt('maint-disp-ahorro', ahorroAnual > 0 ? `(Ahorras ${formatCLP(ahorroAnual)})` : '');
+            setHref('maint-link-anual', `Hola José! Quiero contratar el *Pase Anual Clima Todo el Año* (2 visitas) por ${formatCLP(m.paseAnual)}.`, `Contratar Pase Anual (${formatCLP(m.paseAnual)})`);
 
-            setText('maint-disp-com3', formatCLP(m.comunidad3a4));
-            setText('maint-disp-com5', formatCLP(m.comunidad5mas));
+            setTxt('maint-disp-com3', formatCLP(m.comunidad3a4));
+            setTxt('maint-disp-com5', formatCLP(m.comunidad5mas));
 
-            setText('maint-disp-sanitario', `+${formatCLP(m.kitSanitario)}`);
-            setLink('maint-link-sanitario', `Hola José, deseo agregar el Kit Sanitario Antialérgico (+${formatCLP(m.kitSanitario)})`);
+            setTxt('maint-disp-sanitario', `+${formatCLP(m.kitSanitario)}`);
+            setHref('maint-link-sanitario', `Hola José! Quiero sumar el *Kit Sanitario Antialérgico* (+${formatCLP(m.kitSanitario)}) a mi servicio.`);
 
-            setText('maint-disp-wifi', `+${formatCLP(m.moduloWifi)}`);
-            setLink('maint-link-wifi', `Hola José, deseo agregar el Controlador IR Wi-Fi Universal (+${formatCLP(m.moduloWifi)})`);
+            setTxt('maint-disp-wifi', `+${formatCLP(m.moduloWifi)}`);
+            setHref('maint-link-wifi', `Hola José! Quiero agregar el *Controlador IR Wi-Fi Universal* (+${formatCLP(m.moduloWifi)}).`);
 
-            setText('maint-disp-escudo', `+${formatCLP(m.escudoInverter)}`);
-            setLink('maint-link-escudo', `Hola José, deseo agregar el Escudo Eléctrico Inverter (+${formatCLP(m.escudoInverter)})`);
+            setTxt('maint-disp-escudo', `+${formatCLP(m.escudoInverter)}`);
+            setHref('maint-link-escudo', `Hola José! Quiero agregar el *Escudo Inverter Enchufable* (+${formatCLP(m.escudoInverter)}).`);
 
-            setText('maint-disp-profundo', `+${formatCLP(m.lavadoProfundo)}`);
-            setLink('maint-link-profundo', `Hola José, deseo cotizar Lavado Profundo / Desarme de Turbina (+${formatCLP(m.lavadoProfundo)})`);
+            setTxt('maint-disp-profundo', `+${formatCLP(m.lavadoProfundo)}`);
+            setHref('maint-link-profundo', `Hola José! Quiero consultar por el *Lavado Profundo / Desarme de Turbina* (+${formatCLP(m.lavadoProfundo)}).`);
 
-            setText('maint-disp-garantia', `+${formatCLP(m.garantia3Anos)}`);
-            setLink('maint-link-garantia', `Hola José, quiero consultar por la Extensión de Garantía de 1 a 3 Años (+${formatCLP(m.garantia3Anos)}) para instalación EasyCool.`);
+            setTxt('maint-disp-garantia', `+${formatCLP(m.garantia3Anos)}`);
+            setHref('maint-link-garantia', `Hola José! Quiero extender a 3 años la garantía de instalación de mi equipo instalado por EasyCool (+${formatCLP(m.garantia3Anos)}).`);
 
-            setText('maint-disp-b2b-sem', `Desde ${formatCLP(m.comercioSemestral)}`);
-            setLink('maint-link-b2b-sem', `Hola José, solicito cotización para Plan Comercio Semestral (Desde ${formatCLP(m.comercioSemestral)} + IVA, mín. 4 equipos)`);
+            setTxt('maint-disp-b2b-sem', `Desde ${formatCLP(m.comercioSemestral)}`);
+            setHref('maint-link-b2b-sem', `Hola José! Necesito cotizar el plan *Comercio Semestral B2B* (desde ${formatCLP(m.comercioSemestral)} + IVA por equipo).`);
 
-            setText('maint-disp-b2b-tri', `Desde ${formatCLP(m.continuidadTrimestral)}`);
-            setLink('maint-link-b2b-tri', `Hola José, solicito cotización para Plan Continuidad Trimestral (Desde ${formatCLP(m.continuidadTrimestral)} + IVA, flotas 6+ equipos)`);
+            setTxt('maint-disp-b2b-tri', `Desde ${formatCLP(m.continuidadTrimestral)}`);
+            setHref('maint-link-b2b-tri', `Hola José! Necesito cotizar el plan *Continuidad Trimestral B2B* (desde ${formatCLP(m.continuidadTrimestral)} + IVA por equipo).`);
 
-            setText('maint-disp-b2b-min', `${formatCLP(m.visitaMinimaB2B)} + IVA`);
+            setTxt('maint-disp-b2b-min', `${formatCLP(m.visitaMinimaB2B)} + IVA`);
+
+            setTxt('maint-disp-diagnostico', formatCLP(m.diagnosticoFalla));
+            setTxt('maint-disp-diag-desde-base', `desde ${formatCLP(m.base)}`);
+            setTxt('maint-btn-text-diagnostico', `Agendar Diagnóstico (${formatCLP(m.diagnosticoFalla)})`);
+            setHref('maint-link-diagnostico', `Hola José! Necesito agendar una *Visita Técnica de Diagnóstico de Falla* (${formatCLP(m.diagnosticoFalla)} IVA incluido, con Informe PDF).`);
         }
 
-        function switchMaintTab(tab) {
-            document.querySelectorAll('.maint-content').forEach(el => el.classList.add('hidden'));
-            document.querySelectorAll('.maint-tab-btn').forEach(btn => {
-                btn.classList.remove('bg-brand-blue', 'text-white', 'shadow');
-                btn.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
-            });
+        // --- 8. NAVEGACIÓN POR HASH (#catalogo, #bombas, #mantenimiento, #diagnostico) ---
+        function handleHashRoute() {
+            const hash = (window.location.hash || '').toLowerCase();
+            if (!hash) return;
 
-            const target = document.getElementById('maint-content-' + tab);
-            if (target) target.classList.remove('hidden');
+            const sectionMap = {
+                '#catalogo': null,
+                '#solo-instalacion': 'solo-instalacion',
+                '#bombas': 'bombas-condensado',
+                '#bombas-condensado': 'bombas-condensado',
+                '#mantenimiento': 'mantenimiento',
+                '#diagnostico': 'diagnostico'
+            };
 
-            const btn = document.getElementById('maint-btn-' + tab);
-            if (btn) {
-                btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
-                btn.classList.add('bg-brand-blue', 'text-white', 'shadow');
+            if (Object.prototype.hasOwnProperty.call(sectionMap, hash)) {
+                openCatalogModal(false);
+                const targetId = sectionMap[hash];
+                if (targetId) {
+                    setTimeout(() => {
+                        const el = document.getElementById(targetId);
+                        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 120);
+                }
             }
         }
 
-        window.onload = function() {
-            renderBrandView();
-            renderSoloInstallPrices();
-            renderBombasPrices();
-            renderMaintenancePrices();
-            checkDirectCatalogLink();
-        };
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeCompareModal();
+        });
 
-        window.addEventListener('hashchange', checkDirectCatalogLink);
+        window.addEventListener('hashchange', handleHashRoute);
+        window.addEventListener('DOMContentLoaded', handleHashRoute);
     </script>
 </body>
 </html>
